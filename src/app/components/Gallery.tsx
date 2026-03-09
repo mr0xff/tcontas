@@ -10,6 +10,7 @@ const galleryImages = [
     description: "Juiz Conselheiro Vice-Presidente do Tribunal e Presidente da 1.ª Câmara",
     biographyUrl: "https://tcontas.ao/juizes/dr-evaristo-jose-solano/",
   },
+
   {
     id: 2,
     src: "https://tcontas.ao/wp-content/uploads/2025/09/06.webp",
