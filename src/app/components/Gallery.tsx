@@ -8,72 +8,84 @@ const galleryImages = [
     src: "https://tcontas.ao/wp-content/uploads/2025/09/04.webp",
     name: "Dr. Evaristo José Solano",
     description: "Juiz Conselheiro Vice-Presidente do Tribunal e Presidente da 1.ª Câmara",
+    biographyUrl: "https://tcontas.ao/juizes/dr-evaristo-jose-solano/",
   },
   {
     id: 2,
     src: "https://tcontas.ao/wp-content/uploads/2025/09/06.webp",
     name: "Dra. Arlete Maria Bolonhês da Conceição",
     description: "JUÍZA CONSELHEIRA DA 1ª CÂMARA",
+    biographyUrl: "https://tcontas.ao/juizes/dra-arlete-maria-bolonhes-da-conceicao/",
   },
   {
     id: 3,
     src: "https://tcontas.ao/wp-content/uploads/2025/09/04-1.webp",
     name: "Dr. Armindo Gideão Kunjiquisse Jelembi",
     description: "JUIZ CONSELHEIRO DA 1ª CÂMARA",
+    biographyUrl: "https://tcontas.ao/juizes/dr-armindo-gideao-kunjiquisse-jelembi/",
   },
   {
     id: 4,
     src: "https://tcontas.ao/wp-content/uploads/2025/09/01-1.webp",
     name: "Dr. Januário José Domingos",
     description: "JUIZ CONSELHEIRO DA 1ª CÂMARA",
+    biographyUrl: "https://tcontas.ao/juizes/dr-januario-jose-domingos/",
   },
   {
     id: 5,
     src: "https://tcontas.ao/wp-content/uploads/2025/09/03.webp",
     name: "Dr. Carlos Luís M. António",
     description: "JUIZ CONSELHEIRO DA 1ª CÂMARA",
+    biographyUrl: "https://tcontas.ao/juizes/dr-carlos-luis-m-antonio/",
   },
   {
     id: 6,
     src: "https://tcontas.ao/wp-content/uploads/2025/09/8.webp",
     name: "Dra. Olinda França Cardoso",
     description: "JUÍZA CONSELHEIRA PRESIDENTE DA 2ª CÂMARA",
+    biographyUrl: "https://tcontas.ao/juizes/dra-olinda-franca-cardoso/",
   },
   {
     id: 7,
     src: "https://tcontas.ao/wp-content/uploads/2025/09/03-1.webp",
     name: "Dr. Fausto Tavares de Carvalho Simões",
     description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
+    biographyUrl: "https://tcontas.ao/juizes/dr-fausto-tavares-de-carvalho-simoes/",
   },
   {
     id: 8,
     src: "https://tcontas.ao/wp-content/uploads/2025/09/Imagem-WhatsApp-2025-10-09-as-12.58.44_7f1ebd62.png",
     name: "Dr. Manuel José Domingos",
     description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
+    biographyUrl: "https://tcontas.ao/juizes/dr-manuel-jose-domingos/",
   },
   {
     id: 9,
     src: "https://tcontas.ao/wp-content/uploads/2025/09/02-1.webp",
     name: "Dr. Manuel da Cruz Neto",
     description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
+    biographyUrl: "https://tcontas.ao/juizes/dr-manuel-da-cruz-neto/",
   },
   {
     id: 10,
     src: "https://tcontas.ao/wp-content/uploads/2025/09/05.webp",
     name: "Dr. Sebastião Jorge Diogo Bessa",
     description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
+    biographyUrl: "https://tcontas.ao/juizes/dr-sebastiao-jorge-diogo-bessa/",
   },
   {
     id: 11,
     src: "https://tcontas.ao/wp-content/uploads/2025/09/02.webp",
     name: "Dr. João Carlos de C. Paiva",
     description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
+    biographyUrl: "https://tcontas.ao/juizes/dr-joao-carlos-de-c-paiva/",
   },
   {
     id: 12,
     src: "https://tcontas.ao/wp-content/uploads/2025/09/01.webp",
     name: "Dr. Fernando de Almeida Gomes",
     description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
+    biographyUrl: "https://tcontas.ao/juizes/dr-fernando-de-almeida-gomes/",
   },
 ];
 
@@ -122,8 +134,9 @@ function GalleryGrid({ onImageClick }: { onImageClick: (id: number) => void }) {
             transform: isVisible ? "scale(1)" : "scale(0.98)",
             transition: `opacity 0.5s ease ${i * 0.06}s, transform 0.5s ease ${i * 0.06}s`,
             border: "1px solid rgba(201,163,71,0.18)",
-            maxHeight: 420,
-            aspectRatio: "7 / 9",
+            /* switch to a taller portrait ratio so profile pictures aren’t cropped */
+            aspectRatio: "3 / 4",
+            /* remove the fixed max height so the container can grow with the image */
             backgroundColor: "#fff",
             display: "flex",
             alignItems: "center",
@@ -144,8 +157,8 @@ function GalleryGrid({ onImageClick }: { onImageClick: (id: number) => void }) {
               objectPosition: "center 35%",
             }}
           />
-          <div className="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/70 transition-all duration-300 flex items-end p-4">
-            <div className="translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+          <div className="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/70 transition-all duration-300 flex flex-col items-end justify-end p-4">
+            <div className="translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 w-full">
               <span
                 className="text-[#C9A347] text-xs font-bold tracking-wider uppercase block mb-1"
                 style={{ fontFamily: "'Roboto', sans-serif" }}
@@ -153,11 +166,23 @@ function GalleryGrid({ onImageClick }: { onImageClick: (id: number) => void }) {
                 {img.name}
               </span>
               <p
-                className="text-white text-sm"
+                className="text-white text-sm mb-3"
                 style={{ fontFamily: "'Roboto', sans-serif" }}
               >
                 {img.description}
               </p>
+              {img.biographyUrl && (
+                <a
+                  href={img.biographyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 bg-[#C9A347] text-[#0A2540] text-xs font-bold rounded-sm transition-all hover:bg-white"
+                  style={{ fontFamily: "'Roboto', sans-serif" }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Ver Biografia
+                </a>
+              )}
             </div>
           </div>
           {/* Gold corner accent */}
