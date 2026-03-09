@@ -5,39 +5,75 @@ import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 const galleryImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1722306562387-2af58393d08e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxqdXN0aWNlJTIwY291cnRob3VzZSUyMGluc3RpdHV0aW9uYWwlMjBidWlsZGluZ3xlbnwxfHx8fDE3NzI4MDM4NzB8MA&ixlib=rb-4.1.0&q=80&w=800",
-    caption: "Sede do Tribunal de Contas de Angola",
-    category: "Instituição",
+    src: "https://tcontas.ao/wp-content/uploads/2025/09/04.webp",
+    name: "Dr. Evaristo José Solano",
+    description: "Juiz Conselheiro Vice-Presidente do Tribunal e Presidente da 1.ª Câmara",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1735886161697-b868f22f7dcd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwcGFybGlhbWVudCUyMHNlc3Npb24lMjBwbGVuYXJ5fGVufDF8fHx8MTc3MjgwMzg3N3ww&ixlib=rb-4.1.0&q=80&w=800",
-    caption: "Sessão Plenária do Tribunal",
-    category: "Sessões",
+    src: "https://tcontas.ao/wp-content/uploads/2025/09/06.webp",
+    name: "Dra. Arlete Maria Bolonhês da Conceição",
+    description: "JUÍZA CONSELHEIRA DA 1ª CÂMARA",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1768399808130-abac2a8442e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwdWJsaWMlMjBmaW5hbmNlJTIwYXVkaXQlMjBnb3Zlcm5tZW50JTIwbWVldGluZ3xlbnwxfHx8fDE3NzI4MDM4NzF8MA&ixlib=rb-4.1.0&q=80&w=800",
-    caption: "Reunião da Comissão de Auditoria",
-    category: "Auditoria",
+    src: "https://tcontas.ao/wp-content/uploads/2025/09/04-1.webp",
+    name: "Dr. Armindo Gideão Kunjiquisse Jelembi",
+    description: "JUIZ CONSELHEIRO DA 1ª CÂMARA",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1757143137392-0b1e1a27a7de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb3Zlcm5tZW50JTIwY2VyZW1vbnklMjBjZWxlYnJhdGlvbiUyMG9mZmljaWFsJTIwZXZlbnR8ZW58MXx8fHwxNzcyODAzODc0fDA&ixlib=rb-4.1.0&q=80&w=800",
-    caption: "Cerimónia de Tomada de Posse",
-    category: "Eventos",
+    src: "https://tcontas.ao/wp-content/uploads/2025/09/01-1.webp",
+    name: "Dr. Januário José Domingos",
+    description: "JUIZ CONSELHEIRO DA 1ª CÂMARA",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1678345201957-5612bd7dd6dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwZ292ZXJubWVudCUyMGNlcmVtb255JTIwb2ZmaWNpYWwlMjBzaWduaW5nfGVufDF8fHx8MTc3MjgwMzg3MXww&ixlib=rb-4.1.0&q=80&w=800",
-    caption: "Assinatura de Protocolo Institucional",
-    category: "Eventos",
+    src: "https://tcontas.ao/wp-content/uploads/2025/09/03.webp",
+    name: "Dr. Carlos Luís M. António",
+    description: "JUIZ CONSELHEIRO DA 1ª CÂMARA",
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1764113697577-b5899b9a339d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXclMjBzY2FsZSUyMGp1c3RpY2UlMjBiYWxhbmNlJTIwc3ltYm9sfGVufDF8fHx8MTc3MjgwMzg3NXww&ixlib=rb-4.1.0&q=80&w=800",
-    caption: "Símbolo da Justiça e da Legalidade",
-    category: "Instituição",
+    src: "https://tcontas.ao/wp-content/uploads/2025/09/8.webp",
+    name: "Dra. Olinda França Cardoso",
+    description: "JUÍZA CONSELHEIRA PRESIDENTE DA 2ª CÂMARA",
+  },
+  {
+    id: 7,
+    src: "https://tcontas.ao/wp-content/uploads/2025/09/03-1.webp",
+    name: "Dr. Fausto Tavares de Carvalho Simões",
+    description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
+  },
+  {
+    id: 8,
+    src: "https://tcontas.ao/wp-content/uploads/2025/09/Imagem-WhatsApp-2025-10-09-as-12.58.44_7f1ebd62.png",
+    name: "Dr. Manuel José Domingos",
+    description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
+  },
+  {
+    id: 9,
+    src: "https://tcontas.ao/wp-content/uploads/2025/09/02-1.webp",
+    name: "Dr. Manuel da Cruz Neto",
+    description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
+  },
+  {
+    id: 10,
+    src: "https://tcontas.ao/wp-content/uploads/2025/09/05.webp",
+    name: "Dr. Sebastião Jorge Diogo Bessa",
+    description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
+  },
+  {
+    id: 11,
+    src: "https://tcontas.ao/wp-content/uploads/2025/09/02.webp",
+    name: "Dr. João Carlos de C. Paiva",
+    description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
+  },
+  {
+    id: 12,
+    src: "https://tcontas.ao/wp-content/uploads/2025/09/01.webp",
+    name: "Dr. Fernando de Almeida Gomes",
+    description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
   },
 ];
 
@@ -83,16 +119,30 @@ function GalleryGrid({ onImageClick }: { onImageClick: (id: number) => void }) {
           className="relative overflow-hidden group focus:outline-none"
           style={{
             opacity: isVisible ? 1 : 0,
-            transform: isVisible ? "scale(1)" : "scale(0.95)",
-            transition: `opacity 0.6s ease ${i * 0.1}s, transform 0.6s ease ${i * 0.1}s`,
-            border: "1px solid rgba(201,163,71,0.3)",
+            transform: isVisible ? "scale(1)" : "scale(0.98)",
+            transition: `opacity 0.5s ease ${i * 0.06}s, transform 0.5s ease ${i * 0.06}s`,
+            border: "1px solid rgba(201,163,71,0.18)",
+            maxHeight: 420,
+            aspectRatio: "7 / 9",
+            backgroundColor: "#fff",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
-          aria-label={img.caption}
+          aria-label={img.description}
         >
           <img
             src={img.src}
-            alt={img.caption}
-            className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            alt={img.name}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            style={{ 
+              maxWidth: "100%",
+              maxHeight: "100%",
+              width: "auto",
+              height: "auto",
+              objectFit: "contain",
+              objectPosition: "center 35%",
+            }}
           />
           <div className="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/70 transition-all duration-300 flex items-end p-4">
             <div className="translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -100,13 +150,13 @@ function GalleryGrid({ onImageClick }: { onImageClick: (id: number) => void }) {
                 className="text-[#C9A347] text-xs font-bold tracking-wider uppercase block mb-1"
                 style={{ fontFamily: "'Roboto', sans-serif" }}
               >
-                {img.category}
+                {img.name}
               </span>
               <p
                 className="text-white text-sm"
                 style={{ fontFamily: "'Roboto', sans-serif" }}
               >
-                {img.caption}
+                {img.description}
               </p>
             </div>
           </div>
@@ -132,7 +182,7 @@ function Lightbox({ imageId, onClose }: { imageId: number; onClose: () => void }
       onClick={onClose}
     >
       <div
-        className="relative max-w-4xl w-full"
+        className="relative max-w-4xl w-full flex justify-center"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -144,15 +194,24 @@ function Lightbox({ imageId, onClose }: { imageId: number; onClose: () => void }
         </button>
         <img
           src={img.src}
-          alt={img.caption}
-          className="w-full max-h-[75vh] object-contain"
-          style={{ border: "1px solid rgba(201,163,71,0.4)" }}
+          alt={img.name}
+          className="w-full"
+          style={{ 
+            display: "block",
+            maxHeight: "65vh",
+            objectFit: "contain",
+            objectPosition: "center 35%",
+            border: "1px solid rgba(201,163,71,0.35)",
+           }}
         />
         <p
           className="text-center text-white/80 mt-3 text-sm"
           style={{ fontFamily: "'Roboto', sans-serif" }}
         >
-          {img.caption}
+          {img.name}
+          <br />
+          <br />
+          {img.description}
         </p>
         {/* Navigation */}
         <button
