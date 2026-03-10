@@ -1,6 +1,6 @@
-import { useState, FormEvent } from "react";
+import { useState } from "react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import { Calendar, MapPin, Clock, CheckCircle2, Music, Award, Mic, Users, BookOpen, Camera } from "lucide-react";
+import { Calendar, MapPin, Clock, Music, Award, Mic, Users, BookOpen, Camera } from "lucide-react";
 // const anniversarySchedule = [
 //   {
 //     date: "09/04/2026",

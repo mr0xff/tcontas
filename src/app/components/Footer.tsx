@@ -1,5 +1,4 @@
 import { MapPin, Phone, Mail, ExternalLink, Facebook, Twitter, Youtube, Linkedin } from "lucide-react";
-import { TcaLogo30Anos, TcaLogoText } from "./TcaLogo";
 
 const socialLinks = [
   { icon: Facebook, label: "Facebook", href: "https://facebook.com" },
@@ -43,10 +42,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Column 1: Logos and description */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-6 mb-6 flex-wrap">
-              <TcaLogo30Anos size={80} />
+            <div className="flex w-32">
+              {/* <TcaLogo30Anos size={80} />
               <div className="h-12 w-px bg-[#C9A347]/30 hidden sm:block" />
-              <TcaLogoText size={40} />
+              <TcaLogoText size={40} /> */}
+              <img src="logo.png" />
             </div>
             <p
               className="text-white/50 leading-relaxed mb-6"

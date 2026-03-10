@@ -110,7 +110,7 @@ const testimonials = [
     id: 50,
     quote: "A missão do TCA vai além da fiscalização; é um compromisso permanente com a construção de um Estado mais justo, transparente e eficiente ao serviço dos cidadãos angolanos.",
     name: "Dr. Sebastião Gunza",
-    image: "https://tcontas.ao/wp-content/uploads/2025/09/05.webp",
+    image: "presidente.jpeg",
     role: "Juiz Conselheiro — Tribunal de Contas"
   }
 ];
