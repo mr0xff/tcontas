@@ -173,9 +173,236 @@ function RSVPForm() {
   );
 }
 
+// export function EventSection() {
+//   const { ref: titleRef, isVisible: titleVisible } = useIntersectionObserver();
+//   const { ref: contentRef, isVisible: contentVisible } = useIntersectionObserver();
+
+//   return (
+//     <section
+//       id="evento"
+//       className="py-24"
+//       style={{ backgroundColor: "#0A2540", fontFamily: "'Roboto', sans-serif" }}
+//     >
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//         {/* Section header */}
+//         <div
+//           ref={titleRef}
+//           className="text-center mb-16"
+//           style={{
+//             opacity: titleVisible ? 1 : 0,
+//             transform: titleVisible ? "translateY(0)" : "translateY(30px)",
+//             transition: "opacity 0.7s ease, transform 0.7s ease",
+//           }}
+//         >
+//           <div className="flex items-center justify-center gap-4 mb-4">
+//             <div className="h-px w-12 bg-[#C9A347]" />
+//             <span className="text-[#C9A347] text-xs font-bold tracking-[0.3em] uppercase">
+//               Evento Comemorativo
+//             </span>
+//             <div className="h-px w-12 bg-[#C9A347]" />
+//           </div>
+//           <h2
+//             className="text-white"
+//             style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 700, lineHeight: 1.2 }}
+//           >
+//             Comemoração dos <span style={{ color: "#C9A347" }}>30 Anos</span>
+//           </h2>
+//           <p
+//             className="text-white/60 mt-4 max-w-xl mx-auto"
+//             style={{ fontSize: "1rem", fontWeight: 300, lineHeight: 1.7 }}
+//           >
+//             Junte-se a nós nesta celebração histórica que marca três décadas de fiscalização ao serviço de Angola.
+//           </p>
+//         </div>
+
+//         {/* Event info bar */}
+//         <div
+//           ref={contentRef}
+//           style={{
+//             opacity: contentVisible ? 1 : 0,
+//             transform: contentVisible ? "translateY(0)" : "translateY(30px)",
+//             transition: "opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s",
+//           }}
+//         >
+//           <div
+//             className="grid grid-cols-1 md:grid-cols-3 gap-px mb-12"
+//             style={{ backgroundColor: "rgba(201,163,71,0.3)" }}
+//           >
+//             {[
+//               {
+//                 icon: Calendar,
+//                 label: "Data",
+//                 value: "22 de Março de 2026",
+//                 sub: "Sábado",
+//               },
+//               {
+//                 icon: Clock,
+//                 label: "Horário",
+//                 value: "08:30 — 20:00",
+//                 sub: "Horário de Angola (WAT)",
+//               },
+//               {
+//                 icon: MapPin,
+//                 label: "Local",
+//                 value: "Palácio da Justiça",
+//                 sub: "Cidade Alta, Luanda",
+//               },
+//             ].map((item) => (
+//               <div
+//                 key={item.label}
+//                 className="flex items-center gap-4 p-6"
+//                 style={{ backgroundColor: "#0D2D50" }}
+//               >
+//                 <div
+//                   className="w-12 h-12 flex items-center justify-center flex-shrink-0"
+//                   style={{ backgroundColor: "rgba(201,163,71,0.12)", border: "1px solid rgba(201,163,71,0.4)" }}
+//                 >
+//                   <item.icon size={22} className="text-[#C9A347]" />
+//                 </div>
+//                 <div>
+//                   <p
+//                     className="text-[#C9A347] text-xs font-bold tracking-widest uppercase mb-0.5"
+//                     style={{ fontFamily: "'Roboto', sans-serif" }}
+//                   >
+//                     {item.label}
+//                   </p>
+//                   <p
+//                     className="text-white font-medium"
+//                     style={{ fontFamily: "'Roboto', sans-serif", fontSize: "1rem" }}
+//                   >
+//                     {item.value}
+//                   </p>
+//                   <p
+//                     className="text-white/50 text-xs"
+//                     style={{ fontFamily: "'Roboto', sans-serif" }}
+//                   >
+//                     {item.sub}
+//                   </p>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+
+//           {/* Map + Schedule + RSVP */}
+//           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+//             {/* Left: Map + Schedule */}
+//             <div className="space-y-8">
+//               {/* Google Maps embed */}
+//               <div>
+//                 <h3
+//                   className="text-white mb-4"
+//                   style={{ fontFamily: "'Roboto', sans-serif", fontSize: "1.1rem", fontWeight: 700 }}
+//                 >
+//                   <span style={{ color: "#C9A347" }}>★</span> Localização
+//                 </h3>
+//                 <div
+//                   className="overflow-hidden"
+//                   style={{ border: "1px solid rgba(201,163,71,0.3)", height: "220px" }}
+//                 >
+//                   <iframe
+//                     title="Localização — Cidade Alta, Luanda"
+//                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.3234085476727!2d13.234!3d-8.835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f1a41c3f6a19%3A0x1e6d4e3a0b4e1a31!2sCidade%20Alta%2C%20Luanda%2C%20Angola!5e0!3m2!1spt!2sao!4v1680000000000!5m2!1spt!2sao"
+//                     width="100%"
+//                     height="100%"
+//                     style={{ border: 0 }}
+//                     allowFullScreen
+//                     loading="lazy"
+//                     referrerPolicy="no-referrer-when-downgrade"
+//                   />
+//                 </div>
+//                 <p
+//                   className="text-white/40 text-xs mt-2"
+//                   style={{ fontFamily: "'Roboto', sans-serif" }}
+//                 >
+//                   <MapPin size={12} className="inline mr-1" />
+//                   Rua 17 de Setembro, Cidade Alta, Luanda, Angola
+//                 </p>
+//               </div>
+
+//               {/* Schedule */}
+//               <div>
+//                 <h3
+//                   className="text-white mb-5"
+//                   style={{ fontFamily: "'Roboto', sans-serif", fontSize: "1.1rem", fontWeight: 700 }}
+//                 >
+//                   <span style={{ color: "#C9A347" }}>★</span> Cronograma do Evento
+//                 </h3>
+//                 <div className="space-y-2">
+//                   {anniversarySchedule.map((item, i) => (
+//                     <div
+//                       key={i}
+//                       className="flex items-center gap-4 p-3 transition-all duration-200 hover:bg-white/5 group"
+//                       style={{ borderLeft: "2px solid rgba(201,163,71,0.3)" }}
+//                     >
+//                       <div
+//                         className="flex-shrink-0 w-14 text-right"
+//                       >
+//                         <span
+//                           className="text-[#C9A347] font-bold"
+//                           style={{ fontFamily: "'Roboto', sans-serif", fontSize: "0.8rem" }}
+//                         >
+//                           {item.time}
+//                         </span>
+//                       </div>
+//                       <div
+//                         className="w-8 h-8 flex items-center justify-center flex-shrink-0 transition-all duration-200 group-hover:bg-[#C9A347]/20"
+//                         style={{ border: "1px solid rgba(201,163,71,0.3)" }}
+//                       >
+//                         <item.icon size={14} className="text-[#C9A347]" />
+//                       </div>
+//                       <p
+//                         className="text-white/80 group-hover:text-white transition-colors"
+//                         style={{ fontFamily: "'Roboto', sans-serif", fontSize: "0.85rem" }}
+//                       >
+//                         {item.title}
+//                       </p>
+//                     </div>
+//                   ))}
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Right: RSVP Form */}
+//             <div>
+//               <div
+//                 className="p-8"
+//                 style={{ border: "1px solid rgba(201,163,71,0.3)", backgroundColor: "rgba(255,255,255,0.03)" }}
+//               >
+//                 <h3
+//                   className="text-white mb-2"
+//                   style={{ fontFamily: "'Roboto', sans-serif", fontSize: "1.3rem", fontWeight: 700 }}
+//                 >
+//                   <span style={{ color: "#C9A347" }}>★</span> Confirmar Presença
+//                 </h3>
+//                 <p
+//                   className="text-white/50 mb-8"
+//                   style={{ fontFamily: "'Roboto', sans-serif", fontSize: "0.85rem", lineHeight: 1.6 }}
+//                 >
+//                   Preencha o formulário abaixo para confirmar a sua participação na cerimónia comemorativa dos 30 Anos do TCA.
+//                 </p>
+//                 <RSVPForm />
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+// ... (Keep imports and RSVPForm as they are)
+
 export function EventSection() {
   const { ref: titleRef, isVisible: titleVisible } = useIntersectionObserver();
   const { ref: contentRef, isVisible: contentVisible } = useIntersectionObserver();
+
+  // Helper to get an icon for the activity list
+  const getActivityIcon = (event: string) => {
+    if (event.includes("Hino") || event.includes("Cultural")) return Music;
+    if (event.includes("Discurso") || event.includes("Sessão")) return Mic;
+    if (event.includes("Desportivo")) return Award;
+    return Clock;
+  };
 
   return (
     <section
@@ -215,7 +442,6 @@ export function EventSection() {
           </p>
         </div>
 
-        {/* Event info bar */}
         <div
           ref={contentRef}
           style={{
@@ -224,6 +450,7 @@ export function EventSection() {
             transition: "opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s",
           }}
         >
+          {/* Event info bar */}
           <div
             className="grid grid-cols-1 md:grid-cols-3 gap-px mb-12"
             style={{ backgroundColor: "rgba(201,163,71,0.3)" }}
@@ -232,13 +459,13 @@ export function EventSection() {
               {
                 icon: Calendar,
                 label: "Data",
-                value: "22 de Março de 2026",
-                sub: "Sábado",
+                value: "09 a 11 de Abril 2026", // Updated to match your data
+                sub: "Quinta a Sábado",
               },
               {
                 icon: Clock,
                 label: "Horário",
-                value: "08:30 — 20:00",
+                value: "09:00 — 20:00",
                 sub: "Horário de Angola (WAT)",
               },
               {
@@ -260,128 +487,76 @@ export function EventSection() {
                   <item.icon size={22} className="text-[#C9A347]" />
                 </div>
                 <div>
-                  <p
-                    className="text-[#C9A347] text-xs font-bold tracking-widest uppercase mb-0.5"
-                    style={{ fontFamily: "'Roboto', sans-serif" }}
-                  >
-                    {item.label}
-                  </p>
-                  <p
-                    className="text-white font-medium"
-                    style={{ fontFamily: "'Roboto', sans-serif", fontSize: "1rem" }}
-                  >
-                    {item.value}
-                  </p>
-                  <p
-                    className="text-white/50 text-xs"
-                    style={{ fontFamily: "'Roboto', sans-serif" }}
-                  >
-                    {item.sub}
-                  </p>
+                  <p className="text-[#C9A347] text-xs font-bold tracking-widest uppercase mb-0.5">{item.label}</p>
+                  <p className="text-white font-medium" style={{ fontSize: "1rem" }}>{item.value}</p>
+                  <p className="text-white/50 text-xs">{item.sub}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Map + Schedule + RSVP */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            {/* Left: Map + Schedule */}
+            {/* Left Column */}
             <div className="space-y-8">
-              {/* Google Maps embed */}
+              {/* Map */}
               <div>
-                <h3
-                  className="text-white mb-4"
-                  style={{ fontFamily: "'Roboto', sans-serif", fontSize: "1.1rem", fontWeight: 700 }}
-                >
+                <h3 className="text-white mb-4" style={{ fontSize: "1.1rem", fontWeight: 700 }}>
                   <span style={{ color: "#C9A347" }}>★</span> Localização
                 </h3>
-                <div
-                  className="overflow-hidden"
-                  style={{ border: "1px solid rgba(201,163,71,0.3)", height: "220px" }}
-                >
+                <div className="overflow-hidden" style={{ border: "1px solid rgba(201,163,71,0.3)", height: "220px" }}>
                   <iframe
-                    title="Localização — Cidade Alta, Luanda"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.3234085476727!2d13.234!3d-8.835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f1a41c3f6a19%3A0x1e6d4e3a0b4e1a31!2sCidade%20Alta%2C%20Luanda%2C%20Angola!5e0!3m2!1spt!2sao!4v1680000000000!5m2!1spt!2sao"
+                    title="Localização"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.3456!2d13.2345!3d-8.8123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwNDgnNDQuMyJTIDEzwrAxNCcwNC4yIkU!5e0!3m2!1spt!2sao!4v1600000000000"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
-                    allowFullScreen
                     loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
                   />
                 </div>
-                <p
-                  className="text-white/40 text-xs mt-2"
-                  style={{ fontFamily: "'Roboto', sans-serif" }}
-                >
-                  <MapPin size={12} className="inline mr-1" />
-                  Rua 17 de Setembro, Cidade Alta, Luanda, Angola
-                </p>
               </div>
 
-              {/* Schedule */}
+              {/* Schedule (Rendering Day 1 as primary view) */}
               <div>
-                <h3
-                  className="text-white mb-5"
-                  style={{ fontFamily: "'Roboto', sans-serif", fontSize: "1.1rem", fontWeight: 700 }}
-                >
-                  <span style={{ color: "#C9A347" }}>★</span> Cronograma do Evento
+                <h3 className="text-white mb-5" style={{ fontSize: "1.1rem", fontWeight: 700 }}>
+                  <span style={{ color: "#C9A347" }}>★</span> Destaques do Primeiro Dia
                 </h3>
                 <div className="space-y-2">
-                  {schedule.map((item, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center gap-4 p-3 transition-all duration-200 hover:bg-white/5 group"
-                      style={{ borderLeft: "2px solid rgba(201,163,71,0.3)" }}
-                    >
+                  {anniversarySchedule[0].activities.map((item, i) => {
+                    const Icon = getActivityIcon(item.event);
+                    return (
                       <div
-                        className="flex-shrink-0 w-14 text-right"
+                        key={i}
+                        className="flex items-center gap-4 p-3 transition-all duration-200 hover:bg-white/5 group"
+                        style={{ borderLeft: item.highlight ? "2px solid #C9A347" : "2px solid rgba(201,163,71,0.3)" }}
                       >
-                        <span
-                          className="text-[#C9A347] font-bold"
-                          style={{ fontFamily: "'Roboto', sans-serif", fontSize: "0.8rem" }}
-                        >
-                          {item.time}
-                        </span>
+                        <div className="flex-shrink-0 w-24">
+                          <span className="text-[#C9A347] font-bold text-[0.75rem]">
+                            {item.time}
+                          </span>
+                        </div>
+                        <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 border border-white/10 group-hover:bg-[#C9A347]/20">
+                          <Icon size={14} className="text-[#C9A347]" />
+                        </div>
+                        <div>
+                           <p className="text-white/80 group-hover:text-white text-sm font-medium">{item.event}</p>
+                           <p className="text-white/40 text-[0.7rem] uppercase tracking-tighter">{item.resp}</p>
+                        </div>
                       </div>
-                      <div
-                        className="w-8 h-8 flex items-center justify-center flex-shrink-0 transition-all duration-200 group-hover:bg-[#C9A347]/20"
-                        style={{ border: "1px solid rgba(201,163,71,0.3)" }}
-                      >
-                        <item.icon size={14} className="text-[#C9A347]" />
-                      </div>
-                      <p
-                        className="text-white/80 group-hover:text-white transition-colors"
-                        style={{ fontFamily: "'Roboto', sans-serif", fontSize: "0.85rem" }}
-                      >
-                        {item.title}
-                      </p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </div>
 
-            {/* Right: RSVP Form */}
-            <div>
-              <div
-                className="p-8"
-                style={{ border: "1px solid rgba(201,163,71,0.3)", backgroundColor: "rgba(255,255,255,0.03)" }}
-              >
-                <h3
-                  className="text-white mb-2"
-                  style={{ fontFamily: "'Roboto', sans-serif", fontSize: "1.3rem", fontWeight: 700 }}
-                >
-                  <span style={{ color: "#C9A347" }}>★</span> Confirmar Presença
-                </h3>
-                <p
-                  className="text-white/50 mb-8"
-                  style={{ fontFamily: "'Roboto', sans-serif", fontSize: "0.85rem", lineHeight: 1.6 }}
-                >
-                  Preencha o formulário abaixo para confirmar a sua participação na cerimónia comemorativa dos 30 Anos do TCA.
-                </p>
-                <RSVPForm />
-              </div>
+            {/* Right Column: RSVP Form */}
+            <div className="p-8" style={{ border: "1px solid rgba(201,163,71,0.3)", backgroundColor: "rgba(255,255,255,0.03)" }}>
+              <h3 className="text-white mb-2" style={{ fontSize: "1.3rem", fontWeight: 700 }}>
+                <span style={{ color: "#C9A347" }}>★</span> Confirmar Presença
+              </h3>
+              <p className="text-white/50 mb-8 text-sm leading-relaxed">
+                Preencha o formulário abaixo para confirmar a sua participação na cerimónia comemorativa.
+              </p>
+              <RSVPForm />
             </div>
           </div>
         </div>

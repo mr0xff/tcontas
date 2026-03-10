@@ -96,18 +96,21 @@ const testimonials = [
     id: 40,
     quote: "O Tribunal de Contas representa um pilar fundamental para a transparência e a boa governação em Angola. Trinta anos de dedicação ao serviço público são motivo de grande orgulho para toda a nação.",
     name: "Dr. Carlos Luís M. António",
+    image: "https://tcontas.ao/wp-content/uploads/2025/09/03.webp",
     role: "Juiz Conselheiro da 1ª Câmara do Tribunal de Contas"
   },
   {
     id: 30,
     quote: "Ao longo destes trinta anos, é notável a evolução desta instituição, que cresceu em capacidade técnica, modernidade e impacto na gestão das finanças públicas angolanas.",
     name: "Dra. Arlete Maria Bolonhês da Conceição",
+    image: "https://tcontas.ao/wp-content/uploads/2025/09/06.webp",
     role: "Juíza Conselheira da 1ª Câmara do Tribunal de Contas"
   },
   {
     id: 50,
     quote: "A missão do TCA vai além da fiscalização; é um compromisso permanente com a construção de um Estado mais justo, transparente e eficiente ao serviço dos cidadãos angolanos.",
     name: "Dr. Sebastião Gunza",
+    image: "https://tcontas.ao/wp-content/uploads/2025/09/05.webp",
     role: "Juiz Conselheiro — Tribunal de Contas"
   }
 ];
