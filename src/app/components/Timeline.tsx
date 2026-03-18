@@ -1,18 +1,18 @@
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 const IMAGES = {
-  1917: "/fallback.jpeg",
-  1933: "/fallback.jpeg",
-  1951: "/fallback.jpeg",
-  1975: "/fallback.jpeg",
-  1991: "/fallback.jpeg",
-  1992: "/fallback.jpeg",
-  1996: "/fallback.jpeg",
-  2001: "/fallback.jpeg",
-  2012: "/fallback.jpeg",
-  2018: "/fallback.jpeg", // Placa "Legado"
-  2023: "/fallback.jpeg", // Placa "Futuro"
-  2026: "/fallback.jpeg",
+  1917: "/fallback.webp",
+  1933: "/fallback.webp",
+  1951: "/fallback.webp",
+  1975: "/fallback.webp",
+  1991: "/fallback.webp",
+  1992: "/fallback.webp",
+  1996: "/fallback.webp",
+  2001: "/fallback.webp",
+  2012: "/fallback.webp",
+  2018: "/fallback.webp", // Placa "Legado"
+  2023: "/fallback.webp", // Placa "Futuro"
+  2026: "/fallback.webp",
 };
 // const timelineData = [
 //   {
