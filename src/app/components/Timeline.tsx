@@ -1,39 +1,125 @@
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 const IMAGES = {
-  1996: "https://images.unsplash.com/photo-1666018215790-867b14fe4822?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvZmZpY2lhbCUyMGRvY3VtZW50JTIwc2lnbmluZyUyMGluc3RpdHV0aW9uYWwlMjBjZXJlbW9ueXxlbnwxfHx8fDE3NzI4MDM4Nzd8MA&ixlib=rb-4.1.0&q=80&w=800",
-  2006: "https://images.unsplash.com/photo-1678345201957-5612bd7dd6dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwZ292ZXJubWVudCUyMGNlcmVtb255JTIwb2ZmaWNpYWwlMjBzaWduaW5nfGVufDF8fHx8MTc3MjgwMzg3MXww&ixlib=rb-4.1.0&q=80&w=800",
-  2016: "https://images.unsplash.com/photo-1768399808130-abac2a8442e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwdWJsaWMlMjBmaW5hbmNlJTIwYXVkaXQlMjBnb3Zlcm5tZW50JTIwbWVldGluZ3xlbnwxfHx8fDE3NzI4MDM4NzF8MA&ixlib=rb-4.1.0&q=80&w=800",
-  2026: "https://images.unsplash.com/photo-1742996111692-2d924f12a058?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBhZnJpY2FuJTIwYnVzaW5lc3MlMjBjb25mZXJlbmNlfGVufDF8fHx8MTc3MjgwMzg3NHww&ixlib=rb-4.1.0&q=80&w=800",
+  1917: "/fallback.jpeg",
+  1933: "/fallback.jpeg",
+  1951: "/fallback.jpeg",
+  1975: "/fallback.jpeg",
+  1991: "/fallback.jpeg",
+  1992: "/fallback.jpeg",
+  1996: "/fallback.jpeg",
+  2001: "/fallback.jpeg",
+  2012: "/fallback.jpeg",
+  2018: "/fallback.jpeg", // Placa "Legado"
+  2023: "/fallback.jpeg", // Placa "Futuro"
+  2026: "/fallback.jpeg",
 };
+// const timelineData = [
+//   {
+//     year: 1996,
+//     title: "Fundação do Tribunal de Contas",
+//     text: "Por força da Lei n.º 4/96, de 22 de março, o Tribunal de Contas de Angola é criado como órgão supremo de fiscalização e controlo da administração financeira do Estado. Inicia-se uma nova era de transparência e legalidade nas finanças públicas angolanas.",
+//     side: "right" as const,
+//   },
+//   {
+//     year: 2006,
+//     title: "Consolidação Institucional",
+//     text: "Uma década de operação consolida o TCA como pilar fundamental da governação financeira em Angola. Reformas internas reforçam os mecanismos de controlo e ampliam a capacidade técnica dos magistrados e auditores, fortalecendo o quadro jurídico de fiscalização.",
+//     side: "left" as const,
+//   },
+//   {
+//     year: 2016,
+//     title: "Modernização e Transparência",
+//     text: "O TCA abraça a modernização tecnológica e a digitalização dos seus processos, adoptando novos sistemas de gestão e controlo financeiro. Inicia-se a publicação electrónica dos relatórios de auditoria, promovendo a transparência e o acesso público à informação.",
+//     side: "right" as const,
+//   },
+//   {
+//     year: 2026,
+//     title: "30 Anos — Uma Nova Visão",
+//     text: "Trinta anos de história, compromisso e dedicação ao serviço público. O TCA reitera o seu compromisso com a legalidade, a eficiência e a modernidade, projectando-se para o futuro com uma visão renovada ao serviço do povo angolano e do desenvolvimento sustentável.",
+//     side: "left" as const,
+//   },
+// ];
 
-const timelineData = [
+export const timelineData: Array<{
+  year: number;
+  title: string;
+  text: string;
+  side: "right" | "left";
+}> = [
+  {
+    year: 1917,
+    title: "As Primeiras Sementes",
+    text: "Criação do Tribunal do Contencioso e de Contas, a primeira estrutura destinada a apreciar matérias administrativas e financeiras.",
+    side: "left"
+  },
+  {
+    year: 1933,
+    title: "Administração do Ultramar",
+    text: "Consolidação do princípio jurídico de que a gestão do dinheiro público deve ser submetida a escrutínio institucional.",
+    side: "right"
+  },
+  {
+    year: 1951,
+    title: "Novo Significado",
+    text: "A revisão constitucional reafirma a necessidade de examinar as contas públicas, fortalecendo a tradição jurídica de fiscalização.",
+    side: "left"
+  },
+  {
+    year: 1975,
+    title: "Nasce uma Nova Nação",
+    text: "Com a Independência Nacional, Angola assume o desafio de construir as suas próprias instituições de soberania.",
+    side: "right"
+  },
+  {
+    year: 1991,
+    title: "O Despertar do Estado de Direito",
+    text: "A Lei n.º 12/91 abre caminho para a institucionalização de um tribunal dedicado à fiscalização das finanças públicas.",
+    side: "left"
+  },
+  {
+    year: 1992,
+    title: "Consagração Constitucional",
+    text: "A segunda revisão constitucional estabelece formalmente o Tribunal de Contas de Angola como órgão essencial do Estado.",
+    side: "right"
+  },
   {
     year: 1996,
-    title: "Fundação do Tribunal de Contas",
-    text: "Por força da Lei n.º 4/96, de 22 de março, o Tribunal de Contas de Angola é criado como órgão supremo de fiscalização e controlo da administração financeira do Estado. Inicia-se uma nova era de transparência e legalidade nas finanças públicas angolanas.",
-    side: "right" as const,
+    title: "Criação Oficial (Lei 5/96)",
+    text: "A 12 de Abril nasce juridicamente o Tribunal de Contas de Angola, instituindo um órgão especializado no julgamento de contas.",
+    side: "left"
   },
   {
-    year: 2006,
-    title: "Consolidação Institucional",
-    text: "Uma década de operação consolida o TCA como pilar fundamental da governação financeira em Angola. Reformas internas reforçam os mecanismos de controlo e ampliam a capacidade técnica dos magistrados e auditores, fortalecendo o quadro jurídico de fiscalização.",
-    side: "left" as const,
+    year: 2001,
+    title: "O Tribunal Ganha Vida",
+    text: "Início efetivo das funções com a nomeação do primeiro Juiz Conselheiro Presidente e da primeira geração de Juízes.",
+    side: "right"
   },
   {
-    year: 2016,
-    title: "Modernização e Transparência",
-    text: "O TCA abraça a modernização tecnológica e a digitalização dos seus processos, adoptando novos sistemas de gestão e controlo financeiro. Inicia-se a publicação electrónica dos relatórios de auditoria, promovendo a transparência e o acesso público à informação.",
-    side: "right" as const,
+    year: 2012,
+    title: "Expansão e Fortalecimento",
+    text: "Fase de crescimento institucional e reforço das estruturas técnicas, consolidando o Tribunal como referência nacional.",
+    side: "left"
+  },
+  {
+    year: 2018, // Ano lógico para representar a "Corte ao Serviço do Estado"
+    title: "Corte ao Serviço do Estado",
+    text: "Afirmação como guardião da legalidade financeira, promovendo a transparência e a boa governação da coisa pública.",
+    side: "right"
+  },
+  {
+    year: 2023, // Ano lógico para a "Transformação Tecnológica"
+    title: "Instituição em Transformação",
+    text: "Modernização através da digitalização de processos e novas tecnologias, tornando a fiscalização mais eficiente.",
+    side: "left"
   },
   {
     year: 2026,
-    title: "30 Anos — Uma Nova Visão",
-    text: "Trinta anos de história, compromisso e dedicação ao serviço público. O TCA reitera o seu compromisso com a legalidade, a eficiência e a modernidade, projectando-se para o futuro com uma visão renovada ao serviço do povo angolano e do desenvolvimento sustentável.",
-    side: "left" as const,
-  },
+    title: "30 Anos | Nova Marca",
+    text: "Celebração da maturidade com o lançamento da nova identidade visual, símbolo de compromisso com o futuro.",
+    side: "right"
+  }
 ];
-
 function TimelineItem({
   item,
   index,
