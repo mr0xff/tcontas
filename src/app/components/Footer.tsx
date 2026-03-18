@@ -46,7 +46,7 @@ export function Footer() {
               {/* <TcaLogo30Anos size={80} />
               <div className="h-12 w-px bg-[#C9A347]/30 hidden sm:block" />
               <TcaLogoText size={40} /> */}
-              <img src="logo.png" />
+              <img src="logo.webp" />
             </div>
             <p
               className="text-white/50 leading-relaxed mb-6"

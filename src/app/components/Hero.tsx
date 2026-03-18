@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 
-const HERO_BG = "fallback-02.jpeg";
+const HERO_BG = "fallback-02.webp";
 
 export function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -63,7 +63,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
         {/* Commemorative Logo */}
-        <img src="logo.png" alt="30 anos de aniversario" />
+        <img src="logo.webp" alt="30 anos de aniversario" />
         {/* <div ref={logoRef} className="flex justify-center mb-10">
           <div className="drop-shadow-2xl">
             <TcaLogo30Anos size={180} />

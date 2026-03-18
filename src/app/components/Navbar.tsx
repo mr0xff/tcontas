@@ -43,7 +43,7 @@ export function Navbar() {
           className="flex items-center gap-3 focus:outline-none"
           aria-label="Voltar ao início"
         >
-          <img src="logo.png" alt="30 anos de aniversairo" className="w-32" />
+          <img src="logo.webp" alt="30 anos de aniversairo" className="w-32" />
         </button>
 
         {/* Desktop Nav */}
