@@ -1,8 +1,7 @@
 import { useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
-import { TcaLogo30Anos } from "./TcaLogo";
 
-const HERO_BG = "https://images.unsplash.com/photo-1760904050658-e05a50a4d529?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdWFuZGElMjBhbmdvbGElMjBjaXR5c2NhcGUlMjBtb2Rlcm58ZW58MXx8fHwxNzcyODAzODczfDA&ixlib=rb-4.1.0&q=80&w=1080";
+const HERO_BG = "fallback-02.jpeg";
 
 export function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
