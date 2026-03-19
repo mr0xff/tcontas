@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
+import { themeColors } from "../theme";
 
 const HERO_BG = "fallback-02.webp";
 
@@ -49,7 +50,7 @@ export function Hero() {
       {/* Dark overlay with navy tint */}
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(135deg, rgba(10,37,64,0.93) 0%, rgba(1,15,40,0.88) 60%, rgba(10,37,64,0.82) 100%)" }}
+        style={{ background: `linear-gradient(135deg, ${themeColors.variants.a} 0%, ${themeColors.variants.b} 60%, ${themeColors.variants.c} 100%)` }}
         aria-hidden="true"
       />
       {/* Gold border bottom */}
@@ -121,7 +122,7 @@ export function Hero() {
             style={{
               fontFamily: "'Roboto', sans-serif",
               backgroundColor: "#C9A347",
-              color: "#0A2540",
+              color: themeColors.primary,
               letterSpacing: "0.1em",
               boxShadow: "0 4px 20px rgba(201,163,71,0.4)",
             }}
