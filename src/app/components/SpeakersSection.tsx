@@ -1,4 +1,5 @@
 import { User, MapPin, Quote } from "lucide-react";
+import { themeColors } from "../theme";
 
 const speakers = [
   { id: 1, name: "Aurora Virgínia & Fernanda Mualeia", country: "Angola/Moçambique", theme: "Compliance e Tribunal de Contas em Angola: Prevenção, Legalidade e Boa Governação", flag: "🇦🇴/🇲🇿" },
@@ -19,7 +20,7 @@ const speakers = [
 
 export function SpeakersSection() {
   return (
-    <section id="oradores" className="py-24 bg-[#0A2540]">
+    <section id="oradores" className="py-24" style={{ backgroundColor: themeColors.primary }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header da Secção */}

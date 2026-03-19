@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import { themeColors } from "../theme";
 
 const stats = [
   { value: 30, suffix: "", label: "Anos de Serviço", description: "ao povo angolano" },
@@ -43,7 +44,7 @@ export function StatsSection() {
   return (
     <section
       style={{
-        background: "linear-gradient(135deg, #0A2540 0%, #001F3F 100%)",
+        background: themeColors.primary,
         borderTop: "3px solid #C9A347",
         borderBottom: "3px solid #C9A347",
         fontFamily: "'Roboto', sans-serif",

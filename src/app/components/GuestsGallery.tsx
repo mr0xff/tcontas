@@ -1,4 +1,5 @@
 import { User, MapPin, Award, GraduationCap } from "lucide-react";
+import { themeColors } from "../theme";
 
 // Estrutura de dados unificada
 // const guestCategories = [
@@ -118,7 +119,7 @@ const guestCategories = [
 
 export function GuestsGallery() {
   return (
-    <section id="convidados" className="py-24 bg-[#0A2540]">
+    <section id="convidados" className="py-24" style={{ backgroundColor: themeColors.primary }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Título da Secção */}

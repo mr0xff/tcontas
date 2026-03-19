@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, ExternalLink, Facebook, Twitter, Youtube, Linkedin } from "lucide-react";
+import { themeColors } from "../theme";
 
 const socialLinks = [
   { icon: Facebook, label: "Facebook", href: "https://facebook.com" },
@@ -32,7 +33,7 @@ export function Footer() {
   return (
     <footer
       id="rodape"
-      style={{ backgroundColor: "#001F3F", fontFamily: "'Roboto', sans-serif" }}
+      style={{ backgroundColor: themeColors.primary, fontFamily: "'Roboto', sans-serif" }}
     >
       {/* Gold top border */}
       <div style={{ height: "3px", background: "linear-gradient(90deg, transparent, #C9A347, transparent)" }} />

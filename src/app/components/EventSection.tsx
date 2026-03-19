@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 import { Calendar, MapPin, Clock, Music, Award, Mic, Users, BookOpen, Camera } from "lucide-react";
+import { themeColors } from "../theme";
 
 const anniversarySchedule = [
   {
@@ -64,7 +65,7 @@ export function EventSection() {
   const { ref: contentRef, isVisible: contentVisible } = useIntersectionObserver();
 
   return (
-    <section id="evento" className="py-24 bg-[#0A2540] font-['Roboto',sans-serif]">
+    <section id="evento" className="py-24 font-['Roboto',sans-serif]" style={{ backgroundColor: themeColors.primary }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Cabeçalho */}
