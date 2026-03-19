@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ExternalLink } from "lucide-react";
+import { themeColors } from "../theme";
+import clsx from "clsx";
 
 const navLinks = [
   { label: "Início", href: "#hero" },
@@ -30,7 +32,7 @@ export function Navbar() {
     <header
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        backgroundColor: scrolled ? "#0A2540" : "transparent",
+        backgroundColor: scrolled ? themeColors.primary : "transparent",
         backdropFilter: scrolled ? "blur(8px)" : "none",
         boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,0.3)" : "none",
         borderBottom: scrolled ? "1px solid rgba(201,163,71,0.3)" : "none",
@@ -64,7 +66,10 @@ export function Navbar() {
               href="https://tcontas.ao"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 border border-[#C9A347] text-[#C9A347] hover:bg-[#C9A347] hover:text-[#0A2540] transition-all duration-200 px-4 py-2 text-sm font-medium tracking-wide"
+              className={clsx(
+                `hover:text-${themeColors.primary}`,
+                "flex items-center gap-1.5 border border-[#C9A347] text-[#C9A347] hover:bg-[#C9A347] transition-all duration-200 px-4 py-2 text-sm font-medium tracking-wide"
+              )}
             >
               <ExternalLink size={14} />
               tcontas.ao
@@ -84,7 +89,7 @@ export function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {menuOpen && (
-        <div className="md:hidden" style={{ backgroundColor: "#0A2540", borderTop: "1px solid rgba(201,163,71,0.3)" }}>
+        <div className="md:hidden" style={{ backgroundColor: themeColors.primary, borderTop: "1px solid rgba(201,163,71,0.3)" }}>
           <ul className="py-4 px-6 space-y-1">
             {navLinks.map((link) => (
               <li key={link.href}>
