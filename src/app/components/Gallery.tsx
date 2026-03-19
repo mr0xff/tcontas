@@ -244,13 +244,26 @@ function GalleryGrid({ onImageClick }: { onImageClick: (id: number) => void }) {
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-transparent to-transparent opacity-60" />
             
             <div className="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/70 transition-all duration-300 flex flex-col items-end justify-end p-6">
-              <div className="translate-y-0 opacity-100 group-hover:translate-y-0 transition-all duration-300 w-full text-left">
-                <span className="text-[#C9A347] text-sm font-bold tracking-widest uppercase block mb-1">
+              <div className="translate-y-0 opacity-100 group-hover:translate-y-0 transition-all duration-300 w-full text-center">
+                <span className="text-[#C9A347] font-bold tracking-widest uppercase block mb-1">
                   {president.name}
                 </span>
                 <p className="text-white text-xs font-medium uppercase opacity-90">
                   {president.description}
                 </p>
+
+                {president.biographyUrl && (
+                  <a
+                    href={president.biographyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 bg-[#C9A347] text-[#0A2540] text-xs font-bold rounded-sm transition-all hover:bg-white"
+                    style={{ fontFamily: "'Roboto', sans-serif" }}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Ver Biografia
+                  </a>
+                )}
               </div>
             </div>
 
@@ -297,13 +310,26 @@ function GalleryGrid({ onImageClick }: { onImageClick: (id: number) => void }) {
               }}
             />
             <div className="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/70 transition-all duration-300 flex flex-col items-end justify-end p-4">
-              <div className="translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 w-full text-right">
-                <span className="text-[#C9A347] text-[10px] font-bold tracking-wider uppercase block mb-1">
+              <div className="translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 w-full text-center">
+                <span className="text-[#C9A347] font-bold tracking-wider uppercase block mb-1">
                   {img.name}
                 </span>
                 <p className="text-white text-[11px] leading-tight">
                   {img.description}
                 </p>
+
+                {img.biographyUrl && (
+                <a
+                  href={img.biographyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 bg-[#C9A347] text-[#0A2540] text-xs font-bold rounded-sm transition-all hover:bg-white"
+                  style={{ fontFamily: "'Roboto', sans-serif" }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Ver Biografia
+                </a>
+              )}
               </div>
             </div>
             {/* Gold corner accent */}
@@ -317,6 +343,86 @@ function GalleryGrid({ onImageClick }: { onImageClick: (id: number) => void }) {
     </div>
   );
 }
+
+// function GalleryGrid({ onImageClick }: { onImageClick: (id: number) => void }) {
+//   const { ref, isVisible } = useIntersectionObserver();
+
+//   return (
+//     <div
+//       ref={ref}
+//       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+//     >
+//       {galleryImages.map((img, i) => (
+//         <button
+//           key={img.id}
+//           onClick={() => onImageClick(img.id)}
+//           className="relative overflow-hidden group focus:outline-none"
+//           style={{
+//             opacity: isVisible ? 1 : 0,
+//             transform: isVisible ? "scale(1)" : "scale(0.98)",
+//             transition: `opacity 0.5s ease ${i * 0.06}s, transform 0.5s ease ${i * 0.06}s`,
+//             border: "1px solid rgba(201,163,71,0.18)",
+//             /* switch to a taller portrait ratio so profile pictures aren’t cropped */
+//             aspectRatio: "3 / 4",
+//             /* remove the fixed max height so the container can grow with the image */
+//             backgroundColor: "#fff",
+//             display: "flex",
+//             alignItems: "center",
+//             justifyContent: "center",
+//           }}
+//           aria-label={img.description}
+//         >
+//           <img
+//             src={img.src}
+//             alt={img.name}
+//             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+//             style={{ 
+//               maxWidth: "100%",
+//               maxHeight: "100%",
+//               width: "auto",
+//               height: "auto",
+//               objectFit: "contain",
+//               objectPosition: "center 35%",
+//             }}
+//           />
+//           <div className="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/70 transition-all duration-300 flex flex-col items-end justify-end p-4">
+//             <div className="translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 w-full">
+//               <span
+//                 className="text-[#C9A347] text-xs font-bold tracking-wider uppercase block mb-1"
+//                 style={{ fontFamily: "'Roboto', sans-serif" }}
+//               >
+//                 {img.name}
+//               </span>
+//               <p
+//                 className="text-white text-sm mb-3"
+//                 style={{ fontFamily: "'Roboto', sans-serif" }}
+//               >
+//                 {img.description}
+//               </p>
+//               {img.biographyUrl && (
+//                 <a
+//                   href={img.biographyUrl}
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   className="inline-block px-4 py-2 bg-[#C9A347] text-[#0A2540] text-xs font-bold rounded-sm transition-all hover:bg-white"
+//                   style={{ fontFamily: "'Roboto', sans-serif" }}
+//                   onClick={(e) => e.stopPropagation()}
+//                 >
+//                   Ver Biografia
+//                 </a>
+//               )}
+//             </div>
+//           </div>
+//           {/* Gold corner accent */}
+//           <div className="absolute top-0 left-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+//             <div className="w-full h-0.5 bg-[#C9A347]" />
+//             <div className="w-0.5 h-full bg-[#C9A347]" />
+//           </div>
+//         </button>
+//       ))}
+//     </div>
+//   );
+// }
 
 function Lightbox({ imageId, onClose }: { imageId: number; onClose: () => void }) {
   const [current, setCurrent] = useState(galleryImages.findIndex((i) => i.id === imageId));
