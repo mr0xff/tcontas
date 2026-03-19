@@ -1,5 +1,6 @@
 import { Shield, Eye, TrendingUp, BookOpen } from "lucide-react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import { themeColors } from "../theme";
 
 const pillars = [
   {
@@ -137,7 +138,7 @@ function QuoteBanner() {
       ref={ref}
       className="mt-16 py-12 px-8 md:px-16 text-center relative overflow-hidden"
       style={{
-        backgroundColor: "#0A2540",
+        backgroundColor: themeColors.primary,
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(30px)",
         transition: "opacity 0.7s ease 0.3s, transform 0.7s ease 0.3s",
