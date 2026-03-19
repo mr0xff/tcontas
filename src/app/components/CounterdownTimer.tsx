@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { themeColors } from "../theme";
 
 // Data Alvo: 08 de Abril de 2026, 09h00 (Recepção dos Convidados)
 const TARGET_DATE = new Date("2026-04-08T09:00:00").getTime();
@@ -10,10 +11,10 @@ const FlipCard = ({ value, label }: { value: number; label: string }) => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="relative w-20 h-24 md:w-28 md:h-32 bg-[#0A2540] rounded-xl shadow-2xl overflow-hidden group border border-[#C9A347]/20">
+      <div style={{ backgroundColor: themeColors.primary }} className="relative w-20 h-24 md:w-28 md:h-32 rounded-xl shadow-2xl overflow-hidden group border border-[#C9A347]/20">
         
         {/* A. Sombra e Efeito de Vidro de Fundo */}
-        <div className="absolute inset-0 bg-[#0A2540] backdrop-blur-sm opacity-90" />
+        <div className={`absolute inset-0 backdrop-blur-sm opacity-90`} style={{ backgroundColor: themeColors.primary }} />
 
         {/* B. A "Linha de Corte" no Centro da Placa (Efeito Mecânico) */}
         <div className="absolute inset-x-0 top-1/2 h-[1px] bg-white/10 z-20" />
