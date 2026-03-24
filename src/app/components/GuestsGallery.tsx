@@ -78,9 +78,9 @@ const guestCategories = [
   {
     title: "Convidados Observadores",
     members: [
-      { id: "10", name: "Edilson de Sousa Silva", role: "Presidente da ATRICON", country: "Brasil", theme: "Diálogos Institucionais e Boa Administração", image: "/photos/p10.png" },
-      { id: "11", name: "Nelson Pellegrini", role: "Presidente da ABRACON", country: "Brasil", theme: "LINDB e Balizas do Controle Externo", image: "/photos/p11.png" },
-      { id: "12", name: "Inaldo Araújo", role: "Presidente do IRB", country: "Brasil", theme: "Cooperação Internacional", image: "/photos/p12.png" },
+      { id: "10", name: "Edilson de Sousa Silva", role: "Presidente da ATRICON", country: "Brasil", theme: "Diálogos Institucionais e Boa Administração", image: "/photos/p10.jpeg" },
+      { id: "11", name: "Nelson Pellegrini", role: "Presidente da ABRACON", country: "Brasil", theme: "LINDB e Balizas do Controle Externo", image: "/photos/p11.jpeg" },
+      { id: "12", name: "Inaldo Araújo", role: "Presidente do IRB", country: "Brasil", theme: "Cooperação Internacional", image: "/photos/p12.jpeg" },
       { id: "13", name: "Benjamin Zymler", role: "Ministro do TCU / Sec. Geral OISC-CPLP", country: "Brasil", image: "/photos/p13.png" },
       { id: "14", name: "Mirian Radiziane", role: "Presidente da ASUR", country: "Argentina", image: "" }, // p14 não listado no seu ls
     ]
@@ -93,7 +93,7 @@ const guestCategories = [
       { id: "17", name: "Andre de Matos", role: "Conselheiro TCE-TO", country: "Brasil", theme: "Atividade Financeira e Papel de Controle", image: "/photos/p17.png" },
       { id: "18", name: "Marcus Presidio", role: "Conselheiro TCE-BA", country: "Brasil", image: "/photos/p18.png" },
       { id: "19", name: "Júlio Pinheiro", role: "Conselheiro TCE-AM", country: "Brasil", image: "/photos/p19.png" },
-      { id: "20", name: "Sebastião Helvécio", role: "Conselheiro TCE-MG", country: "Brasil", theme: "Jurisdição Inclusiva", image: "/photos/p20.png" },
+      { id: "20", name: "Sebastião Helvécio", role: "Conselheiro TCE-MG", country: "Brasil", theme: "Jurisdição Inclusiva", image: "/photos/p20.jpeg" },
       { id: "21", name: "Fábio Nogueira", role: "Presidente TCE-PB", country: "Brasil", image: "/photos/p21.png" },
       { id: "22", name: "Joaquim Kennedy N. Barros", role: "Presidente TCE-PI", country: "Brasil", image: "/photos/p22.png" },
     ]
@@ -101,16 +101,16 @@ const guestCategories = [
   {
     title: "Académicos e Outros Convidados",
     members: [
-      { id: "23", name: "Maria Santana Milhomem", role: "Reitora da UFT", country: "Brasil", theme: "Conhecimento, Inovação e Controlo Externo", image: "/photos/p23.png" },
-      { id: "24", name: "Jorge Bacelar Gouveia", role: "Professor Doutor", country: "Portugal", theme: "Sustentabilidade Fiscal", image: "/photos/p24.png" },
+      { id: "23", name: "Maria Santana Milhomem", role: "Reitora da UFT", country: "Brasil", theme: "Conhecimento, Inovação e Controlo Externo", image: "/photos/p23.jpeg" },
+      { id: "24", name: "Jorge Bacelar Gouveia", role: "Professor Doutor", country: "Portugal", theme: "Sustentabilidade Fiscal", image: "/photos/p24.jpeg" },
       { id: "25", name: "Luciano Vieira de Araújo", role: "Professor da USP", country: "Brasil", theme: "IA Generativa: Do Texto à Tarefa", image: "/photos/p25.png" },
       { id: "26", name: "Suzana Gilioli", role: "Professora UFT", country: "Brasil", image: "/photos/p26.png" },
       { id: "27", name: "Waldecy Rodrigues", role: "Professor UFT", country: "Brasil", image: "/photos/p27.png" },
-      { id: "28", name: "Dra. Carina Leite", role: "Especialista em Saúde Ocupacional", country: "Portugal", theme: "Bem-Estar Institucional", image: "" }, // p28 não listado
+      { id: "28", name: "Dra. Carina Leite", role: "Especialista em Saúde Ocupacional", country: "Portugal", theme: "Bem-Estar Institucional", image: "/photos/p28.jpeg" }, // p28 não listado
       { id: "29", name: "Aly Elias Lalá", role: "Intérprete de Gestão Pública", country: "Moçambique", image: "/photos/p29.png" },
       { id: "30", name: "Wanderlei Barbosa Campos", role: "Governador de Palmas", country: "Brasil", image: "/photos/p30.png" },
-      { id: "33", name: "Marina Faraco Siqueira e Silva", role: "Professora PUC/SP", country: "Brasil", theme: "Arquitetura Constitucional", image: "/photos/p33.png" },
-      { id: "37", name: "Augusto Nardes", role: "Ministro do TCU", country: "Brasil", theme: "Governança Pública", image: "/photos/p37.png" },
+      { id: "33", name: "Marina Faraco Siqueira e Silva", role: "Professora PUC/SP", country: "Brasil", theme: "Arquitetura Constitucional", image: "/photos/p33.jpeg" },
+      { id: "37", name: "Augusto Nardes", role: "Ministro do TCU", country: "Brasil", theme: "Governança Pública", image: "/photos/p37.jpeg" },
       { id: "38", name: "José Fontes", role: "Prof. Catedrático Academia Militar", country: "Portugal", theme: "Consolidação da Jurisdição Financeira", image: "/photos/p38.png" },
       { id: "39", name: "Eduardo Vera-Cruz", role: "Professor Doutor Univ. Lisboa", country: "Portugal", image: "/photos/p39.png" },
     ]
