@@ -3,51 +3,6 @@ import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 import { Calendar, MapPin, Clock, Music, Award, Mic, Users, BookOpen, Camera } from "lucide-react";
 import { themeColors } from "../theme";
 
-// const anniversarySchedule = [
-//   {
-//     date: "08/04/2026",
-//     weekday: "Quarta-feira",
-//     activities: [
-//       { time: "08:30 - 09:30", event: "Recepção e Acomodação dos Convidados e Funcionários", resp: "DSA/Protocolo/Cerimonial/RH" },
-//       { time: "10:00 - 10:30", event: "Sessão Solene: Hino Nacional e Boas-Vindas (VJCP Sebastião Gunza)", resp: "Coro TdC / Gab GJCP", highlight: true },
-//       { time: "10:40 - 11:00", event: "Discurso de Abertura por S.Exa Presidente da República", resp: "Gab GJCP", highlight: true },
-//       { time: "11:00 - 11:20", event: "Fotografia Oficial na Escadaria Frontal", resp: "Protocolo/Cerimonial" },
-//       { time: "12:00 - 13:00", event: "Cerimónia de Condecorações", resp: "Gab GJCP / Cerimonial", highlight: true },
-//       { time: "13:00 - 13:30", event: "Lançamento do Novo Portal e Edições da Revista Fluxos da Corte", resp: "DDI / GCI / DST", highlight: true },
-//       { time: "15:00 - 15:50", event: "Painéis: Autonomia Financeira e Controlo Jurisdicional", resp: "Prof. Rui Cruz / Prof. Dr. Carlos Feijó" },
-//       { time: "16:00 - 16:50", event: "Palestras: Fiscalização e Cooperação Internacional (Portugal)", resp: "Cons. Pres. Filipa Calvão / Cons. Carlos António" }
-//     ]
-//   },
-//   {
-//     date: "09/04/2026",
-//     weekday: "Quinta-feira",
-//     activities: [
-//       { time: "09:30 - 10:50", event: "Painéis: Cooperação Internacional, Sustentabilidade Fiscal e Governança", resp: "Cons. Inaldo Araújo / Prof. Bacelar Gouveia / Ministro Augusto Nardes" },
-//       { time: "11:00 - 12:20", event: "Conferências: Instituições de Controlo e Compliance em Angola", resp: "Cons. André Luís de Matos / Dra. Aurora dos Santos" },
-//       { time: "14:30 - 15:50", event: "Diálogos Institucionais, Inovação e Controlo Externo", resp: "Cons. Edilson de Sousa Silva / Maria Santana Milhomem" },
-//       { time: "16:00 - 16:20", event: "IA Generativa Activa: do Texto à Tarefa, do Risco ao Controlo", resp: "Prof. Dr. Luciano Araújo (USP)", highlight: true }
-//     ]
-//   },
-//   {
-//     date: "10/04/2026",
-//     weekday: "Sexta-feira",
-//     activities: [
-//       { time: "09:30 - 10:50", event: "Painéis: Saúde Ocupacional, Combate à Corrupção e Inclusão", resp: "Prof. Dra. Carina Leite / Dr. João Pinto / Cons. Sebastião Helvéccio" },
-//       { time: "11:00 - 12:00", event: "Conferências: Arquitectura Constitucional e Cooperação Internacional", resp: "Prof. Dra. Marina Siqueira / Prof. Dr. José Fontes" },
-//       { time: "12:00 - 13:00", event: "Leitura do Relatório Final e Encerramento Cultural", resp: "Coro do Tribunal de Contas", highlight: true }
-//     ]
-//   },
-//   {
-//     date: "28/03/2026",
-//     weekday: "Sábado",
-//     activities: [
-//       { time: "08:00 - 09:30", event: "Inauguração do Complexo Desportivo do TdC (Zango)", resp: "D.S.A.", highlight: true },
-//       { time: "09:30 - 13:30", event: "Jogos Finais e Actividade Lúdica", resp: "D.S.A." },
-//       { time: "19:30", event: "Jantar de Comemoração dos 30 Anos (Tenda da Ilha)", resp: "D.S.A.", highlight: true }
-//     ]
-//   }
-// ];
-
 // Helper para ícones dinâmicos
 
 const anniversarySchedule = [
@@ -59,7 +14,7 @@ const anniversarySchedule = [
       { time: "09h00 – 09h30", event: "Recepção e Acomodação dos Convidados", resp: "DSA/Protocolo/Cerimonial/RH" },
       { time: "10h00 – 10h10", event: "Sessão solene de abertura: Entoação do Hino Nacional", resp: "Coro do Tribunal de Contas / DSA/Protocolo", highlight: true },
       { time: "10h15 – 10h30", event: "Apresentação de Boas-Vindas", resp: "VJCP – Sebastião Gunza / Gabinete do VJCP", highlight: true },
-      { time: "10h40 – 11h00", event: "Discurso de Abertura", resp: "S. Excelência Presidente da República de Angola / Gabinete do VJCP", highlight: true },
+      { time: "10h40 – 11h00", event: "Discurso de Abertura", resp: "Entidade protocolar a indicar ", highlight: true },
       { time: "11h00 – 11h20", event: "Fotografia Oficial (se presença PR)", resp: "Escadaria Frontal / Protocolo/Cerimonial" },
       { time: "12h00 – 13h00", event: "CERIMÓNIA DE CONDECORAÇÕES", resp: "Gabinete VJCP / Cerimonial", highlight: true },
       { time: "13h00 – 13h30", event: "Lançamento do novo Portal", resp: "Célio Gourgel / DDI", highlight: true },
