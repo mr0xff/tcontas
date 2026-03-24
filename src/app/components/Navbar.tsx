@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Galeria", href: "#galeria" },
   { label: "Evento", href: "#evento" },
   { label: "Oradores", href: "#oradores" },
+  { label: "Convidados", href: "#convidados" },
   { label: "Contacto", href: "#rodape" },
 ];
 
