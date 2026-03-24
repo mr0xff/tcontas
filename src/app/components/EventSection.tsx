@@ -3,52 +3,108 @@ import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 import { Calendar, MapPin, Clock, Music, Award, Mic, Users, BookOpen, Camera } from "lucide-react";
 import { themeColors } from "../theme";
 
+// const anniversarySchedule = [
+//   {
+//     date: "08/04/2026",
+//     weekday: "Quarta-feira",
+//     activities: [
+//       { time: "08:30 - 09:30", event: "Recepção e Acomodação dos Convidados e Funcionários", resp: "DSA/Protocolo/Cerimonial/RH" },
+//       { time: "10:00 - 10:30", event: "Sessão Solene: Hino Nacional e Boas-Vindas (VJCP Sebastião Gunza)", resp: "Coro TdC / Gab GJCP", highlight: true },
+//       { time: "10:40 - 11:00", event: "Discurso de Abertura por S.Exa Presidente da República", resp: "Gab GJCP", highlight: true },
+//       { time: "11:00 - 11:20", event: "Fotografia Oficial na Escadaria Frontal", resp: "Protocolo/Cerimonial" },
+//       { time: "12:00 - 13:00", event: "Cerimónia de Condecorações", resp: "Gab GJCP / Cerimonial", highlight: true },
+//       { time: "13:00 - 13:30", event: "Lançamento do Novo Portal e Edições da Revista Fluxos da Corte", resp: "DDI / GCI / DST", highlight: true },
+//       { time: "15:00 - 15:50", event: "Painéis: Autonomia Financeira e Controlo Jurisdicional", resp: "Prof. Rui Cruz / Prof. Dr. Carlos Feijó" },
+//       { time: "16:00 - 16:50", event: "Palestras: Fiscalização e Cooperação Internacional (Portugal)", resp: "Cons. Pres. Filipa Calvão / Cons. Carlos António" }
+//     ]
+//   },
+//   {
+//     date: "09/04/2026",
+//     weekday: "Quinta-feira",
+//     activities: [
+//       { time: "09:30 - 10:50", event: "Painéis: Cooperação Internacional, Sustentabilidade Fiscal e Governança", resp: "Cons. Inaldo Araújo / Prof. Bacelar Gouveia / Ministro Augusto Nardes" },
+//       { time: "11:00 - 12:20", event: "Conferências: Instituições de Controlo e Compliance em Angola", resp: "Cons. André Luís de Matos / Dra. Aurora dos Santos" },
+//       { time: "14:30 - 15:50", event: "Diálogos Institucionais, Inovação e Controlo Externo", resp: "Cons. Edilson de Sousa Silva / Maria Santana Milhomem" },
+//       { time: "16:00 - 16:20", event: "IA Generativa Activa: do Texto à Tarefa, do Risco ao Controlo", resp: "Prof. Dr. Luciano Araújo (USP)", highlight: true }
+//     ]
+//   },
+//   {
+//     date: "10/04/2026",
+//     weekday: "Sexta-feira",
+//     activities: [
+//       { time: "09:30 - 10:50", event: "Painéis: Saúde Ocupacional, Combate à Corrupção e Inclusão", resp: "Prof. Dra. Carina Leite / Dr. João Pinto / Cons. Sebastião Helvéccio" },
+//       { time: "11:00 - 12:00", event: "Conferências: Arquitectura Constitucional e Cooperação Internacional", resp: "Prof. Dra. Marina Siqueira / Prof. Dr. José Fontes" },
+//       { time: "12:00 - 13:00", event: "Leitura do Relatório Final e Encerramento Cultural", resp: "Coro do Tribunal de Contas", highlight: true }
+//     ]
+//   },
+//   {
+//     date: "28/03/2026",
+//     weekday: "Sábado",
+//     activities: [
+//       { time: "08:00 - 09:30", event: "Inauguração do Complexo Desportivo do TdC (Zango)", resp: "D.S.A.", highlight: true },
+//       { time: "09:30 - 13:30", event: "Jogos Finais e Actividade Lúdica", resp: "D.S.A." },
+//       { time: "19:30", event: "Jantar de Comemoração dos 30 Anos (Tenda da Ilha)", resp: "D.S.A.", highlight: true }
+//     ]
+//   }
+// ];
+
+// Helper para ícones dinâmicos
+
 const anniversarySchedule = [
   {
     date: "08/04/2026",
     weekday: "Quarta-feira",
     activities: [
-      { time: "08:30 - 09:30", event: "Recepção e Acomodação dos Convidados e Funcionários", resp: "DSA/Protocolo/Cerimonial/RH" },
-      { time: "10:00 - 10:30", event: "Sessão Solene: Hino Nacional e Boas-Vindas (VJCP Sebastião Gunza)", resp: "Coro TdC / Gab GJCP", highlight: true },
-      { time: "10:40 - 11:00", event: "Discurso de Abertura por S.Exa Presidente da República", resp: "Gab GJCP", highlight: true },
-      { time: "11:00 - 11:20", event: "Fotografia Oficial na Escadaria Frontal", resp: "Protocolo/Cerimonial" },
-      { time: "12:00 - 13:00", event: "Cerimónia de Condecorações", resp: "Gab GJCP / Cerimonial", highlight: true },
-      { time: "13:00 - 13:30", event: "Lançamento do Novo Portal e Edições da Revista Fluxos da Corte", resp: "DDI / GCI / DST", highlight: true },
-      { time: "15:00 - 15:50", event: "Painéis: Autonomia Financeira e Controlo Jurisdicional", resp: "Prof. Rui Cruz / Prof. Dr. Carlos Feijó" },
-      { time: "16:00 - 16:50", event: "Palestras: Fiscalização e Cooperação Internacional (Portugal)", resp: "Cons. Pres. Filipa Calvão / Cons. Carlos António" }
+      { time: "08h30 – 09h00", event: "Acomodação dos funcionários", resp: "DSA/Protocolo/Cerimonial/RH" },
+      { time: "09h00 – 09h30", event: "Recepção e Acomodação dos Convidados", resp: "DSA/Protocolo/Cerimonial/RH" },
+      { time: "10h00 – 10h10", event: "Sessão solene de abertura: Entoação do Hino Nacional", resp: "Coro do Tribunal de Contas / DSA/Protocolo", highlight: true },
+      { time: "10h15 – 10h30", event: "Apresentação de Boas-Vindas", resp: "VJCP – Sebastião Gunza / Gabinete do VJCP", highlight: true },
+      { time: "10h40 – 11h00", event: "Discurso de Abertura", resp: "S. Excelência Presidente da República de Angola / Gabinete do VJCP", highlight: true },
+      { time: "11h00 – 11h20", event: "Fotografia Oficial (se presença PR)", resp: "Escadaria Frontal / Protocolo/Cerimonial" },
+      { time: "12h00 – 13h00", event: "CERIMÓNIA DE CONDECORAÇÕES", resp: "Gabinete VJCP / Cerimonial", highlight: true },
+      { time: "13h00 – 13h30", event: "Lançamento do novo Portal", resp: "Célio Gourgel / DDI", highlight: true },
+      { time: "13h00 – 13h30", event: "Lançamento da 3.ª Edição da Revista Fluxos da Corte", resp: "Alexandre Cose / GCI" },
+      { time: "13h00 – 13h30", event: "Lançamento da 4.ª, 5.ª, 6.ª e 7.ª Edições da Colectânea de Jurisprudência", resp: "Juiz Conselheiro Carlos António / DST" },
+      { time: "13h00 – 13h30", event: "Lançamento da 4.ª Edição da Revista Científica", resp: "Juiz Conselheiro Vice-Presidente Evaristo Solano / Gabinete Vice-Presidente" },
+      { time: "13h30", event: "Pausa para Almoço", resp: "" },
+      { time: "14h50", event: "Mensagem de felicitações da Presidente do Tribunal de Contas de Marrocos", resp: "Dra. Zineb El Adaoui / GCII – A. Cose" },
+      { time: "15h00 – 15h20", event: "A Autonomia Financeira dos Órgãos de Fiscalização Externa das Finanças Públicas", resp: "Prof. Rui Cruz / GCII – A. Cose" },
+      { time: "15h30 – 15h50", event: "O Controlo Jurisdicional das Políticas Públicas", resp: "Prof. Dr. Carlos Maria Feijó / GCII – A. Cose" },
+      { time: "16h00 – 16h20", event: "A importância de um Controlo integrado e articulado das Finanças Públicas", resp: "Juíza Conselheira Filipa Calvão / GCII – A. Cose" },
+      { time: "16h30 – 16h50", event: "A Fiscalização do Tribunal de Contas e as Entidades e Organismos sujeitos à sua Jurisdição", resp: "Juiz Conselheiro Carlos António / GCII – A. Cose" }
     ]
   },
   {
     date: "09/04/2026",
     weekday: "Quinta-feira",
     activities: [
-      { time: "09:30 - 10:50", event: "Painéis: Cooperação Internacional, Sustentabilidade Fiscal e Governança", resp: "Cons. Inaldo Araújo / Prof. Bacelar Gouveia / Ministro Augusto Nardes" },
-      { time: "11:00 - 12:20", event: "Conferências: Instituições de Controlo e Compliance em Angola", resp: "Cons. André Luís de Matos / Dra. Aurora dos Santos" },
-      { time: "14:30 - 15:50", event: "Diálogos Institucionais, Inovação e Controlo Externo", resp: "Cons. Edilson de Sousa Silva / Maria Santana Milhomem" },
-      { time: "16:00 - 16:20", event: "IA Generativa Activa: do Texto à Tarefa, do Risco ao Controlo", resp: "Prof. Dr. Luciano Araújo (USP)", highlight: true }
+      { time: "09h30 – 09h50", event: "A importância da Cooperação Internacional para o aperfeiçoamento dos Tribunais de Contas", resp: "Conselheiro Inaldo da Paixão Araújo / GCII – A. Cose" },
+      { time: "10h00 – 10h20", event: "Sustentabilidade Fiscal e Responsabilidade Inter-geracional na Gestão dos Recursos Públicos", resp: "Prof. Dr. Jorge Bacelar Gouveia / GCII – A. Cose" },
+      { time: "10h30 – 10h50", event: "Governança Pública", resp: "Ministro Augusto Nardes / GCII – A. Cose" },
+      { time: "11h00 – 11h20", event: "Os aspectos centrais da Actividade Financeira do Estado e o papel de Controlo das ISC", resp: "Conselheiro André Luís de Matos / GCII – A. Cose" },
+      { time: "12h00 – 12h20", event: "Compliance e Tribunal de Contas em Angola: Prevenção, Legalidade e Boa Governação", resp: "Dra. Aurora dos Santos / GCII – A. Cose" },
+      { time: "12h20", event: "Pausa para Almoço", resp: "" },
+      { time: "14h30 – 14h50", event: "Diálogos Institucionais e os Tribunais de Contas como agentes do Direito Fundamental à Boa Administração Pública", resp: "Conselheiro Edilson de Sousa Silva / GCII – A. Cose" },
+      { time: "15h00 – 15h20", event: "Conhecimento, Inovação e Controlo Externo: Contributos da Academia para a Jurisdição Financeira no Século XXI", resp: "Maria Santana Milhomem / GCII – A. Cose" },
+      { time: "15h30 – 15h50", event: "Interpretação e Aplicação do Direito Público: balizas para o exercício do Controlo Externo no Brasil", resp: "Conselheiro Nelson Pellegrini / GCII – A. Cose" },
+      { time: "16h00 – 16h20", event: "IA Generativa Activa: do Texto à Tarefa, do Risco ao Controlo", resp: "Prof. Dr. Luciano Araújo / GCII – A. Cose", highlight: true }
     ]
   },
   {
     date: "10/04/2026",
     weekday: "Sexta-feira",
     activities: [
-      { time: "09:30 - 10:50", event: "Painéis: Saúde Ocupacional, Combate à Corrupção e Inclusão", resp: "Prof. Dra. Carina Leite / Dr. João Pinto / Cons. Sebastião Helvéccio" },
-      { time: "11:00 - 12:00", event: "Conferências: Arquitectura Constitucional e Cooperação Internacional", resp: "Prof. Dra. Marina Siqueira / Prof. Dr. José Fontes" },
-      { time: "12:00 - 13:00", event: "Leitura do Relatório Final e Encerramento Cultural", resp: "Coro do Tribunal de Contas", highlight: true }
-    ]
-  },
-  {
-    date: "28/03/2026",
-    weekday: "Sábado",
-    activities: [
-      { time: "08:00 - 09:30", event: "Inauguração do Complexo Desportivo do TdC (Zango)", resp: "D.S.A.", highlight: true },
-      { time: "09:30 - 13:30", event: "Jogos Finais e Actividade Lúdica", resp: "D.S.A." },
-      { time: "19:30", event: "Jantar de Comemoração dos 30 Anos (Tenda da Ilha)", resp: "D.S.A.", highlight: true }
+      { time: "09h30 – 09h50", event: "Fundamentos para um Tribunal de Contas Moderno e Sustentável: saúde ocupacional e bem-estar Institucional", resp: "Prof. Dra. Karina Leite / GCII – A. Cose" },
+      { time: "10h00 – 10h20", event: "O papel do Controlo Interno no Combate à Corrupção", resp: "Dr. João Pinto / GCII – A. Cose" },
+      { time: "10h30 – 10h50", event: "A jurisdição dos Tribunais de Contas como pilar de Instituição inclusiva", resp: "Conselheiro Sebastião Helvécio / GCII – A. Cose" },
+      { time: "11h00 – 11h20", event: "Arquitectura Constitucional do Controlo Externo: Separação de Poderes e Legitimação Democrática", resp: "Prof. Dra. Marina Faraco / GCII – A. Cose" },
+      { time: "11h30 – 11h50", event: "A Cooperação Internacional dos Tribunais de Contas e a Consolidação da Jurisdição Financeira", resp: "Prof. Dr. José Fontes / GCII – A. Cose" },
+      { time: "12h00 – 13h00", event: "Leitura do Relatório Final, Momento Cultural e Encerramento", resp: "Coro do Tribunal de Contas" },
+      { time: "19h30", event: "Jantar de Comemoração do 30.º Aniversário do Tribunal de Contas – Tenda da Ilha de Luanda", resp: "Cerimonial", highlight: true }
     ]
   }
 ];
 
-// Helper para ícones dinâmicos
 const getActivityIcon = (event: string) => {
   const e = event.toLowerCase();
   if (e.includes("hino") || e.includes("cultural") || e.includes("jantar")) return Music;
