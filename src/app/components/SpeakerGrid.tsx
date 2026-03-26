@@ -34,7 +34,10 @@ const speakersData = [
     details: {
       specialization: "Controlo Externo, Auditoria Governamental e Contabilidade Pública",
       academic: "Mestre em Contabilidade e Contador. Professor da Universidade do Estado da Bahia (UNEB) há 29 anos.",
-      bio: "Conselheiro do TCE/BA com 25 anos de carreira como auditor. Ingressou por concurso público e ocupou posições de destaque no controlo externo brasileiro.",
+      bio: `<b>Conselheiro do Tribunal de Contas do Estado da Bahia (TCE/BA)</b>, onde também exerce as funções de Director da Escola de Contas Conselheiro José Borba Pedreira Lapa. É o actual <b>Presidente do Instituto Rui Barbosa (IRB)</b> para o biênio 2026/2027.<br/><br/>
+      Mestre em Contabilidade e contador de formação, ingressou no TCE/BA por concurso público, construindo uma carreira de <b>25 anos como auditor</b>, tendo ocupado posições de destaque no controlo externo.<br/><br/>
+      Paralelamente, há <b>29 anos é professor da Universidade do Estado da Bahia (UNEB)</b>, tendo lecionado também na UCSal, UFBa, UNIFACS e em diversos cursos preparatórios. Sua experiência docente inclui a regência do curso de <i>Auditoria Integral no Tribunal de Contas de Portugal</i>.<br/><br/>
+      Sua actuação é marcada pelo domínio do controlo externo, contabilidade pública e governança. É <b>autor de 13 livros</b> sobre auditoria e contabilidade, além de manter colunas semanais nos jornais <i>A Tarde</i> e <i>Tribuna da Bahia</i>.`,
       achievements: "Autor de 13 livros sobre auditoria e contabilidade. Articulista semanal nos jornais A Tarde e Tribuna da Bahia."
     }
   },
@@ -232,9 +235,11 @@ const SpeakerCard = ({ speaker }: { speaker: any }) => {
                     <h5 className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 mb-4">
                       <Award size={14} /> Biografia Científica
                     </h5>
-                    <p className="text-slate-700 text-sm leading-relaxed" style={{ fontFamily: "'Roboto', sans-serif" }}>
-                      {speaker.details.bio}
-                    </p>
+                    <p 
+                      className="text-slate-700 text-sm leading-relaxed" 
+                      style={{ fontFamily: "'Roboto', sans-serif" }} 
+                      dangerouslySetInnerHTML={{ __html: speaker.details.bio }} 
+                    />
                   </div>
                 </div>
               </div>
