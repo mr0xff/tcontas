@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 const galleryImages = [
   {
     id: 0,
-    src: "presidente.jpeg",
+    src: "presidente.png",
     name: "Dr. Sebastião Gunza",
     description: "Juiz Conselheiro — Tribunal de Contas",
     biographyUrl: "#",
@@ -102,7 +101,7 @@ const testimonials = [
     id: 50,
     quote: "A missão do TCA vai além da fiscalização; é um compromisso permanente com a construção de um Estado mais justo, transparente e eficiente ao serviço dos cidadãos angolanos.",
     name: "Dr. Sebastião Gunza",
-    image: "presidente.jpeg",
+    image: "presidente.png",
     role: "Juiz Conselheiro — Tribunal de Contas"
   },
   {
@@ -121,7 +120,7 @@ const testimonials = [
   }
 ];
 
-function GalleryGrid({ onImageClick }: { onImageClick: (id: number) => void }) {
+function GalleryGrid() {
   const { ref, isVisible } = useIntersectionObserver();
 
   // Separamos o Presidente das outras imagens
@@ -135,7 +134,6 @@ function GalleryGrid({ onImageClick }: { onImageClick: (id: number) => void }) {
       {president && (
         <div className="w-full max-w-sm mb-12 flex justify-center">
           <button
-            onClick={() => onImageClick(president.id)}
             className="relative overflow-hidden group focus:outline-none w-full shadow-2xl"
             style={{
               opacity: isVisible ? 1 : 0,
@@ -201,7 +199,6 @@ function GalleryGrid({ onImageClick }: { onImageClick: (id: number) => void }) {
         {otherJudges.map((img, i) => (
           <button
             key={img.id}
-            onClick={() => onImageClick(img.id)}
             className="relative overflow-hidden group focus:outline-none"
             style={{
               opacity: isVisible ? 1 : 0,
@@ -259,68 +256,6 @@ function GalleryGrid({ onImageClick }: { onImageClick: (id: number) => void }) {
             </div>
           </button>
         ))}
-      </div>
-    </div>
-  );
-}
-
-function Lightbox({ imageId, onClose }: { imageId: number; onClose: () => void }) {
-  const [current, setCurrent] = useState(galleryImages.findIndex((i) => i.id === imageId));
-  const img = galleryImages[current];
-
-  return (
-    <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4"
-      style={{ backgroundColor: "rgba(10,37,64,0.97)" }}
-      onClick={onClose}
-    >
-      <div
-        className="relative max-w-4xl w-full flex justify-center"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button
-          onClick={onClose}
-          className="absolute -top-12 right-0 text-white/60 hover:text-[#C9A347] transition-colors"
-          aria-label="Fechar"
-        >
-          <X size={28} />
-        </button>
-        <img
-          src={img.src}
-          alt={img.name}
-          className="w-full"
-          style={{ 
-            display: "block",
-            maxHeight: "65vh",
-            objectFit: "contain",
-            objectPosition: "center 35%",
-            border: "1px solid rgba(201,163,71,0.35)",
-           }}
-        />
-        <p
-          className="text-center text-white/80 mt-3 text-sm"
-          style={{ fontFamily: "'Roboto', sans-serif" }}
-        >
-          {img.name}
-          <br />
-          <br />
-          {img.description}
-        </p>
-        {/* Navigation */}
-        <button
-          onClick={() => setCurrent((c) => (c - 1 + galleryImages.length) % galleryImages.length)}
-          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 text-white/60 hover:text-[#C9A347] transition-colors hidden sm:block"
-          aria-label="Anterior"
-        >
-          <ChevronLeft size={36} />
-        </button>
-        <button
-          onClick={() => setCurrent((c) => (c + 1) % galleryImages.length)}
-          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 text-white/60 hover:text-[#C9A347] transition-colors hidden sm:block"
-          aria-label="Próximo"
-        >
-          <ChevronRight size={36} />
-        </button>
       </div>
     </div>
   );
@@ -425,7 +360,6 @@ function TestimonialCarousel() {
 }
 
 export function Gallery() {
-  const [lightboxId, setLightboxId] = useState<number | null>(null);
   const { ref: titleRef, isVisible: titleVisible } = useIntersectionObserver();
 
   return (
@@ -466,13 +400,9 @@ export function Gallery() {
           </p>
         </div>
 
-        <GalleryGrid onImageClick={setLightboxId} />
+        <GalleryGrid />
         <TestimonialCarousel />
       </div>
-
-      {lightboxId !== null && (
-        <Lightbox imageId={lightboxId} onClose={() => setLightboxId(null)} />
-      )}
     </section>
   );
 }
