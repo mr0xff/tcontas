@@ -4,6 +4,7 @@ import SpeakerGrid from "./SpeakerGrid";
 import { useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { LayoutGrid, List } from 'lucide-react';
+import { FlayerGallery } from "./FlayerGallery";
 
 
 const speakers = [
@@ -102,9 +103,10 @@ export function SpeakersNavigation({ simpleSpeakers }: { simpleSpeakers: any[] }
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-0 border-t border-l border-white/10"
+            // className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-0 border-t border-l border-white/10"
           >
-            {simpleSpeakers.map((speaker) => (
+            <FlayerGallery /> 
+            {/* {simpleSpeakers.map((speaker) => (
               <div 
                 key={speaker.id}
                 className="group relative bg-white/5 border-r m-1 border-b border-white/10 p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-[#C9A347]/50"
@@ -138,7 +140,7 @@ export function SpeakersNavigation({ simpleSpeakers }: { simpleSpeakers: any[] }
 
                 <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#C9A347] transition-all duration-500 group-hover:w-full" />
               </div>
-            ))}
+            ))} */}
           </motion.div>
         )}
       </AnimatePresence>
