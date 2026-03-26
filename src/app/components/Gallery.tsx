@@ -99,6 +99,13 @@ const galleryImages = [
 
 const testimonials = [
   {
+    id: 50,
+    quote: "A missão do TCA vai além da fiscalização; é um compromisso permanente com a construção de um Estado mais justo, transparente e eficiente ao serviço dos cidadãos angolanos.",
+    name: "Dr. Sebastião Gunza",
+    image: "presidente.jpeg",
+    role: "Juiz Conselheiro — Tribunal de Contas"
+  },
+  {
     id: 40,
     quote: "O Tribunal de Contas representa um pilar fundamental para a transparência e a boa governação em Angola. Trinta anos de dedicação ao serviço público são motivos de grande orgulho para toda a nação.",
     name: "Dr. Carlos Luís M. António",
@@ -111,13 +118,6 @@ const testimonials = [
     name: "Dra. Arlete Maria Bolonhês da Conceição",
     image: "https://tcontas.ao/wp-content/uploads/2025/09/06.webp",
     role: "Juíza Conselheira da 1ª Câmara do Tribunal de Contas"
-  },
-  {
-    id: 50,
-    quote: "A missão do TCA vai além da fiscalização; é um compromisso permanente com a construção de um Estado mais justo, transparente e eficiente ao serviço dos cidadãos angolanos.",
-    name: "Dr. Sebastião Gunza",
-    image: "presidente.jpeg",
-    role: "Juiz Conselheiro — Tribunal de Contas"
   }
 ];
 
@@ -404,7 +404,7 @@ function TestimonialCarousel() {
 
         {/* Pagination dots */}
         <div className="flex justify-center gap-3 mt-6">
-          {testimonials.reverse().map((_, i) => (
+          {testimonials.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}

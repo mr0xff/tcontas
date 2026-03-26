@@ -68,7 +68,7 @@ export function SpeakersNavigation({ simpleSpeakers }: { simpleSpeakers: any[] }
               : 'text-white/50 hover:text-white'
             }`}
           >
-            <List size={14} /> Lista Rápida
+            <List size={14} /> Prelectores
           </button>
           <button
             onClick={() => setActiveTab('quick')}
@@ -78,7 +78,7 @@ export function SpeakersNavigation({ simpleSpeakers }: { simpleSpeakers: any[] }
               : 'text-white/50 hover:text-white'
             }`}
           >
-            <LayoutGrid size={14} /> Visão Detalhada
+            <LayoutGrid size={14} /> Currículos
           </button>
         </div>
       </div>
