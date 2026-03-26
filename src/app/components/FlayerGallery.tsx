@@ -6,12 +6,12 @@ import { X, Share2 } from 'lucide-react';
 
 // Dados Exemplo dos Flayers (Substituir pelos teus caminhos reais no Railway)
 const flayersData = [
+  { id: 4, title: "O Controlo jurisdicional das Políticas Públicas", image: "/flayers/p04.jpeg" },
+  { id: 5, title: "A fiscalização do tribunal de contas e as entidades e Organismos sujeitos à sua jurisdição", image: "/flayers/p05.jpeg" },
   { id: 1, title: "A Importância da Cooperação Internacional para o Aperfeiçoamento dos Tribunais de Contas", image: "/flayers/p01.jpeg" },
   { id: 2, title: "Sustentabilidade Fiscal e Responsabilidade Intergeracional na Gesstão dos Recursos Públicos", image: "/flayers/p02.jpeg" },
   { id: 3, title: "Os Aspectos Centrais da Actividade Financeira do Estado e o Indispensável Papel de Controle das Instituições Superiores de Controlo", image: "/flayers/p03.jpeg" },
-  { id: 4, title: "O Controlo jurisdicional das Políticas Públicas", image: "/flayers/p04.jpeg" },
-  { id: 5, title: "A fiscalização do tribunal de contas e as entidades e Organismos sujeitos à sua jurisdição", image: "/flayers/p05.jpeg" },
-  { id: 6, title: "Inovação no Controlo", image: "/flayers/p06.jpeg" },
+  { id: 6, title: "Saúde ocupacional de Bem-Estar Institucional: Fundamentos para um Tribunal de Contas Moderno e Sustentável", image: "/flayers/p06.jpeg" },
 ];
 
 export function FlayerGallery() {
