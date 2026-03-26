@@ -64,13 +64,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
         {/* Commemorative Logo */}
-        <img src="logo.webp" alt="30 anos de aniversario" />
-        {/* <div ref={logoRef} className="flex justify-center mb-10">
-          <div className="drop-shadow-2xl">
-            <TcaLogo30Anos size={180} />
-          </div>
-        </div> */}
-
+        <img src="hero.jpeg" alt="30 anos de aniversario" className="inline-flex justify-center w-[30rem]" />
         {/* Eyebrow text */}
         <div className="flex items-center justify-center gap-4 mb-6">
           <div className="h-px w-16 bg-[#C9A347]" />
