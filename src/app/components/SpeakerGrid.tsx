@@ -9,7 +9,7 @@ const speakersData = [
     name: "Dra. Karina Leite Baía Fernandes",
     shortName: "Prof. Dra. Karina Leite",
     role: "CEO e Directora Clínica",
-    image: "/speakers/p03.jpeg", // Caminho da imagem adicionado
+    image: "fallback.png", // Caminho da imagem adicionado
     institution: "Instituto Karina Leite Dental Clinic (Brasil e Portugal)",
     topic: "Fundamentos para um Tribunal de Contas Moderno e Sustentável: saúde ocupacional e bem-estar Institucional",
     time: "09h30 – 09h50",
@@ -43,7 +43,7 @@ const speakersData = [
     name: "Dra. Aurora Carvalho",
     shortName: "Dra. Aurora Carvalho",
     role: "Directora de Sustentabilidade e Compliance",
-    image: "/speakers/p03.jpeg",
+    image: "fallback.png",
     institution: "Porto de Luanda – Empresa Pública",
     topic: "Compliance e Tribunal de Contas em Angola: Prevenção, Legalidade e Boa Governação",
     time: "12h00 – 12h20",
@@ -60,7 +60,7 @@ const speakersData = [
     name: "Dra. Fernanda Mualeia",
     shortName: "Dra. Fernanda Mualeia",
     role: "Vice-Presidente da Associação Angolana de Corporate Governance (ACGA)",
-    image: "/speakers/p03.jpeg",
+    image: "fallback.png",
     institution: "Fernanda Mualeia Advogados",
     topic: "Governança Corporativa e ESG nas Instituições",
     time: "15h00 – 15h20",

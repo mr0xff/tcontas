@@ -1,5 +1,6 @@
 import { User, MapPin } from "lucide-react";
 import { themeColors } from "../theme";
+import clsx from "clsx";
 
 const guestCategories = [
   {
@@ -24,8 +25,8 @@ const guestCategories = [
   {
     title: "Convidados Observadores",
     members: [
-      { id: "10", name: "Edilson de Sousa Silva", role: "Presidente da ATRICON", country: "Brasil", theme: "Diálogos Institucionais e Boa Administração", image: "/photos/p10.jpeg" },
-      { id: "11", name: "Nelson Pellegrini", role: "Presidente da ABRACON", country: "Brasil", theme: "LINDB e Balizas do Controle Externo", image: "/photos/p11.jpeg" },
+      { id: "10", name: "Edilson de Sousa Silva", role: "Presidente da ATRICON", country: "Brasil", theme: "Diálogos Institucionais e Boa Administração", image: "/photos/p10.png" },
+      { id: "11", name: "Nelson Pellegrini", role: "Presidente da ABRACON", country: "Brasil", theme: "LINDB e Balizas do Controle Externo", image: "/photos/p11.png" },
       { id: "12", name: "Inaldo Araújo", role: "Presidente do IRB", country: "Brasil", theme: "Cooperação Internacional", image: "/photos/p12.jpeg" },
       { id: "13", name: "Benjamin Zymler", role: "Ministro do TCU / Sec. Geral OISC-CPLP", country: "Brasil", image: "" },
       { id: "14", name: "Mirian Radiziane", role: "Presidente da ASUR", country: "Argentina", image: "" }, // p14 não listado no seu ls
@@ -47,16 +48,16 @@ const guestCategories = [
   {
     title: "Académicos e Outros Convidados",
     members: [
-      { id: "23", name: "Maria Santana Milhomem", role: "Reitora da UFT", country: "Brasil", theme: "Conhecimento, Inovação e Controlo Externo", image: "/photos/p23.jpeg" },
-      { id: "24", name: "Jorge Bacelar Gouveia", role: "Professor Doutor", country: "Portugal", theme: "Sustentabilidade Fiscal", image: "/photos/p24.jpeg" },
-      { id: "25", name: "Luciano Vieira de Araújo", role: "Professor da USP", country: "Brasil", theme: "IA Generativa: Do Texto à Tarefa", image: "" },
+      { id: "23", name: "Maria Santana Milhomem", role: "Reitora da UFT", country: "Brasil", theme: "Conhecimento, Inovação e Controlo Externo", image: "/photos/p23.png" },
+      { id: "24", name: "Jorge Bacelar Gouveia", role: "Professor Doutor", country: "Portugal", theme: "Sustentabilidade Fiscal", image: "/photos/p24.png" },
+      { id: "25", name: "Luciano Vieira de Araújo", role: "Professor da USP", country: "Brasil", theme: "IA Generativa: Do Texto à Tarefa", image: "/photos/p25.png" },
       { id: "26", name: "Suzana Gilioli", role: "Professora UFT", country: "Brasil", image: "" },
       { id: "27", name: "Waldecy Rodrigues", role: "Professor UFT", country: "Brasil", image: "" },
       { id: "28", name: "Dra. Carina Leite", role: "Especialista em Saúde Ocupacional", country: "Portugal", theme: "Bem-Estar Institucional", image: "/photos/p28.jpeg" }, // p28 não listado
       { id: "29", name: "Aly Elias Lalá", role: "Intérprete de Gestão Pública", country: "Moçambique", image: "" },
       { id: "30", name: "Wanderlei Barbosa Campos", role: "Governador de Palmas", country: "Brasil", image: "" },
       { id: "33", name: "Marina Faraco Siqueira e Silva", role: "Professora PUC/SP", country: "Brasil", theme: "Arquitetura Constitucional", image: "/photos/p33.jpeg" },
-      { id: "37", name: "Augusto Nardes", role: "Ministro do TCU", country: "Brasil", theme: "Governança Pública", image: "/photos/p37.jpeg" },
+      { id: "37", name: "Augusto Nardes", role: "Ministro do TCU", country: "Brasil", theme: "Governança Pública", image: "/photos/p37.png" },
       { id: "38", name: "José Fontes", role: "Prof. Catedrático Academia Militar", country: "Portugal", theme: "Consolidação da Jurisdição Financeira", image: "" },
       { id: "39", name: "Eduardo Vera-Cruz", role: "Professor Doutor Univ. Lisboa", country: "Portugal", image: "" },
     ]
@@ -101,7 +102,7 @@ export function GuestsGallery() {
                   className="group bg-white/[0.02] border border-white/5 hover:border-[#C9A347]/30 transition-all duration-500 overflow-hidden"
                 >
                   {/* Container da Foto */}
-                  <div className="aspect-[4/5] overflow-hidden bg-slate-900/50 relative">
+                  <div className={clsx("aspect-[4/5] overflow-hidden relative", person.image && "bg-white")}>
                     {person.image ? (
                       <img 
                         src={person.image} 
