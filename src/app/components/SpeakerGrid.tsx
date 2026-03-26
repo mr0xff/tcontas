@@ -17,7 +17,10 @@ const speakersData = [
     details: {
       specialization: "Reabilitação estética e digital, implantodontia e prótese",
       academic: "Doutorada e Mestre em Implantodontia pela Universidade São Leopoldo Mandic; Especialização em Prótese Dentária pela ABO-Bahia.",
-      bio: "Acumula as funções de directora clínica, protesista e professora visitante em instituições como FUNORTE e Odonto Master (Portugal). Sua trajetória é marcada pela atuação em reabilitações totais fixas com implantes e técnica All-on-4.",
+      bio: `<b>CEO do Instituto Karina Leite Dental Clinic (Brasil e Portugal)</b> e Directora Clínica do Instituto Karina Leite Portugal, é médica dentista com actuação especializada em <b>reabilitação estética e digital</b>.<br/><br/>
+      Acumula as funções de directora clínica, protesista e professora visitante em instituições como <b>FITS</b>, <b>FUNORTE</b> e <b>Odonto Master (Portugal)</b>. Possui <b>Doutorado e Mestrado em Implantodontia</b> pela Universidade São Leopoldo Mandic e residência em técnica <i>All-on-4</i> pelo Malo Clinical Education.<br/><br/>
+      Sua trajetória profissional é marcada pelo domínio consolidado em <b>reabilitações totais fixas com implantes</b>, carga imediata e planejamento multidisciplinar, com foco em estética em implantes unitários anteriores e integração multidisciplinar.<br/><br/>
+      Como palestrante, acumula <b>mais de 50 apresentações</b> em congressos internacionais (Brasil, Portugal, Alemanha e Suécia), tendo sido convidada por entidades como <b>SBOE</b> e <b>Jornadas de Medicina Dentária do Porto</b>. É autora de artigos em periódicos de relevo, como <i>Brazilian Dental Journal</i> e <i>Implant News</i>.`,
       achievements: "Mais de 50 apresentações em congressos internacionais (Brasil, Portugal, Alemanha e Suécia). Autora de artigos em periódicos como Brazilian Dental Journal e Implant News."
     }
   },
@@ -54,7 +57,10 @@ const speakersData = [
     details: {
       specialization: "Direito Portuário, Compliance, Integridade e Sustentabilidade",
       academic: "Licenciada em Direito (UAN); Pós-graduada em Direito Bancário e Gestão Estratégica de Portos (Portugal). Certificada pela LEC Brasil.",
-      bio: "Carreira de mais de 15 anos. Atuou no Ministério dos Petróleos e no BNI antes de assumir cargos estratégicos na Empresa Portuária de Luanda.",
+      bio: `<b>Directora de Sustentabilidade e Compliance no Porto de Luanda – Empresa Pública</b>, é licenciada em Direito pela UAN, com pós-graduações em <b>Direito Bancário e Gestão Estratégica de Portos</b> pelo Instituto Superior Infante D. Henrique (Portugal).<br/><br/>
+      Complementou sua formação com certificações em <b>Compliance pela LEC Brasil</b>, Gestão da Fraude pela Universidade de Coimbra, Sustentabilidade e Coaching pela BAI Academy. Sua carreira abrange <b>mais de 15 anos</b> de experiência técnica e estratégica.<br/><br/>
+      Actuou no <b>Ministério dos Petróleos</b> e no Gabinete Jurídico do <b>BNI (Banco de Negócios Internacional)</b> antes de ingressar na Empresa Portuária de Luanda, onde ocupou cargos de chefia em Contratação, Contencioso e Gestão de Pessoas, servindo também como <b>Assessora da Presidência</b> para Concessões e Ordenamento Portuário.<br/><br/>
+      Possui sólida experiência em <b>governança no sector portuário</b> e sustentabilidade aplicada a infraestruturas. Como palestrante, participou em formações internacionais em Portugal, Espanha e Brasil, destacando-se pela comunicação institucional e mediação em áreas estratégicas.`,
       achievements: "Vasta experiência em governança no setor portuário e mediação institucional."
     }
   },
@@ -71,7 +77,10 @@ const speakersData = [
     details: {
       specialization: "ESG, Governança Corporativa, Direito Fiscal e Recuperação de Empresas",
       academic: "Mestre em Direito Penal (Coimbra); Pós-graduada em Direito dos Contratos (UCP Porto). Certificada em ESG pela Universidade Nova de Lisboa.",
-      bio: "Advogada inscrita em Angola e Moçambique com 19 anos de experiência jurídica. Professora na UAN, Universidade Lusíada e ISPTEC.",
+      bio: `<b>Sócio-Fundadora da Fernanda Mualeia Advogados</b> e Vice-Presidente da Associação Angolana de Corporate Governance (ACGA), é advogada inscrita em <b>Angola e Moçambique</b> com 19 anos de experiência jurídica.<br/><br/>
+      Licenciada pela UCP Porto e <b>Mestre em Direito Penal</b> pela Universidade de Coimbra, possui certificações em <b>ESG Reporting, Compliance e Prevenção da Corrupção</b> pela Universidade Nova de Lisboa, sendo também Administradora de Empresas em Recuperação e Insolvência.<br/><br/>
+      Sua actuação foca-se em <b>ESG, Governança Corporativa, Direito Fiscal e Financeiro</b>, com domínio em concessões, privatizações e investimento. Desde 2006, lecciona na <b>UAN (Pós-graduação e Mestrado)</b>, Universidade Lusíadas e ISPTEC, sendo formadora de magistrados em processos de insolvência.<br/><br/>
+      É autora e coautora de diversas obras, com destaque para o <i>Guia Prático de Direito Comercial</i> (Escolar Editora) e artigos especializados em periódicos como <i>Business & Legal</i>, <i>Economia & Finanças</i> e <i>Mercado</i>, consolidando-se como referência em <b>Corporate Governance</b>.`,
       achievements: "Coautora do 'Guia Prático de Direito Comercial'. Formadora de magistrados em Recuperação de Empresa e Insolvência."
     }
   }
