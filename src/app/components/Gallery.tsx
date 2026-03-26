@@ -100,7 +100,7 @@ const galleryImages = [
 const testimonials = [
   {
     id: 40,
-    quote: "O Tribunal de Contas representa um pilar fundamental para a transparência e a boa governação em Angola. Trinta anos de dedicação ao serviço público são motivo de grande orgulho para toda a nação.",
+    quote: "O Tribunal de Contas representa um pilar fundamental para a transparência e a boa governação em Angola. Trinta anos de dedicação ao serviço público são motivos de grande orgulho para toda a nação.",
     name: "Dr. Carlos Luís M. António",
     image: "https://tcontas.ao/wp-content/uploads/2025/09/03.webp",
     role: "Juiz Conselheiro da 1ª Câmara do Tribunal de Contas"
@@ -404,7 +404,7 @@ function TestimonialCarousel() {
 
         {/* Pagination dots */}
         <div className="flex justify-center gap-3 mt-6">
-          {testimonials.map((_, i) => (
+          {testimonials.reverse().map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}

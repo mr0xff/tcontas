@@ -1,5 +1,10 @@
-import { User, MapPin, Quote } from "lucide-react";
+import { MapPin, Quote } from "lucide-react";
 import { themeColors } from "../theme";
+import SpeakerGrid from "./SpeakerGrid";
+import { useState } from "react";
+import { motion, AnimatePresence } from 'framer-motion';
+import { LayoutGrid, List } from 'lucide-react';
+
 
 const speakers = [
   { id: 1, name: "Aurora Virgínia & Fernanda Mualeia", country: "Angola/Moçambique", theme: "Compliance e Tribunal de Contas em Angola: Prevenção, Legalidade e Boa Governação", flag: "🇦🇴/🇲🇿" },
@@ -34,46 +39,7 @@ export function SpeakersSection() {
           </h2>
         </div>
 
-        {/* Grelha de Oradores */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-          {speakers.map((speaker) => (
-            <div 
-              key={speaker.id}
-              className="group relative bg-white/5 border border-white/10 p-6 transition-all duration-300 hover:bg-white/[0.08] hover:border-[#C9A347]/50"
-            >
-              {/* Número de Ordem Subtil */}
-              <span className="absolute top-4 right-6 text-white/5 font-bold text-5xl group-hover:text-[#C9A347]/10 transition-colors">
-                {speaker.id.toString().padStart(2, '0')}
-              </span>
-
-              <div className="relative z-10">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-xl">{speaker.flag}</span>
-                  <span className="text-[#C9A347] text-[10px] font-bold uppercase tracking-tighter flex items-center gap-1">
-                    <MapPin size={10} /> {speaker.country}
-                  </span>
-                </div>
-
-                <h3 className="text-white font-bold text-lg mb-3 flex items-start gap-2 group-hover:text-[#C9A347] transition-colors">
-                  <User size={18} className="mt-1 text-[#C9A347] flex-shrink-0" />
-                  {speaker.name}
-                </h3>
-
-                <div className="space-y-2">
-                  <div className="flex gap-2">
-                    <Quote size={14} className="text-[#C9A347] flex-shrink-0 mt-1 rotate-180" />
-                    <p className="text-white/60 text-sm leading-relaxed italic font-light">
-                      {speaker.theme}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Detalhe Decorativo Inferior */}
-              <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#C9A347] transition-all duration-500 group-hover:w-full" />
-            </div>
-          ))}
-        </div>
+        <SpeakersNavigation simpleSpeakers={speakers} />
 
         {/* Footer da Secção */}
         <div className="mt-12 text-center">
@@ -83,5 +49,99 @@ export function SpeakersSection() {
         </div>
       </div>
     </section>
+  );
+}
+
+export function SpeakersNavigation({ simpleSpeakers }: { simpleSpeakers: any[] }) {
+  const [activeTab, setActiveTab] = useState<'detailed' | 'quick'>('detailed');
+
+  return (
+    <div className="w-full">
+      {/* Tab Switcher Brutalista */}
+      <div className="flex justify-center mb-16">
+        <div className="inline-flex bg-white/5 p-1 border border-white/10 rounded-none">
+          <button
+            onClick={() => setActiveTab('detailed')}
+            className={`flex items-center gap-2 px-6 py-3 font-black uppercase text-[10px] tracking-[0.2em] transition-all duration-300 rounded-none ${
+              activeTab === 'detailed' 
+              ? 'bg-[#C9A347] text-[#0A2540] shadow-[4px_4px_0px_rgba(255,255,255,0.1)]' 
+              : 'text-white/50 hover:text-white'
+            }`}
+          >
+            <List size={14} /> Lista Rápida
+          </button>
+          <button
+            onClick={() => setActiveTab('quick')}
+            className={`flex items-center gap-2 px-6 py-3 font-black uppercase text-[10px] tracking-[0.2em] transition-all duration-300 rounded-none ${
+              activeTab === 'quick' 
+              ? 'bg-[#C9A347] text-[#0A2540] shadow-[4px_4px_0px_rgba(255,255,255,0.1)]' 
+              : 'text-white/50 hover:text-white'
+            }`}
+          >
+            <LayoutGrid size={14} /> Visão Detalhada
+          </button>
+        </div>
+      </div>
+
+      {/* Conteúdo das Abas */}
+      <AnimatePresence mode="wait">
+        {activeTab === 'quick' ? (
+          <motion.div
+            key="detailed"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+          >
+            <SpeakerGrid  />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="quick"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-0 border-t border-l border-white/10"
+          >
+            {simpleSpeakers.map((speaker) => (
+              <div 
+                key={speaker.id}
+                className="group relative bg-white/5 border-r m-1 border-b border-white/10 p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-[#C9A347]/50"
+              >
+                <span className="absolute top-4 right-6 text-white/5 font-black text-6xl group-hover:text-[#C9A347]/10 transition-colors pointer-events-none">
+                  {speaker.id.toString().padStart(2, '0')}
+                </span>
+
+                <div className="relative z-10">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-xl">{speaker.flag}</span>
+                    <span 
+                      className="text-[10px] font-black uppercase tracking-tighter flex items-center gap-1"
+                      style={{ color: "#C9A347" }}
+                    >
+                      <MapPin size={10} /> {speaker.country}
+                    </span>
+                  </div>
+
+                  <h3 className="text-white font-black text-lg mb-4 uppercase leading-none tracking-tighter group-hover:text-[#C9A347] transition-colors">
+                    {speaker.name}
+                  </h3>
+
+                  <div className="flex gap-3 pt-4 border-t border-white/5">
+                    <Quote size={14} className="text-[#C9A347] flex-shrink-0 mt-1 rotate-180 opacity-50" />
+                    <p className="text-white/60 text-xs leading-relaxed italic font-light">
+                      {speaker.theme}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#C9A347] transition-all duration-500 group-hover:w-full" />
+              </div>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
