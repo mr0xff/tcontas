@@ -53,7 +53,7 @@ export function FlayerGallery() {
       <div className="flex items-center justify-between mb-12 pb-6 border-b border-white/10">
         <div className="flex items-center gap-4">
           <h2 className="text-4xl font-black uppercase tracking-tighter leading-none text-white" style={{ fontFamily: "'Roboto', sans-serif" }}>
-            Galeria de <span style={{ color: "#C9A347" }}>Flayers</span>
+            intervenientes
           </h2>
         </div>
         
