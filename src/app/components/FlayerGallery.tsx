@@ -6,9 +6,9 @@ import { X, Share2 } from 'lucide-react';
 
 // Dados Exemplo dos Flayers (Substituir pelos teus caminhos reais no Railway)
 const flayersData = [
-  { id: 1, title: "A Importância da Cooperação Internacional para o Aperfeiçoamento dos Tribunais de Contas", image: "/flayers/p1.png" },
-  { id: 2, title: "Sustentabilidade Fiscal e Responsabilidade Intergeracional na Gestão dos Recursos Públicos", image: "/flayers/p2.png" },
-  { id: 3, title: "Os Aspectos Centrais da Actividade Financeira do Estado e o Indispensável Papel de Controle das Instituições Superiores de Controlo", image: "/flayers/p3.png" },
+  { id: 1, title: "Sebastião Cunza", image: "/flayers/p1.png" },
+  { id: 2, title: "célio gourgel", image: "/flayers/p2.png" },
+  { id: 3, title: "alexandre cose", image: "/flayers/p3.png" },
   { id: 4, title: "Adilson Cardoso", image: "/flayers/p4.png" },
   { id: 5, title: "Evarista Solano", image: "/flayers/p5.png" },
   { id: 6, title: "Zineb Moçameque", image: "/flayers/p6.png" },
