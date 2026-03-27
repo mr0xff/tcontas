@@ -120,146 +120,368 @@ const testimonials = [
   }
 ];
 
+// function GalleryGrid() {
+//   const { ref, isVisible } = useIntersectionObserver();
+
+//   // Separamos o Presidente das outras imagens
+//   const president = galleryImages.find((img) => img.id === 0);
+//   const otherJudges = galleryImages.filter((img) => img.id !== 0);
+
+//   return (
+//     <div ref={ref} className="flex flex-col items-center">
+      
+//       {/* 1. DESTAQUE DO PRESIDENTE (ID: 0) - Centralizado no Topo */}
+//       {president && (
+//         <div className="w-full max-w-sm mb-12 flex justify-center">
+//           <button
+//             className="relative overflow-hidden group focus:outline-none w-full shadow-2xl"
+//             style={{
+//               opacity: isVisible ? 1 : 0,
+//               transform: isVisible ? "scale(1)" : "scale(0.95)",
+//               transition: "opacity 0.8s ease, transform 0.8s ease",
+//               border: "2px solid #C9A347", // Borda mais forte para o destaque
+//               aspectRatio: "3 / 4",
+//               backgroundColor: "#fff",
+//               display: "flex",
+//               alignItems: "center",
+//               justifyContent: "center",
+//             }}
+//             aria-label={president.description}
+//           >
+//             <img
+//               src={president.src}
+//               alt={president.name}
+//               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+//               style={{ 
+//                 objectFit: "cover",
+//                 objectPosition: "center 20%", // Ajuste para focar no rosto
+//               }}
+//             />
+            
+//             {/* Overlay Permanente ou Hover para o Presidente */}
+//             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-transparent to-transparent opacity-60" />
+            
+//             <div className="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/70 transition-all duration-300 flex flex-col items-end justify-end p-6">
+//               <div className="translate-y-0 opacity-100 group-hover:translate-y-0 transition-all duration-300 w-full text-center">
+//                 <span className="text-[#C9A347] font-bold tracking-widest uppercase block mb-1">
+//                   {president.name}
+//                 </span>
+//                 <p className="text-white text-xs font-medium uppercase opacity-90">
+//                   {president.description}
+//                 </p>
+
+//                 {president.biographyUrl && (
+//                   <a
+//                     href={president.biographyUrl}
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                     className="inline-block px-4 py-2 bg-[#C9A347] text-[#0A2540] text-xs font-bold rounded-sm transition-all hover:bg-white"
+//                     style={{ fontFamily: "'Roboto', sans-serif" }}
+//                     onClick={(e) => e.stopPropagation()}
+//                   >
+//                     Ver Biografia
+//                   </a>
+//                 )}
+//               </div>
+//             </div>
+
+//             {/* Accent Gold Corners - Mais visíveis no Presidente */}
+//             <div className="absolute top-0 left-0 w-12 h-12">
+//               <div className="w-full h-1 bg-[#C9A347]" />
+//               <div className="w-1 h-full bg-[#C9A347]" />
+//             </div>
+//           </button>
+//         </div>
+//       )}
+
+//       {/* 2. GRID DOS OUTROS JUÍZES */}
+//       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+//         {otherJudges.map((img, i) => (
+//           <button
+//             key={img.id}
+//             className="relative overflow-hidden group focus:outline-none"
+//             style={{
+//               opacity: isVisible ? 1 : 0,
+//               transform: isVisible ? "scale(1)" : "scale(0.98)",
+//               transition: `opacity 0.5s ease ${(i + 1) * 0.06}s, transform 0.5s ease ${(i + 1) * 0.06}s`,
+//               border: "1px solid rgba(201,163,71,0.18)",
+//               aspectRatio: "3 / 4",
+//               backgroundColor: "#fff",
+//               display: "flex",
+//               alignItems: "center",
+//               justifyContent: "center",
+//             }}
+//             aria-label={img.description}
+//           >
+//             <img
+//               src={img.src}
+//               alt={img.name}
+//               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+//               style={{ 
+//                 maxWidth: "100%",
+//                 maxHeight: "100%",
+//                 width: "auto",
+//                 height: "auto",
+//                 objectFit: "contain",
+//                 objectPosition: "center 35%",
+//               }}
+//             />
+//             <div className="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/70 transition-all duration-300 flex flex-col items-end justify-end p-4">
+//               <div className="translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 w-full text-center">
+//                 <span className="text-[#C9A347] font-bold tracking-wider uppercase block mb-1">
+//                   {img.name}
+//                 </span>
+//                 <p className="text-white text-[11px] leading-tight">
+//                   {img.description}
+//                 </p>
+
+//                 {img.biographyUrl && (
+//                 <a
+//                   href={img.biographyUrl}
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   className="inline-block px-4 py-2 bg-[#C9A347] text-[#0A2540] text-xs font-bold rounded-sm transition-all hover:bg-white"
+//                   style={{ fontFamily: "'Roboto', sans-serif" }}
+//                   onClick={(e) => e.stopPropagation()}
+//                 >
+//                   Ver Biografia
+//                 </a>
+//               )}
+//               </div>
+//             </div>
+//             {/* Gold corner accent */}
+//             <div className="absolute top-0 left-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+//               <div className="w-full h-0.5 bg-[#C9A347]" />
+//               <div className="w-0.5 h-full bg-[#C9A347]" />
+//             </div>
+//           </button>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
 function GalleryGrid() {
   const { ref, isVisible } = useIntersectionObserver();
 
-  // Separamos o Presidente das outras imagens
   const president = galleryImages.find((img) => img.id === 0);
-  const otherJudges = galleryImages.filter((img) => img.id !== 0);
+  const other_judges = galleryImages.filter((img) => img.id !== 0);
+
+  // Verificação simples para evitar erros de renderização
+  const isDesktop = typeof window !== 'undefined' && window.innerWidth > 768;
 
   return (
-    <div ref={ref} className="flex flex-col items-center">
+    <div ref={ref} className="flex flex-col items-center w-full px-4 min-h-[500px]">
       
-      {/* 1. DESTAQUE DO PRESIDENTE (ID: 0) - Centralizado no Topo */}
+      {/* 1. DESTAQUE DO PRESIDENTE */}
       {president && (
         <div className="w-full max-w-sm mb-12 flex justify-center">
-          <button
-            className="relative overflow-hidden group focus:outline-none w-full shadow-2xl"
+          <div
+            className="relative overflow-hidden group w-full shadow-2xl border-2 border-[#C9A347]"
             style={{
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible ? "scale(1)" : "scale(0.95)",
+              // No mobile (isDesktop false), a opacidade é sempre 1. No desktop, segue o isVisible.
+              opacity: !isDesktop || isVisible ? 1 : 0,
+              transform: !isDesktop || isVisible ? "scale(1)" : "scale(0.95)",
               transition: "opacity 0.8s ease, transform 0.8s ease",
-              border: "2px solid #C9A347", // Borda mais forte para o destaque
               aspectRatio: "3 / 4",
-              backgroundColor: "#fff",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              backgroundColor: "#0A2540",
             }}
-            aria-label={president.description}
           >
             <img
               src={president.src}
               alt={president.name}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              style={{ 
-                objectFit: "cover",
-                objectPosition: "center 20%", // Ajuste para focar no rosto
-              }}
+              className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110"
+              style={{ objectPosition: "center 20%" }}
             />
             
-            {/* Overlay Permanente ou Hover para o Presidente */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-transparent to-transparent opacity-60" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-transparent to-transparent opacity-90 md:opacity-60" />
             
-            <div className="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/70 transition-all duration-300 flex flex-col items-end justify-end p-6">
-              <div className="translate-y-0 opacity-100 group-hover:translate-y-0 transition-all duration-300 w-full text-center">
-                <span className="text-[#C9A347] font-bold tracking-widest uppercase block mb-1">
-                  {president.name}
-                </span>
-                <p className="text-white text-xs font-medium uppercase opacity-90">
-                  {president.description}
-                </p>
+            <div className="absolute inset-0 flex flex-col items-center justify-end p-6 text-center">
+              <span className="text-[#C9A347] font-bold tracking-widest uppercase block mb-1">
+                {president.name}
+              </span>
+              <p className="text-white text-[10px] font-medium uppercase opacity-90 mb-4">
+                {president.description}
+              </p>
 
-                {president.biographyUrl && (
-                  <a
-                    href={president.biographyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-4 py-2 bg-[#C9A347] text-[#0A2540] text-xs font-bold rounded-sm transition-all hover:bg-white"
-                    style={{ fontFamily: "'Roboto', sans-serif" }}
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    Ver Biografia
-                  </a>
-                )}
-              </div>
-            </div>
-
-            {/* Accent Gold Corners - Mais visíveis no Presidente */}
-            <div className="absolute top-0 left-0 w-12 h-12">
-              <div className="w-full h-1 bg-[#C9A347]" />
-              <div className="w-1 h-full bg-[#C9A347]" />
-            </div>
-          </button>
-        </div>
-      )}
-
-      {/* 2. GRID DOS OUTROS JUÍZES */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-        {otherJudges.map((img, i) => (
-          <button
-            key={img.id}
-            className="relative overflow-hidden group focus:outline-none"
-            style={{
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible ? "scale(1)" : "scale(0.98)",
-              transition: `opacity 0.5s ease ${(i + 1) * 0.06}s, transform 0.5s ease ${(i + 1) * 0.06}s`,
-              border: "1px solid rgba(201,163,71,0.18)",
-              aspectRatio: "3 / 4",
-              backgroundColor: "#fff",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-            aria-label={img.description}
-          >
-            <img
-              src={img.src}
-              alt={img.name}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              style={{ 
-                maxWidth: "100%",
-                maxHeight: "100%",
-                width: "auto",
-                height: "auto",
-                objectFit: "contain",
-                objectPosition: "center 35%",
-              }}
-            />
-            <div className="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/70 transition-all duration-300 flex flex-col items-end justify-end p-4">
-              <div className="translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 w-full text-center">
-                <span className="text-[#C9A347] font-bold tracking-wider uppercase block mb-1">
-                  {img.name}
-                </span>
-                <p className="text-white text-[11px] leading-tight">
-                  {img.description}
-                </p>
-
-                {img.biographyUrl && (
+              {president.biographyUrl && (
                 <a
-                  href={img.biographyUrl}
+                  href={president.biographyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-[#C9A347] text-[#0A2540] text-xs font-bold rounded-sm transition-all hover:bg-white"
+                  className="inline-block px-4 py-2 bg-[#C9A347] text-[#0A2540] text-xs font-bold uppercase transition-all hover:bg-white active:scale-95"
                   style={{ fontFamily: "'Roboto', sans-serif" }}
-                  onClick={(e) => e.stopPropagation()}
                 >
                   Ver Biografia
                 </a>
               )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 2. GRID DOS OUTROS JUÍZES */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+        {other_judges.map((img, i) => (
+          <div
+            key={img.id}
+            className="relative overflow-hidden group border border-[#C9A347]/30"
+            style={{
+              // No mobile, ignoramos o isVisible para garantir que o card apareça
+              opacity: !isDesktop || isVisible ? 1 : 0,
+              transform: !isDesktop || isVisible ? "scale(1)" : "scale(0.98)",
+              transition: `opacity 0.5s ease ${(i + 1) * 0.06}s, transform 0.5s ease ${(i + 1) * 0.06}s`,
+              aspectRatio: "3 / 4",
+              backgroundColor: "#0A2540",
+            }}
+          >
+            <img
+              src={img.src}
+              alt={img.name}
+              className="w-full h-full object-cover transition-transform duration-500 md:group-hover:scale-105"
+              style={{ objectPosition: "center 35%" }}
+            />
+            
+            {/* Overlay: No Mobile o fundo escuro é permanente para legibilidade */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-[2%] via-[#0A2540]/60 to-transparent md:from-transparent md:via-transparent md:group-hover:from-[#0A2540] md:group-hover:via-[#0A2540]/80 transition-all duration-300 flex flex-col items-center justify-end p-6 text-center">              <div className="opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300">
+                <span className="text-[#C9A347] font-bold tracking-wider uppercase block mb-1 text-sm">
+                  {img.name}
+                </span>
+                <p className="text-white text-[10px] uppercase tracking-tighter mb-4">
+                  {img.description}
+                </p>
+
+                {img.biographyUrl && (
+                  <a
+                    href={img.biographyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 bg-[#C9A347] text-[#0A2540] text-[10px] font-black uppercase tracking-widest hover:bg-white active:scale-95"
+                  >
+                    Biografia
+                  </a>
+                )}
               </div>
             </div>
-            {/* Gold corner accent */}
-            <div className="absolute top-0 left-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="w-full h-0.5 bg-[#C9A347]" />
-              <div className="w-0.5 h-full bg-[#C9A347]" />
-            </div>
-          </button>
+          </div>
         ))}
       </div>
     </div>
   );
 }
+
+// function GalleryGrid() {
+//   const { ref, isVisible } = useIntersectionObserver();
+
+//   const president = galleryImages.find((img) => img.id === 0);
+//   const otherJudges = galleryImages.filter((img) => img.id !== 0);
+
+//   return (
+//     <div ref={ref} className="flex flex-col items-center w-full px-4">
+      
+//       {/* 1. DESTAQUE DO PRESIDENTE */}
+//       {president && (
+//         <div className="w-full max-w-sm mb-12 flex justify-center">
+//           <button
+//             className="relative overflow-hidden group focus:outline-none w-full shadow-2xl"
+//             style={{
+//               opacity: isVisible ? 1 : 0,
+//               transform: isVisible ? "scale(1)" : "scale(0.95)",
+//               transition: "opacity 0.8s ease, transform 0.8s ease",
+//               border: "2px solid #C9A347",
+//               aspectRatio: "3 / 4",
+//               backgroundColor: "#0A2540", // Fundo escuro para evitar flash branco
+//               display: "block", // Alterado para block para melhor suporte mobile
+//             }}
+//           >
+//             <img
+//               src={president.src}
+//               alt={president.name}
+//               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+//               style={{ objectPosition: "center 20%" }}
+//             />
+            
+//             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-transparent to-transparent opacity-60" />
+            
+//             <div className="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/70 group-active:bg-[#0A2540]/70 transition-all duration-300 flex flex-col items-end justify-end p-6">
+//               <div className="w-full text-center">
+//                 <span className="text-[#C9A347] font-bold tracking-widest uppercase block mb-1">
+//                   {president.name}
+//                 </span>
+//                 <p className="text-white text-xs font-medium uppercase opacity-90 mb-4">
+//                   {president.description}
+//                 </p>
+//                 {president.biographyUrl && (
+//                   <a
+//                     href={president.biographyUrl}
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                     className="inline-block px-4 py-2 bg-[#C9A347] text-[#0A2540] text-xs font-bold rounded-none transition-all"
+//                     onClick={(e) => e.stopPropagation()}
+//                   >
+//                     Ver Biografia
+//                   </a>
+//                 )}
+//               </div>
+//             </div>
+//           </button>
+//         </div>
+//       )}
+
+//       {/* 2. GRID DOS OUTROS JUÍZES */}
+//       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+//         {otherJudges.map((img, i) => (
+//           <button
+//             key={img.id}
+//             className="relative overflow-hidden group focus:outline-none w-full"
+//             style={{
+//               opacity: isVisible ? 1 : 0,
+//               transform: isVisible ? "scale(1)" : "scale(0.98)",
+//               transition: `opacity 0.5s ease ${(i + 1) * 0.06}s, transform 0.5s ease ${(i + 1) * 0.06}s`,
+//               border: "1px solid rgba(201,163,71,0.3)",
+//               aspectRatio: "3 / 4",
+//               backgroundColor: "#0A2540",
+//               display: "block",
+//             }}
+//           >
+//             <img
+//               src={img.src}
+//               alt={img.name}
+//               /* CORREÇÃO AQUI: 
+//                  w-full e h-full com object-cover garante que a imagem preencha 
+//                  o espaço do aspectRatio no mobile.
+//               */
+//               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+//               style={{ 
+//                 objectPosition: "center 35%",
+//               }}
+//             />
+            
+//             {/* Overlay - group-active para funcionar no toque mobile */}
+//             <div className="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/80 group-active:bg-[#0A2540]/80 transition-all duration-300 flex flex-col items-center justify-end p-6">
+//               <div className="translate-y-4 group-hover:translate-y-0 group-active:translate-y-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-all duration-300 w-full text-center">
+//                 <span className="text-[#C9A347] font-bold tracking-wider uppercase block mb-1 text-sm">
+//                   {img.name}
+//                 </span>
+//                 <p className="text-white text-[10px] uppercase tracking-tighter mb-4">
+//                   {img.description}
+//                 </p>
+//                 {img.biographyUrl && (
+//                   <a
+//                     href={img.biographyUrl}
+//                     className="inline-block px-4 py-2 bg-[#C9A347] text-[#0A2540] text-[10px] font-black uppercase tracking-widest"
+//                   >
+//                     Biografia
+//                   </a>
+//                 )}
+//               </div>
+//             </div>
+//           </button>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
 
 function TestimonialCarousel() {
   const [current, setCurrent] = useState(0);
@@ -401,6 +623,7 @@ export function Gallery() {
         </div>
 
         <GalleryGrid />
+
         <TestimonialCarousel />
       </div>
     </section>
