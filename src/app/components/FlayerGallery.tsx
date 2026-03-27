@@ -36,9 +36,8 @@ const flayersData = [
 
 export function FlayerGallery() {
   const [currentPage, setCurrentPage] = useState(1);
-  const flayersPerPage = 3; // Número de flayers por linha/página
+  const flayersPerPage = 3;
 
-  // Lógica de Paginação Simple
   const indexOfLastFlayer = currentPage * flayersPerPage;
   const indexOfFirstFlayer = indexOfLastFlayer - flayersPerPage;
   const currentFlayers = flayersData.slice(indexOfFirstFlayer, indexOfLastFlayer);
@@ -49,7 +48,7 @@ export function FlayerGallery() {
   return (
     <div className="w-full p-8 md:p-12 border border-white/10 rounded-none mt-20">
       
-      {/* Cabeçalho da Galeria */}
+      {/* Cabeçalho */}
       <div className="flex items-center justify-between mb-12 pb-6 border-b border-white/10">
         <div className="flex items-center gap-4">
           <h2 className="text-4xl font-black uppercase tracking-tighter leading-none text-white" style={{ fontFamily: "'Roboto', sans-serif" }}>
@@ -57,8 +56,8 @@ export function FlayerGallery() {
           </h2>
         </div>
         
-        {/* Navegação de Paginação */}
-        <div className="flex items-center gap-2">
+        {/* Navegação de Paginação (Visível apenas em Desktop) */}
+        <div className="hidden md:flex items-center gap-2">
           <button 
             onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
@@ -79,7 +78,7 @@ export function FlayerGallery() {
         </div>
       </div>
 
-      {/* Grelha de Flayers com Animação */}
+      {/* Grelha com tuas Animações Originais */}
       <AnimatePresence mode="wait">
         <motion.div 
           key={currentPage}
@@ -89,25 +88,22 @@ export function FlayerGallery() {
           transition={{ duration: 0.3 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          {currentFlayers.map((flayer) => (
+          {/* Mostra todos no mobile (scroll vertical) ou paginado no desktop */}
+          {(typeof window !== 'undefined' && window.innerWidth < 768 ? flayersData : currentFlayers).map((flayer) => (
             <div key={flayer.id} className="group relative rounded-none overflow-hidden bg-white/5 border border-white/10 hover:border-[#C9A347]/50 transition-all duration-300 flex flex-col h-full">
               
-              {/* Container da Imagem com Zoom no Hover */}
               <div className="relative aspect-[3/4] overflow-hidden border-b border-white/10">
                 <img 
                   src={flayer.image} 
                   alt={flayer.title}
                   className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110 group-hover:rotate-1"
                 />
-                
-                {/* Overlay Técnico com Botões */}
-                <div className="absolute inset-0 bg-primary/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-4 z-10 p-6">
+
+                <div className="absolute inset-0 bg-primary/25 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-4 z-10 p-6">
                   <button
                     onClick={() => setSelectedFlayer(flayer)}
                     className="flex items-center gap-2 px-5 py-3 font-black uppercase text-[10px] tracking-[0.2em] rounded-none border transition-colors"
                     style={{ backgroundColor: "transparent", borderColor: "#C9A347", color: "#C9A347" }}
-                    onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "#C9A347"; e.currentTarget.style.color = themeColors.primary; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.color = "#C9A347"; }}
                   >
                     <Maximize2 size={14} /> Expandir
                   </button>
@@ -119,7 +115,6 @@ export function FlayerGallery() {
                 </div>
               </div>
 
-              {/* Detalhes do Flayer (Sempre Visíveis) */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <div className="border-b-1 border-yellow-500 mb-2" />
@@ -130,10 +125,9 @@ export function FlayerGallery() {
                 <div className="h-1 w-0 bg-[#C9A347] group-hover:w-full transition-all duration-500" />
               </div>
 
-              {/* ID Técnico no Canto */}
               <div className="absolute top-0 right-0 border-l border-b border-white/10 px-3 py-1 text-[9px] font-mono text-white/50 group-hover:text-[#C9A347]">
                 FL_{flayer.id.toString().padStart(3, '0')}
-              </  div>
+              </div>
             </div>
           ))}
         </motion.div>
@@ -147,8 +141,6 @@ export function FlayerGallery() {
     </div>
   );
 }
-
-
 interface FlayerModalProps {
   isOpen: boolean;
   onClose: () => void;
