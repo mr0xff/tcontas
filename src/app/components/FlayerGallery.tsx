@@ -6,12 +6,32 @@ import { X, Share2 } from 'lucide-react';
 
 // Dados Exemplo dos Flayers (Substituir pelos teus caminhos reais no Railway)
 const flayersData = [
-  { id: 4, title: "O Controlo jurisdicional das Políticas Públicas", image: "/flayers/p04.jpeg" },
-  { id: 5, title: "A fiscalização do tribunal de contas e as entidades e Organismos sujeitos à sua jurisdição", image: "/flayers/p05.jpeg" },
-  { id: 1, title: "A Importância da Cooperação Internacional para o Aperfeiçoamento dos Tribunais de Contas", image: "/flayers/p01.jpeg" },
-  { id: 2, title: "Sustentabilidade Fiscal e Responsabilidade Intergeracional na Gesstão dos Recursos Públicos", image: "/flayers/p02.jpeg" },
-  { id: 3, title: "Os Aspectos Centrais da Actividade Financeira do Estado e o Indispensável Papel de Controle das Instituições Superiores de Controlo", image: "/flayers/p03.jpeg" },
-  { id: 6, title: "Saúde ocupacional de Bem-Estar Institucional: Fundamentos para um Tribunal de Contas Moderno e Sustentável", image: "/flayers/p06.jpeg" },
+  { id: 1, title: "A Importância da Cooperação Internacional para o Aperfeiçoamento dos Tribunais de Contas", image: "/flayers/p1.png" },
+  { id: 2, title: "Sustentabilidade Fiscal e Responsabilidade Intergeracional na Gestão dos Recursos Públicos", image: "/flayers/p2.png" },
+  { id: 3, title: "Os Aspectos Centrais da Actividade Financeira do Estado e o Indispensável Papel de Controle das Instituições Superiores de Controlo", image: "/flayers/p3.png" },
+  { id: 4, title: "Adilson Cardoso", image: "/flayers/p4.png" },
+  { id: 5, title: "Evarista Solano", image: "/flayers/p5.png" },
+  { id: 6, title: "Zineb Moçameque", image: "/flayers/p6.png" },
+  { id: 7, title: "Rui Cruz", image: "/flayers/p7.png" },
+  { id: 8, title: "Carlos Feijó", image: "/flayers/p8.png" },
+  { id: 9, title: "Filipa Calvão", image: "/flayers/p9.png" },
+  { id: 10, title: "Ministro Zimler", image: "/flayers/p10.png" },
+  { id: 11, title: "Título Pendente", image: "/flayers/p11.png" }, // O ficheiro 11 não apareceu no seu ls, valide se existe
+  { id: 12, title: "Inaudo Araújo / Mamadou", image: "/flayers/p12.png" },
+  { id: 13, title: "Jorge Bacelar Gouveia", image: "/flayers/p13.png" },
+  { id: 14, title: "Augusto Nardes", image: "/flayers/p14.png" },
+  { id: 15, title: "André Matos", image: "/flayers/p15.png" },
+  { id: 16, title: "Aurora dos Santos", image: "/flayers/p16.png" },
+  { id: 17, title: "Fernanda Mualeia", image: "/flayers/p17.png" },
+  { id: 18, title: "Edilson Sousa Silva", image: "/flayers/p18.png" },
+  { id: 19, title: "Maria Milhomem", image: "/flayers/p19.png" },
+  { id: 20, title: "Nelson Pellegrini", image: "/flayers/p20.png" },
+  { id: 21, title: "Luciano Araújo", image: "/flayers/p21.png" },
+  { id: 22, title: "Karina Leite", image: "/flayers/p22.png" },
+  { id: 23, title: "João Pinto", image: "/flayers/p23.png" },
+  { id: 24, title: "Sebastião Helvécio", image: "/flayers/p24.png" },
+  { id: 25, title: "Mariana Faraco", image: "/flayers/p25.png" },
+  { id: 26, title: "José Fontes", image: "/flayers/p26.png" },
 ];
 
 export function FlayerGallery() {
