@@ -1,0 +1,38 @@
+name: Generate Build Assets
+
+on:
+  push:
+    branches:
+      - main # Executa sempre que fizeres push para a main
+  workflow_dispatch: # Permite executar manualmente no painel do GitHub
+
+jobs:
+  build-and-zip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Código
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Instalar Dependências
+        run: npm install
+
+      - name: Build do Projeto (Vite)
+        run: npm run build
+
+      - name: Gerar ZIP do Dist
+        # Cria um zip chamado 'projeto-build.zip' com o conteúdo da pasta dist/
+        run: zip -r arquivos-microsite.zip dist/
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Arquivo do Microsite  # Nome que aparecerá no GitHub
+          path: arquivos-microsite.zip
+          retention-days: 7 # Opcional: tempo que o ficheiro fica guardado
