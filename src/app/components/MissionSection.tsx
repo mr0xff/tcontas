@@ -1,28 +1,61 @@
-import { Shield, Eye, TrendingUp, BookOpen } from "lucide-react";
+import { Shield, Eye, TrendingUp, BookOpen, Lightbulb } from "lucide-react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 import { themeColors } from "../theme";
+
+// const pillars = [
+//   {
+//     icon: Shield,
+//     title: "Legalidade",
+//     text: "Verificar a conformidade dos actos de gestão financeira com as leis e regulamentos em vigor na República de Angola.",
+//   },
+//   {
+//     icon: Eye,
+//     title: "Transparência",
+//     text: "Promover a divulgação pública dos resultados das auditorias e fiscalizações, contribuindo para uma governação aberta.",
+//   },
+//   {
+//     icon: TrendingUp,
+//     title: "Eficiência",
+//     text: "Avaliar a economicidade, eficiência e eficácia na utilização dos recursos públicos do Estado angolano.",
+//   },
+//   {
+//     icon: BookOpen,
+//     title: "Integridade",
+//     text: "Assegurar que a gestão financeira pública é conduzida com elevados padrões de ética, rigor e responsabilidade.",
+//   },
+//   {
+//     icon: Lightbulb,
+//     title: "Inovação",
+//     text: "Acompanhamos a evolução tecnológica através da digitalização de processos e da implementação de novas ferramentas de auditoria, tornando a fiscalização financeira mais ágil, transparente e conectada com o futuro."
+//   }
+// ];
 
 const pillars = [
   {
     icon: Shield,
-    title: "Legalidade",
-    text: "Verificar a conformidade dos actos de gestão financeira com as leis e regulamentos em vigor na República de Angola.",
+    title: "LEGALIDADE",
+    text: "Assegurar o estrito cumprimento das normas jurídicas e a conformidade dos atos de gestão financeira e administrativa perante a Lei na República de Angola.",
   },
   {
     icon: Eye,
-    title: "Transparência",
-    text: "Promover a divulgação pública dos resultados das auditorias e fiscalizações, contribuindo para uma governação aberta.",
+    title: "TRANSPARÊNCIA",
+    text: "Promover a cultura de prestação de contas e a publicidade das decisões, garantindo que a sociedade acompanhe a aplicação dos recursos públicos.",
   },
   {
     icon: TrendingUp,
-    title: "Eficiência",
-    text: "Avaliar a economicidade, eficiência e eficácia na utilização dos recursos públicos do Estado angolano.",
+    title: "EFICIÊNCIA",
+    text: "Avaliar a boa gestão dos gastos públicos, focando na economicidade e eficácia para que cada recurso gere o máximo benefício ao cidadão angolano.",
   },
   {
     icon: BookOpen,
-    title: "Integridade",
-    text: "Assegurar que a gestão financeira pública é conduzida com elevados padrões de ética, rigor e responsabilidade.",
+    title: "INTEGRIDADE",
+    text: "Pilar ético que sustenta a confiança nas instituições, baseando o controlo externo em valores de competência, lealdade e responsabilidade financeira.",
   },
+  {
+    icon: Lightbulb,
+    title: "INOVAÇÃO",
+    text: "Modernização do controlo externo através da digitalização e fiscalização concomitante, colaborando para o aperfeiçoamento contínuo da Administração Pública.",
+  }
 ];
 
 export function MissionSection() {
@@ -69,7 +102,7 @@ export function MissionSection() {
         </div>
 
         {/* Pillars grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {pillars.map((pillar, i) => (
             <PillarCard key={pillar.title} pillar={pillar} index={i} />
           ))}
