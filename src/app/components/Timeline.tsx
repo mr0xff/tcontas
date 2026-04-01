@@ -14,32 +14,6 @@ const IMAGES = {
   2023: "/fallback.webp", // Placa "Futuro"
   2026: "/fallback.webp",
 };
-// const timelineData = [
-//   {
-//     year: 1996,
-//     title: "Fundação do Tribunal de Contas",
-//     text: "Por força da Lei n.º 4/96, de 22 de março, o Tribunal de Contas de Angola é criado como órgão supremo de fiscalização e controlo da administração financeira do Estado. Inicia-se uma nova era de transparência e legalidade nas finanças públicas angolanas.",
-//     side: "right" as const,
-//   },
-//   {
-//     year: 2006,
-//     title: "Consolidação Institucional",
-//     text: "Uma década de operação consolida o TCA como pilar fundamental da governação financeira em Angola. Reformas internas reforçam os mecanismos de controlo e ampliam a capacidade técnica dos magistrados e auditores, fortalecendo o quadro jurídico de fiscalização.",
-//     side: "left" as const,
-//   },
-//   {
-//     year: 2016,
-//     title: "Modernização e Transparência",
-//     text: "O TCA abraça a modernização tecnológica e a digitalização dos seus processos, adoptando novos sistemas de gestão e controlo financeiro. Inicia-se a publicação electrónica dos relatórios de auditoria, promovendo a transparência e o acesso público à informação.",
-//     side: "right" as const,
-//   },
-//   {
-//     year: 2026,
-//     title: "30 Anos — Uma Nova Visão",
-//     text: "Trinta anos de história, compromisso e dedicação ao serviço público. O TCA reitera o seu compromisso com a legalidade, a eficiência e a modernidade, projectando-se para o futuro com uma visão renovada ao serviço do povo angolano e do desenvolvimento sustentável.",
-//     side: "left" as const,
-//   },
-// ];
 
 export const timelineData: Array<{
   year: number;
@@ -49,77 +23,78 @@ export const timelineData: Array<{
 }> = [
   {
     year: 1917,
-    title: "As Primeiras Sementes",
-    text: "Criação do Tribunal do Contencioso e de Contas, a primeira estrutura destinada a apreciar matérias administrativas e financeiras.",
-    side: "left"
+    side: "left",
+    title: "AS PRIMEIRAS SEMENTES",
+    text: "Criação do Tribunal do Contencioso e de Contas, a primeira estrutura destinada a apreciar matérias administrativas, fiscais e financeiras em território angolano.",
   },
   {
     year: 1933,
-    title: "Administração do Ultramar",
-    text: "Consolidação do princípio jurídico de que a gestão do dinheiro público deve ser submetida a escrutínio institucional.",
-    side: "right"
+    side: "right",
+    title: "ADMINISTRAÇÃO DO ULTRAMAR",
+    text: "O controlo das contas passou a ser enquadrado nas estruturas centrais do Estado, consolidando o princípio jurídico do escrutínio institucional sobre o dinheiro público.",
   },
   {
     year: 1951,
-    title: "Novo Significado",
-    text: "A revisão constitucional reafirma a necessidade de examinar as contas públicas, fortalecendo a tradição jurídica de fiscalização.",
-    side: "left"
+    side: "left",
+    title: "NOVO SIGNIFICADO",
+    text: "A revisão constitucional reafirmou a necessidade de examinar as contas das províncias ultramarinas, reforçando o papel do Tribunal no sistema administrativo.",
   },
   {
     year: 1975,
-    title: "Nasce uma Nova Nação",
-    text: "Com a Independência Nacional, Angola assume o desafio de construir as suas próprias instituições de soberania.",
-    side: "right"
+    side: "right",
+    title: "NASCE UMA NOVA NAÇÃO",
+    text: "Com a Independência Nacional, Angola assumiu o desafio de edificar as suas próprias instituições de soberania e governação democrática.",
   },
   {
     year: 1991,
-    title: "O Despertar do Estado de Direito",
-    text: "A Lei n.º 12/91 abre caminho para a institucionalização de um tribunal dedicado à fiscalização das finanças públicas.",
-    side: "left"
+    side: "left",
+    title: "O DESPERTAR DO ESTADO DE DIREITO",
+    text: "A Lei n.º 12/91 reconheceu a necessidade de um órgão independente de controlo financeiro, abrindo caminho para a fiscalização das finanças públicas.",
   },
   {
     year: 1992,
-    title: "Consagração Constitucional",
-    text: "A segunda revisão constitucional estabelece formalmente o Tribunal de Contas de Angola como órgão essencial do Estado.",
-    side: "right"
+    side: "right",
+    title: "CONSAGRAÇÃO CONSTITUCIONAL",
+    text: "A segunda revisão constitucional estabeleceu formalmente o Tribunal de Contas de Angola como órgão jurisdicional para assegurar a legalidade dos recursos públicos.",
   },
   {
     year: 1996,
-    title: "Criação Oficial (Lei 5/96)",
-    text: "A 12 de Abril nasce juridicamente o Tribunal de Contas de Angola, instituindo um órgão especializado no julgamento de contas.",
-    side: "left"
+    side: "left",
+    title: "NASCIMENTO JURÍDICO",
+    text: "A 12 de Abril, através da Lei n.º 5/96, é oficialmente criado o Tribunal de Contas de Angola, instituição destinada a proteger a legalidade financeira do Estado.",
   },
   {
     year: 2001,
-    title: "O Tribunal Ganha Vida",
-    text: "Início efetivo das funções com a nomeação do primeiro Juiz Conselheiro Presidente e da primeira geração de Juízes.",
-    side: "right"
+    side: "right",
+    title: "O TRIBUNAL GANHA VIDA",
+    text: "Início efetivo das funções com a nomeação do primeiro Juiz Conselheiro Presidente, Dr. Julião António, lançando as bases da fiscalização moderna.",
   },
   {
     year: 2012,
-    title: "Expansão e Fortalecimento",
-    text: "Fase de crescimento institucional e reforço das estruturas técnicas, consolidando o Tribunal como referência nacional.",
-    side: "left"
+    side: "left",
+    title: "EXPANSÃO E FORTALECIMENTO",
+    text: "Fase de crescimento institucional com a nomeação de novos Juízes e reforço técnico, consolidando o Tribunal como referência na fiscalização nacional.",
   },
   {
-    year: 2018, // Ano lógico para representar a "Corte ao Serviço do Estado"
-    title: "Corte ao Serviço do Estado",
-    text: "Afirmação como guardião da legalidade financeira, promovendo a transparência e a boa governação da coisa pública.",
-    side: "right"
+    year: 2020, // Atribuído ano aproximado para manter cronologia da Placa 10
+    side: "right",
+    title: "AO SERVIÇO DO ESTADO",
+    text: "Afirmação como guardião da legalidade, promovendo a transparência, a boa governação e a responsabilidade na gestão da coisa pública.",
   },
   {
-    year: 2023, // Ano lógico para a "Transformação Tecnológica"
-    title: "Instituição em Transformação",
-    text: "Modernização através da digitalização de processos e novas tecnologias, tornando a fiscalização mais eficiente.",
-    side: "left"
+    year: 2024, // Atribuído ano aproximado para a fase de modernização da Placa 11
+    side: "left",
+    title: "INSTITUIÇÃO EM TRANSFORMAÇÃO",
+    text: "Digitalização de processos e reforço da cooperação internacional, tornando a fiscalização mais eficiente e próxima das exigências contemporâneas.",
   },
   {
     year: 2026,
-    title: "30 Anos | Nova Marca",
-    text: "Celebração da maturidade com o lançamento da nova identidade visual, símbolo de compromisso com o futuro.",
-    side: "right"
-  }
+    side: "right",
+    title: "30 ANOS | NOVO CICLO",
+    text: "Celebração da maturidade institucional e apresentação da nova identidade visual. Um compromisso renovado com a transparência e a confiança pública.",
+  },
 ];
+
 function TimelineItem({
   item,
   index,
