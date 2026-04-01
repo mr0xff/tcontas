@@ -166,7 +166,7 @@ function QuoteBanner() {
           lineHeight: 1.8,
         }}
       >
-        O Tribunal de Contas é um <span style={{ color: "#C9A347", fontStyle: "normal", fontWeight: 600 }}>garante fundamental</span> da boa governação e da legalidade na gestão das finanças públicas, contribuindo decisivamente para o desenvolvimento sustentável e para a construção de umas Angola mais transparente e próspero.
+        O Tribunal de Contas é um <span style={{ color: "#C9A347", fontStyle: "normal", fontWeight: 600 }}>garante fundamental</span> da boa governação e da legalidade na gestão das finanças públicas, contribuindo decisivamente para o desenvolvimento sustentável e para a construção de uma Angola mais transparente e próspero.
       </p>
 
       <div className="flex items-center justify-center gap-4 mt-6">
