@@ -1,14 +1,15 @@
-name: Generate Build Assets
+name: Gerar Release do Microsite
 
 on:
   push:
     branches:
-      - main # Executa sempre que fizeres push para a main
-  workflow_dispatch: # Permite executar manualmente no painel do GitHub
+      - main # Executa sempre que enviares código para a main
 
 jobs:
-  build-and-zip:
+  build-and-release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Permissão obrigatória para criar a Release
 
     steps:
       - name: Checkout Código
@@ -23,16 +24,31 @@ jobs:
       - name: Instalar Dependências
         run: npm install
 
-      - name: Build do Projeto (Vite)
+      - name: Build Vite
         run: npm run build
 
       - name: Gerar ZIP do Dist
-        # Cria um zip chamado 'projeto-build.zip' com o conteúdo da pasta dist/
+        # Compacta a pasta dist no ficheiro com o nome exato que pediste
         run: zip -r arquivos-microsite.zip dist/
 
-      - name: Upload Artifact
+      - name: Criar/Atualizar Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: "Build Atualizado - Microsite 🏛️"
+          body: |
+            ### Assets de Produção
+            Este release contém o build mais recente gerado automaticamente.
+            **Arquivo:** `arquivos-microsite.zip`
+          files: arquivos-microsite.zip
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Artifact (Opcional)
         uses: actions/upload-artifact@v4
         with:
-          name: Arquivo do Microsite  # Nome que aparecerá no GitHub
+          name: "Arquivo do Microsite"
           path: arquivos-microsite.zip
-          retention-days: 7 # Opcional: tempo que o ficheiro fica guardado
+          retention-days: 7
