@@ -16,7 +16,7 @@ const flayersData = [
   { id: 8, title: "Carlos Feijó", image: "/flayers/p8.png" },
   { id: 9, title: "Filipa Calvão", image: "/flayers/p9.png" },
   { id: 10, title: "Ministro Zimler", image: "/flayers/p10.png" },
-  { id: 11, title: "Mamadou", image: "/flayers/p11.png" }, // O ficheiro 11 não apareceu no seu ls, valide se existe
+  { id: 11, title: "Mamadou Faye", image: "/flayers/p11.png" }, // O ficheiro 11 não apareceu no seu ls, valide se existe
   { id: 12, title: "Inaudo Araújo", image: "/flayers/p12.png" },
   { id: 13, title: "Jorge Bacelar Gouveia", image: "/flayers/p13.png" },
   { id: 14, title: "Augusto Nardes", image: "/flayers/p14.png" },
