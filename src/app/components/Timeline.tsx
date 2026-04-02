@@ -173,6 +173,7 @@ export const timelineData: Array<{
     year: 1991,
     side: "left",
     title: "O DESPERTAR DO ESTADO DE DIREITO",
+    extraStyle: "lg:object-contain h-96",
     text: "A abertura política dos anos 1990 trouxe consigo novas exigências institucionais. A Lei n.º 12/91, ao reconhecer a necessidade de criar um órgão independente de controlo financeiro, abriu caminho para a institucionalização de um tribunal dedicado à fiscalização das finanças públicas. O princípio da prestação de contas começava a afirmar-se como elemento essencial da nova ordem constitucional angolana.",
   },
   {
