@@ -444,7 +444,7 @@ export function Gallery() {
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="h-px w-12 bg-[#C9A347]" />
             <span className="text-[#C9A347] text-xs font-bold tracking-[0.3em] uppercase">
-              Memórias
+              Juizes
             </span>
             <div className="h-px w-12 bg-[#C9A347]" />
           </div>
@@ -452,14 +452,8 @@ export function Gallery() {
             className="text-[#0A2540]"
             style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 700, lineHeight: 1.2 }}
           >
-            Galeria — <span style={{ color: "#C9A347" }}>30 Anos de Memórias</span>
+            Juizes em funções no Tribunal de Contas
           </h2>
-          <p
-            className="text-[#555] mt-4 max-w-xl mx-auto"
-            style={{ fontSize: "1rem", fontWeight: 300, lineHeight: 1.7 }}
-          >
-            Uma viagem visual pela história e os momentos que marcaram três décadas do Tribunal de Contas de Angola.
-          </p>
         </div>
 
         <GalleryGrid />

@@ -24,10 +24,10 @@ export default function App() {
         <StatsSection />
         <Timeline />
         <MissionSection />
-        <Gallery />
         <EventSection />
         <SpeakersSection />
         <GuestsGallery />
+        <Gallery />
       </main>
       <Footer />
 
