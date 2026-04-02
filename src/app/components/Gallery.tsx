@@ -188,6 +188,13 @@ export const galleryImages = [
     src: "https://tcontas.ao/wp-content/uploads/2025/09/01.webp",
     biographyUrl: "https://tcontas.ao/juizes/dr-fernando-de-almeida-gomes/",
   },
+  {
+    id: 13,
+    name: "Dr. Aquiles Gonçalves da Silva Francisco",
+    description: "Juiz Conselheiro da 2.ª Câmara",
+    src: "/juiz.jpeg",
+    biographyUrl: "https://tcontas.ao/juizes/dr-fernando-de-almeida-gomes/",
+  },
 ];
 
 const testimonials = [
