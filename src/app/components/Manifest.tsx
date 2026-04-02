@@ -1,32 +1,13 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ShieldCheck, Cpu, Globe, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Cpu, Globe } from 'lucide-react';
 import { themeColors } from "../theme";
 
 const AnniversaryManifesto = () => {
-  const pillars = [
-    {
-      icon: <Cpu className="w-6 h-6" />,
-      title: "Modernização",
-      desc: "Expressão da adaptação tecnológica e da inovação institucional."
-    },
-    {
-      icon: <ShieldCheck className="w-6 h-6" />,
-      title: "Integridade",
-      desc: "Fundamento da confiança pública e da responsabilidade na gestão."
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Cooperação",
-      desc: "Fortalecimento das relações institucionais nacionais e internacionais."
-    }
-  ];
-
   return (
     <section className="bg-white py-24 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         
-        {/* CABEÇALHO COM A CORES DO TEMA */}
+        {/* CABEÇALHO */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end mb-20">
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -58,49 +39,63 @@ const AnniversaryManifesto = () => {
           </div>
         </div>
 
-        {/* CONTEÚDO PRINCIPAL (MANIFESTO INTEGRAL) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div className="lg:col-span-7 space-y-8 text-lg leading-relaxed text-[#0A2540]/80">
-            <p className="font-medium text-[#0A2540]">
-              Em Abril de 2026, o Tribunal de Contas de Angola assinala 30 anos de existência ao serviço da República, três décadas marcadas pelo compromisso inabalável com a fiscalização das finanças públicas.
+        {/* CONTEÚDO INTEGRAL */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+          <div className="lg:col-span-8 space-y-8 text-lg leading-relaxed text-[#0A2540]/90 text-justify">
+            <p>
+              Em Abril de 2026, o Tribunal de Contas de Angola assinala 30 anos de existência ao serviço da República, três décadas marcadas pelo compromisso inabalável com a fiscalização das finanças públicas, a promoção da legalidade e o reforço da responsabilidade na gestão dos recursos do Estado.
             </p>
             <p>
-              Instituído pela <span className="font-bold text-[#0A2540]">Lei n.º 5/96, de 12 de Abril</span>, o Tribunal afirmou-se como um dos pilares fundamentais do Estado de Direito em Angola, contribuindo para a consolidação da transparência e da confiança pública.
+              Instituído pela Lei n.º 5/96, de 12 de Abril, o Tribunal de Contas afirmou-se, ao longo do tempo, como um dos pilares fundamentais do Estado de Direito em Angola, contribuindo de forma decisiva para a consolidação da transparência, da boa gestão e da confiança pública.
             </p>
-            <p className="text-sm border-t border-[#C9A347]/20 pt-8">
-              É neste contexto de maturidade institucional que se realizam as <span className="font-bold">Jornadas Científicas</span>, de 8 a 10 de Abril, no Palácio da Justiça, em Luanda, reafirmando uma visão estratégica ancorada na inovação e no rigor.
+            <p>
+              É neste contexto de maturidade institucional, dinamismo interno e crescente projecção internacional que se realizam as Jornadas Científicas alusivas ao 30.º aniversário do Tribunal de Contas de Angola, de 8 a 10 de Abril, no Palácio da Justiça, em Luanda.
+            </p>
+            <p>
+              Sob o lema “30 Anos de Justiça Financeira: Modernização, Integridade e Cooperação”, este evento afirma-se como um espaço privilegiado de reflexão, partilha de conhecimento e diálogo institucional, reunindo magistrados, académicos, especialistas nacionais e internacionais e representantes de instituições congéneres.
             </p>
             
-            {/* TAGLINE FINAL */}
-            <div className="flex flex-col gap-2 pt-4">
-               <span className="text-[#C9A347] font-black text-xs tracking-widest uppercase">A missão mantém-se firme:</span>
-               <div className="flex flex-wrap gap-x-6 gap-y-2 text-[#0A2540] font-black text-sm uppercase italic">
-                  <span>• Fiscalizar com rigor</span>
-                  <span>• Promover a transparência</span>
-                  <span>• Servir melhor Angola</span>
-               </div>
+            <div className="py-6">
+              <h4 className="font-black text-[#0A2540] uppercase tracking-widest mb-6 flex items-center gap-2">
+                <div className="w-2 h-2 bg-[#C9A347]" />
+                Três Pilares Essenciais:
+              </h4>
+              <ul className="space-y-6">
+                <li className="flex gap-4">
+                  <Cpu className="text-[#C9A347] shrink-0" />
+                  <span><strong>Modernização</strong>, como expressão da adaptação tecnológica e da inovação institucional;</span>
+                </li>
+                <li className="flex gap-4">
+                  <ShieldCheck className="text-[#C9A347] shrink-0" />
+                  <span><strong>Integridade</strong>, como fundamento da confiança pública e da responsabilidade na gestão dos recursos;</span>
+                </li>
+                <li className="flex gap-4">
+                  <Globe className="text-[#C9A347] shrink-0" />
+                  <span><strong>Cooperação</strong>, como caminho para o fortalecimento das relações institucionais, a nível nacional e internacional.</span>
+                </li>
+              </ul>
             </div>
-          </div>
 
-          {/* CARDS LATERAIS (PILARES) - USANDO O AZUL DO TEMA */}
-          <div className="lg:col-span-5 grid grid-cols-1 gap-4">
-            {pillars.map((p, i) => (
-              <div 
-                key={i} 
-                className="p-8 transition-all duration-500 border-b-2 border-transparent hover:border-[#C9A347]"
-                style={{ backgroundColor: themeColors.primary }}
-              >
-                <div className="text-[#C9A347] mb-4">
-                  {p.icon}
-                </div>
-                <h4 className="text-white text-lg font-black uppercase tracking-widest mb-2">
-                  {p.title}
-                </h4>
-                <p className="text-white/60 text-sm leading-snug">
-                  {p.desc}
-                </p>
+            <p>
+              Mais do que uma celebração, este momento representa uma oportunidade de olhar o percurso feito, consolidar o presente e projectar, com responsabilidade, os desafios que se colocam ao controlo externo das finanças públicas no século XXI.
+            </p>
+            <p>
+              Hoje, o Tribunal de Contas de Angola é uma instituição moderna, em transformação contínua, que investe no capital humano, na qualificação técnica dos seus quadros e na inovação dos seus processos, afirmando-se igualmente no plano internacional, com destaque para a assunção da Presidência da OISC-CPLP.
+            </p>
+
+            <div className="pt-10 border-t border-gray-100">
+              <p className="font-black text-[#0A2540] uppercase tracking-tighter text-2xl mb-4">
+                Trinta anos depois, a missão mantém-se firme.
+              </p>
+              <div className="space-y-1 text-[#C9A347] font-bold uppercase italic tracking-widest">
+                <p>• Fiscalizar com rigor.</p>
+                <p>• Promover a transparência.</p>
+                <p>• Servir melhor Angola.</p>
               </div>
-            ))}
+              <p className="mt-6 font-black text-[#0A2540] uppercase tracking-widest">
+                E o caminho continua.
+              </p>
+            </div>
           </div>
         </div>
       </div>

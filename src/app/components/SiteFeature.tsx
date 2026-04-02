@@ -10,97 +10,93 @@ import {
 import { themeColors } from "../theme";
 
 const SiteFeatures = () => {
-  const features = [
-    {
-      icon: <History className="w-8 h-8" />,
-      title: "Linha do Tempo Interativa",
-      desc: "Uma viagem visual pelos marcos que moldaram a instituição, desde a sua génese até à atualidade."
-    },
-    {
-      icon: <CalendarDays className="w-8 h-8" />,
-      title: "Programa Científico",
-      desc: "Acesso detalhado a preletores, temas e painéis das Jornadas, estruturado para uma consulta antecipada."
-    },
-    {
-      icon: <Newspaper className="w-8 h-8" />,
-      title: "Atualizações em Tempo Real",
-      desc: "Área dedicada a notícias e conteúdos institucionais para acompanhar cada momento relevante do aniversário."
-    },
-    {
-      icon: <FileBox className="w-8 h-8" />,
-      title: "Repositório de Recursos",
-      desc: "Placard digital com comunicações, relatórios e materiais científicos disponíveis para consulta pós-evento."
-    },
-    {
-      icon: <LayoutTemplate className="w-8 h-8" />,
-      title: "Galeria Multimédia",
-      desc: "Registo visual completo em alta definição, integrado com o portal principal do Tribunal de Contas."
-    },
-    {
-      icon: <MonitorSmartphone className="w-8 h-8" />,
-      title: "Plataforma Responsiva",
-      desc: "Navegação intuitiva e acessível em qualquer dispositivo, refletindo a modernização digital da Corte."
-    }
-  ];
-
   return (
     <section className="py-24 px-6 bg-[#F8F9FA]">
       <div className="max-w-7xl mx-auto">
         
         {/* TÍTULO DA SECÇÃO */}
-        <div className="text-center mb-20">
+        <div className="mb-16">
           <h2 
             className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-6"
             style={{ color: themeColors.primary }}
           >
-            O que encontrará <br />
-            <span className="text-[#C9A347]">neste espaço</span>
+            O QUE ENCONTRARÁ <br />
+            <span className="text-[#C9A347]">NESTE ESPAÇO</span>
           </h2>
-          <div className="w-24 h-1 bg-[#C9A347] mx-auto mb-8" />
-          <p className="max-w-2xl mx-auto text-[#0A2540]/70 leading-relaxed font-medium">
-            Uma janela digital concebida para refletir a história, a atividade e a visão de futuro do Tribunal de Contas de Angola.
-          </p>
+          <div className="w-24 h-1 bg-[#C9A347] mb-8" />
+          
+          <div className="max-w-4xl text-[#0A2540]/80 leading-relaxed space-y-4 font-medium">
+            <p>
+              Ao aceder a este microsite dedicado às Jornadas Científicas dos 30 anos do Tribunal de Contas de Angola, o visitante é imediatamente acolhido por uma mensagem de boas-vindas, que introduz o espírito desta celebração e o significado deste momento histórico para a instituição e para o país.
+            </p>
+          </div>
         </div>
 
-        {/* GRID DE FUNCIONALIDADES */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {features.map((item, index) => (
-            <div 
-              key={index} 
-              className="group p-8 bg-white border border-gray-100 hover:shadow-2xl transition-all duration-500 rounded-sm relative overflow-hidden"
-            >
-              {/* Efeito de Dourado no Topo ao passar o mouse */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-[#C9A347] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              
-              <div className="text-[#C9A347] mb-6 group-hover:scale-110 transition-transform duration-300">
-                {item.icon}
-              </div>
-              
-              <h4 
-                className="text-lg font-black uppercase tracking-tight mb-4"
-                style={{ color: themeColors.primary }}
-              >
-                {item.title}
-              </h4>
-              
-              <p className="text-sm text-[#0A2540]/60 leading-relaxed">
-                {item.desc}
+        {/* GRID DE FUNCIONALIDADES (TEXTO INTEGRAL) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          
+          {/* Linha do Tempo */}
+          <div className="p-8 bg-white border border-gray-100 shadow-sm">
+            <History className="text-[#C9A347] mb-6 w-10 h-10" />
+            <p className="text-sm text-[#0A2540]/80 leading-relaxed">
+              Logo no primeiro contacto, destaca-se uma <strong>linha do tempo interactiva</strong>, concebida para oferecer, de forma clara e envolvente, uma visão sintética da evolução do Tribunal de Contas — desde a sua génese até à actualidade. Em poucos passos, o utilizador percorre os principais marcos que moldaram a instituição e consolidaram o seu papel como guardiã da legalidade financeira.
+            </p>
+          </div>
+
+          {/* Programa */}
+          <div className="p-8 bg-white border border-gray-100 shadow-sm">
+            <CalendarDays className="text-[#C9A347] mb-6 w-10 h-10" />
+            <p className="text-sm text-[#0A2540]/80 leading-relaxed">
+              Neste espaço digital, encontrará também o <strong>programa completo e detalhado das Jornadas Científicas</strong>, com a identificação dos prelectores, temas e painéis, permitindo uma leitura estruturada e antecipada dos conteúdos que marcam esta celebração.
+            </p>
+          </div>
+
+          {/* Notícias */}
+          <div className="p-8 bg-white border border-gray-100 shadow-sm">
+            <Newspaper className="text-[#C9A347] mb-6 w-10 h-10" />
+            <p className="text-sm text-[#0A2540]/80 leading-relaxed">
+              O microsite integra ainda uma área dedicada a <strong>notícias e conteúdos institucionais</strong>, assegurando o acompanhamento contínuo das actividades, anúncios e momentos relevantes associados ao 30.º aniversário do Tribunal.
+            </p>
+          </div>
+
+          {/* Placard de Recursos */}
+          <div className="p-8 bg-white border border-gray-100 shadow-sm lg:col-span-2">
+            <FileBox className="text-[#C9A347] mb-6 w-10 h-10" />
+            <div className="text-sm text-[#0A2540]/80 leading-relaxed">
+              <p className="mb-4">
+                Pensando no legado deste evento, foi igualmente concebido um <strong>placard de recursos e publicações</strong>, que funcionará como repositório pós-evento, onde estarão disponíveis:
+              </p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 italic">
+                <li>• prelecções e comunicações apresentadas;</li>
+                <li>• relatórios e documentos institucionais;</li>
+                <li>• currículos dos oradores;</li>
+                <li>• e demais materiais de interesse científico e institucional.</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Galeria */}
+          <div className="p-8 bg-white border border-gray-100 shadow-sm">
+            <LayoutTemplate className="text-[#C9A347] mb-6 w-10 h-10" />
+            <p className="text-sm text-[#0A2540]/80 leading-relaxed">
+              Complementarmente, o utilizador poderá aceder a uma <strong>galeria multimédia</strong>, integrada com o site principal do Tribunal, reunindo imagens, vídeos e registos visuais que documentam os principais momentos desta celebração.
+            </p>
+          </div>
+        </div>
+
+        {/* CONCLUSÃO TÉCNICA E INSTITUCIONAL */}
+        <div style={{backgroundColor: themeColors.primary }} className="bg-[#0A2540] p-10 text-white">
+          <div className="flex items-start gap-6 mb-8">
+            <MonitorSmartphone className="text-[#C9A347] w-12 h-12 shrink-0" />
+            <div className="space-y-4 text-sm leading-relaxed text-white/80">
+              <p>
+                Do ponto de vista técnico, trata-se de uma plataforma moderna, responsiva e intuitiva, concebida para garantir: fácil navegação; acessibilidade em diferentes dispositivos; interactividade; e actualização permanente dos conteúdos.
+              </p>
+              <p className="text-white font-bold text-lg leading-snug">
+                Mais do que um simples portal informativo, este microsite constitui-se como uma janela digital do Tribunal de Contas de Angola, reflectindo a sua história, a sua actividade e a sua visão de futuro.
               </p>
             </div>
-          ))}
-        </div>
-
-        {/* MENSAGEM FINAL / STATUS TÉCNICO */}
-        <div className="mt-20 p-8 border border-[#0A2540]/10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4">
-             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-             <span className="text-xs font-bold uppercase tracking-widest text-[#0A2540]">
-               Plataforma em Atualização Permanente
-             </span>
           </div>
-          <p className="text-[10px] uppercase tracking-[0.2em] font-black text-[#C9A347]">
-            Tribunal de Contas de Angola • 30 Anos
-          </p>
         </div>
 
       </div>
