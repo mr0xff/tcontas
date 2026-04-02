@@ -59,7 +59,7 @@ export function SpeakersNavigation({ simpleSpeakers }: { simpleSpeakers: any[] }
   return (
     <div className="w-full">
       {/* Tab Switcher Brutalista */}
-      <div className="flex justify-center mb-16">
+      {/* <div className="flex justify-center mb-16">
         <div className="inline-flex bg-white/5 p-1 border border-white/10 rounded-none">
           <button
             onClick={() => setActiveTab('detailed')}
@@ -82,7 +82,7 @@ export function SpeakersNavigation({ simpleSpeakers }: { simpleSpeakers: any[] }
             <LayoutGrid size={14} /> Currículos
           </button>
         </div>
-      </div>
+      </div> */}
 
       {/* Conteúdo das Abas */}
       <AnimatePresence mode="wait">

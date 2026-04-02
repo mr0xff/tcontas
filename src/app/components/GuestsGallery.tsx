@@ -73,7 +73,7 @@ export function GuestsGallery() {
         <div className="text-center mb-20">
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="h-px w-12 bg-[#C9A347]" />
-            <span className="text-[#C9A347] text-xs font-bold tracking-[0.3em] uppercase">Protocolo Institucional</span>
+            <span className="text-[#C9A347] text-xs font-bold tracking-[0.3em] uppercase">Convidados</span>
             <div className="h-px w-12 bg-[#C9A347]" />
           </div>
         </div>

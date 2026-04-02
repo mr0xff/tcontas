@@ -11,7 +11,7 @@ const flayersData = [
   { id: 3, title: "alexandre cose", image: "/flayers/p3.png" },
   { id: 4, title: "Adilson Cardoso", image: "/flayers/p4.png" },
   { id: 5, title: "Evarista Solano", image: "/flayers/p5.png" },
-  { id: 6, title: "Zineb Moçameque", image: "/flayers/p6.png" },
+  { id: 6, title: "Zineb el adaqui", image: "/flayers/p6.png" },
   { id: 7, title: "Rui Cruz", image: "/flayers/p7.png" },
   { id: 8, title: "Carlos Feijó", image: "/flayers/p8.png" },
   { id: 9, title: "Filipa Calvão", image: "/flayers/p9.png" },
