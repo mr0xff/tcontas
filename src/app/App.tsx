@@ -26,7 +26,7 @@ export default function App() {
         <MissionSection />
         <EventSection />
         <SpeakersSection />
-        <GuestsGallery />
+        {/* <GuestsGallery /> */}
         <Gallery />
       </main>
       <Footer />

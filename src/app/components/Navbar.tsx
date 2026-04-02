@@ -6,10 +6,10 @@ import clsx from "clsx";
 const navLinks = [
   { label: "Início", href: "#hero" },
   { label: "Linha do Tempo", href: "#timeline" },
-  { label: "Galeria", href: "#galeria" },
   { label: "Evento", href: "#evento" },
   { label: "Oradores", href: "#oradores" },
-  { label: "Convidados", href: "#convidados" },
+  { label: "Galeria", href: "#galeria" },
+  // { label: "Convidados", href: "#convidados" },
   { label: "Contacto", href: "#rodape" },
 ];
 
