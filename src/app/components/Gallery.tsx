@@ -118,13 +118,13 @@ export const galleryImages = [
     src: "https://tcontas.ao/wp-content/uploads/2025/09/8.webp",
     biographyUrl: "https://tcontas.ao/juizes/dra-olinda-franca-cardoso/",
   },
-  {
-    id: 3,
-    name: "Dr. Fausto Tavares de Carvalho Simões",
-    description: "Juiz Conselheiro da 2.ª Câmara",
-    src: "https://tcontas.ao/wp-content/uploads/2025/09/03-1.webp",
-    biographyUrl: "https://tcontas.ao/juizes/dr-fausto-tavares-de-carvalho-simoes/",
-  },
+  // {
+  //   id: 3,
+  //   name: "Dr. Fausto Tavares de Carvalho Simões",
+  //   description: "Juiz Conselheiro da 2.ª Câmara",
+  //   src: "https://tcontas.ao/wp-content/uploads/2025/09/03-1.webp",
+  //   biographyUrl: "https://tcontas.ao/juizes/dr-fausto-tavares-de-carvalho-simoes/",
+  // },
   {
     id: 4,
     name: "Dr. Manuel José Domingos",
