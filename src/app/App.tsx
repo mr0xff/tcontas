@@ -23,8 +23,8 @@ export default function App() {
       <main>
         <Hero />
         <AnniversaryManifesto />
+        <SiteFeatures />
         <CountdownTimer />
-        
         <StatsSection />
         <Timeline />
         <MissionSection />
@@ -32,7 +32,6 @@ export default function App() {
         <SpeakersSection />
         {/* <GuestsGallery /> */}
         <Gallery />
-        <SiteFeatures />
       </main>
       <Footer />
 
