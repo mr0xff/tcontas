@@ -25,7 +25,6 @@ export default function App() {
         <AnniversaryManifesto />
         <SiteFeatures />
         <CountdownTimer />
-        <StatsSection />
         <Timeline />
         <MissionSection />
         <EventSection />
