@@ -1,4 +1,5 @@
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import clsx from "clsx";
 
 const IMAGES = {
   1917: "/timelines/1917.png",
@@ -140,6 +141,7 @@ const IMAGES = {
 export const timelineData: Array<{
   year: number;
   title: string;
+  extraStyle?: string;
   text: string;
   side: "right" | "left";
 }> = [
@@ -177,6 +179,7 @@ export const timelineData: Array<{
     year: 1992,
     side: "right",
     title: "A CONSTITUIÇÃO CONSAGRA O TRIBUNAL",
+    extraStyle: "lg:object-contain h-96",
     text: "A segunda revisão constitucional, aprovada em 1992, estabeleceu formalmente a criação do Tribunal de Contas de Angola. Pela primeira vez, a Constituição reconhecia a importância de um órgão jurisdicional dedicado a assegurar a legalidade e a disciplina na gestão dos recursos públicos. A ideia transformava-se, finalmente, em compromisso institucional.",
   },
   {
@@ -246,7 +249,7 @@ function TimelineItem({
             <img
               src={IMAGES[item.year as keyof typeof IMAGES]}
               alt={`${item.year} — ${item.title}`}
-              className="w-full h-48 object-cover mb-4 shadow-lg"
+              className={clsx("w-full h-48 object-cover mb-4 shadow-lg", item.extraStyle)}
               style={{ border: "2px solid #C9A347" }}
             />
             <h3
@@ -293,7 +296,7 @@ function TimelineItem({
             <img
               src={IMAGES[item.year as keyof typeof IMAGES]}
               alt={`${item.year} — ${item.title}`}
-              className="w-full h-48 object-cover mb-4 shadow-lg"
+              className={clsx("w-full h-48 object-cover mb-4 shadow-lg", item.extraStyle)}
               style={{ border: "2px solid #C9A347" }}
             />
             <h3
