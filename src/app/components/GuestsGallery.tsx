@@ -76,12 +76,6 @@ export function GuestsGallery() {
             <span className="text-[#C9A347] text-xs font-bold tracking-[0.3em] uppercase">Protocolo Institucional</span>
             <div className="h-px w-12 bg-[#C9A347]" />
           </div>
-          <h2 className="text-white text-4xl md:text-5xl font-bold mb-4">
-            Convidados e <span className="text-[#C9A347]">Dignitários</span>
-          </h2>
-          <p className="text-white/50 max-w-2xl mx-auto font-light leading-relaxed">
-            Presenças confirmadas das mais altas instâncias de controlo externo e figuras proeminentes da magistratura internacional.
-          </p>
         </div>
 
         {guestCategories.map((category, catIdx) => (
