@@ -10,6 +10,8 @@ import { WhatsAppButton } from "./components/WhatsAppButton"; // Importe aqui
 import { SpeakersSection } from "./components/SpeakersSection";
 import { GuestsGallery } from "./components/GuestsGallery";
 import { CountdownTimer } from "./components/CounterdownTimer";
+import AnniversaryManifesto from "./components/Manifest";
+import SiteFeatures from "./components/SiteFeature";
 
 export default function App() {
   return (
@@ -20,7 +22,9 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <AnniversaryManifesto />
         <CountdownTimer />
+        
         <StatsSection />
         <Timeline />
         <MissionSection />
@@ -28,6 +32,7 @@ export default function App() {
         <SpeakersSection />
         {/* <GuestsGallery /> */}
         <Gallery />
+        <SiteFeatures />
       </main>
       <Footer />
 
