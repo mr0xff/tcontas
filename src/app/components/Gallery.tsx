@@ -14,84 +14,84 @@ import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 //     src: "https://tcontas.ao/wp-content/uploads/2025/09/04.webp",
 //     name: "Dr. Evaristo José Solano",
 //     description: "Juiz Conselheiro Vice-Presidente do Tribunal e Presidente da 1.ª Câmara",
-//     biographyUrl: "https://tcontas.ao/juizes/dr-evaristo-jose-solano/",
+//     biographyUrl: "https://tcontas.ao/Juízes/dr-evaristo-jose-solano/",
 //   },
 //   {
 //     id: 2,
 //     src: "https://tcontas.ao/wp-content/uploads/2025/09/06.webp",
 //     name: "Dra. Arlete Maria Bolonhês da Conceição",
 //     description: "JUÍZA CONSELHEIRA DA 1ª CÂMARA",
-//     biographyUrl: "https://tcontas.ao/juizes/dra-arlete-maria-bolonhes-da-conceicao/",
+//     biographyUrl: "https://tcontas.ao/Juízes/dra-arlete-maria-bolonhes-da-conceicao/",
 //   },
 //   {
 //     id: 3,
 //     src: "https://tcontas.ao/wp-content/uploads/2025/09/04-1.webp",
 //     name: "Dr. Armindo Gideão Kunjiquisse Jelembi",
 //     description: "JUIZ CONSELHEIRO DA 1ª CÂMARA",
-//     biographyUrl: "https://tcontas.ao/juizes/dr-armindo-gideao-kunjiquisse-jelembi/",
+//     biographyUrl: "https://tcontas.ao/Juízes/dr-armindo-gideao-kunjiquisse-jelembi/",
 //   },
 //   {
 //     id: 4,
 //     src: "https://tcontas.ao/wp-content/uploads/2025/09/01-1.webp",
 //     name: "Dr. Januário José Domingos",
 //     description: "JUIZ CONSELHEIRO DA 1ª CÂMARA",
-//     biographyUrl: "https://tcontas.ao/juizes/dr-januario-jose-domingos/",
+//     biographyUrl: "https://tcontas.ao/Juízes/dr-januario-jose-domingos/",
 //   },
 //   {
 //     id: 5,
 //     src: "https://tcontas.ao/wp-content/uploads/2025/09/03.webp",
 //     name: "Dr. Carlos Luís M. António",
 //     description: "JUIZ CONSELHEIRO DA 1ª CÂMARA",
-//     biographyUrl: "https://tcontas.ao/juizes/dr-carlos-luis-m-antonio/",
+//     biographyUrl: "https://tcontas.ao/Juízes/dr-carlos-luis-m-antonio/",
 //   },
 //   {
 //     id: 6,
 //     src: "https://tcontas.ao/wp-content/uploads/2025/09/8.webp",
 //     name: "Dra. Olinda França Cardoso",
 //     description: "JUÍZA CONSELHEIRA PRESIDENTE DA 2ª CÂMARA",
-//     biographyUrl: "https://tcontas.ao/juizes/dra-olinda-franca-cardoso/",
+//     biographyUrl: "https://tcontas.ao/Juízes/dra-olinda-franca-cardoso/",
 //   },
 //   {
 //     id: 7,
 //     src: "https://tcontas.ao/wp-content/uploads/2025/09/03-1.webp",
 //     name: "Dr. Fausto Tavares de Carvalho Simões",
 //     description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
-//     biographyUrl: "https://tcontas.ao/juizes/dr-fausto-tavares-de-carvalho-simoes/",
+//     biographyUrl: "https://tcontas.ao/Juízes/dr-fausto-tavares-de-carvalho-simoes/",
 //   },
 //   {
 //     id: 8,
 //     src: "https://tcontas.ao/wp-content/uploads/2025/09/Imagem-WhatsApp-2025-10-09-as-12.58.44_7f1ebd62.png",
 //     name: "Dr. Manuel José Domingos",
 //     description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
-//     biographyUrl: "https://tcontas.ao/juizes/dr-manuel-jose-domingos/",
+//     biographyUrl: "https://tcontas.ao/Juízes/dr-manuel-jose-domingos/",
 //   },
 //   {
 //     id: 9,
 //     src: "https://tcontas.ao/wp-content/uploads/2025/09/02-1.webp",
 //     name: "Dr. Manuel da Cruz Neto",
 //     description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
-//     biographyUrl: "https://tcontas.ao/juizes/dr-manuel-da-cruz-neto/",
+//     biographyUrl: "https://tcontas.ao/Juízes/dr-manuel-da-cruz-neto/",
 //   },
 //   {
 //     id: 10,
 //     src: "https://tcontas.ao/wp-content/uploads/2025/09/05.webp",
 //     name: "Dr. Sebastião Jorge Diogo Bessa",
 //     description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
-//     biographyUrl: "https://tcontas.ao/juizes/dr-sebastiao-jorge-diogo-bessa/",
+//     biographyUrl: "https://tcontas.ao/Juízes/dr-sebastiao-jorge-diogo-bessa/",
 //   },
 //   {
 //     id: 11,
 //     src: "https://tcontas.ao/wp-content/uploads/2025/09/02.webp",
 //     name: "Dr. João Carlos de C. Paiva",
 //     description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
-//     biographyUrl: "https://tcontas.ao/juizes/dr-joao-carlos-de-c-paiva/",
+//     biographyUrl: "https://tcontas.ao/Juízes/dr-joao-carlos-de-c-paiva/",
 //   },
 //   {
 //     id: 12,
 //     src: "https://tcontas.ao/wp-content/uploads/2025/09/01.webp",
 //     name: "Dr. Fernando de Almeida Gomes",
 //     description: "JUIZ CONSELHEIRO DA 2ª CÂMARA",
-//     biographyUrl: "https://tcontas.ao/juizes/dr-fernando-de-almeida-gomes/",
+//     biographyUrl: "https://tcontas.ao/Juízes/dr-fernando-de-almeida-gomes/",
 //   },
    
 // ];
@@ -109,91 +109,91 @@ export const galleryImages = [
     name: "Dr. Evaristo José Solano",
     description: "Juiz Conselheiro Vice-Presidente do Tribunal e Presidente da 1.ª Câmara",
     src: "https://tcontas.ao/wp-content/uploads/2025/09/04.webp",
-    biographyUrl: "https://tcontas.ao/juizes/dr-evaristo-jose-solano/",
+    biographyUrl: "https://tcontas.ao/Juízes/dr-evaristo-jose-solano/",
   },
   {
     id: 2,
     name: "Dra. Olinda Maria França Cardoso",
     description: "Juíza Conselheira Presidente da 2.ª Câmara",
     src: "https://tcontas.ao/wp-content/uploads/2025/09/8.webp",
-    biographyUrl: "https://tcontas.ao/juizes/dra-olinda-franca-cardoso/",
+    biographyUrl: "https://tcontas.ao/Juízes/dra-olinda-franca-cardoso/",
   },
   // {
   //   id: 3,
   //   name: "Dr. Fausto Tavares de Carvalho Simões",
   //   description: "Juiz Conselheiro da 2.ª Câmara",
   //   src: "https://tcontas.ao/wp-content/uploads/2025/09/03-1.webp",
-  //   biographyUrl: "https://tcontas.ao/juizes/dr-fausto-tavares-de-carvalho-simoes/",
+  //   biographyUrl: "https://tcontas.ao/Juízes/dr-fausto-tavares-de-carvalho-simoes/",
   // },
   {
     id: 4,
     name: "Dr. Manuel José Domingos",
     description: "Juiz Conselheiro da 2.ª Câmara",
     src: "https://tcontas.ao/wp-content/uploads/2025/09/Imagem-WhatsApp-2025-10-09-as-12.58.44_7f1ebd62.png",
-    biographyUrl: "https://tcontas.ao/juizes/dr-manuel-jose-domingos/",
+    biographyUrl: "https://tcontas.ao/Juízes/dr-manuel-jose-domingos/",
   },
   {
     id: 5,
     name: "Dra. Arlete Maria Bolonhês da Conceição",
     description: "Juíza Conselheira da 1.ª Câmara",
     src: "https://tcontas.ao/wp-content/uploads/2025/09/06.webp",
-    biographyUrl: "https://tcontas.ao/juizes/dra-arlete-maria-bolonhes-da-conceicao/",
+    biographyUrl: "https://tcontas.ao/Juízes/dra-arlete-maria-bolonhes-da-conceicao/",
   },
   {
     id: 6,
     name: "Dr. Sebastião Jorge Diogo Bessa",
     description: "Juiz Conselheiro da 2.ª Câmara",
     src: "https://tcontas.ao/wp-content/uploads/2025/09/05.webp",
-    biographyUrl: "https://tcontas.ao/juizes/dr-sebastiao-jorge-diogo-bessa/",
+    biographyUrl: "https://tcontas.ao/Juízes/dr-sebastiao-jorge-diogo-bessa/",
   },
   {
     id: 7,
     name: "Dr. Manuel da Cruz Neto",
     description: "Juiz Conselheiro da 2.ª Câmara",
     src: "https://tcontas.ao/wp-content/uploads/2025/09/02-1.webp",
-    biographyUrl: "https://tcontas.ao/juizes/dr-manuel-da-cruz-neto/",
+    biographyUrl: "https://tcontas.ao/Juízes/dr-manuel-da-cruz-neto/",
   },
   {
     id: 8,
     name: "Dr. Armindo Gideão Kunjiquisse Jelembi",
     description: "Juiz Conselheiro da 1.ª Câmara",
     src: "https://tcontas.ao/wp-content/uploads/2025/09/04-1.webp",
-    biographyUrl: "https://tcontas.ao/juizes/dr-armindo-gideao-kunjiquisse-jelembi/",
+    biographyUrl: "https://tcontas.ao/Juízes/dr-armindo-gideao-kunjiquisse-jelembi/",
   },
   {
     id: 9,
     name: "Dr. Januário José Domingos",
     description: "Juiz Conselheiro da 1.ª Câmara",
     src: "https://tcontas.ao/wp-content/uploads/2025/09/01-1.webp",
-    biographyUrl: "https://tcontas.ao/juizes/dr-januario-jose-domingos/",
+    biographyUrl: "https://tcontas.ao/Juízes/dr-januario-jose-domingos/",
   },
   {
     id: 10,
     name: "Dr. João Carlos de C. Paiva",
     description: "Juiz Conselheiro da 2.ª Câmara",
     src: "https://tcontas.ao/wp-content/uploads/2025/09/02.webp",
-    biographyUrl: "https://tcontas.ao/juizes/dr-joao-carlos-de-c-paiva/",
+    biographyUrl: "https://tcontas.ao/Juízes/dr-joao-carlos-de-c-paiva/",
   },
   {
     id: 11,
     name: "Dr. Carlos Luís M. António",
     description: "Juiz Conselheiro da 1.ª Câmara",
     src: "https://tcontas.ao/wp-content/uploads/2025/09/03.webp",
-    biographyUrl: "https://tcontas.ao/juizes/dr-carlos-luis-m-antonio/",
+    biographyUrl: "https://tcontas.ao/Juízes/dr-carlos-luis-m-antonio/",
   },
   {
     id: 12,
     name: "Dr. Fernando de Almeida Gomes",
     description: "Juiz Conselheiro da 2.ª Câmara",
     src: "https://tcontas.ao/wp-content/uploads/2025/09/01.webp",
-    biographyUrl: "https://tcontas.ao/juizes/dr-fernando-de-almeida-gomes/",
+    biographyUrl: "https://tcontas.ao/Juízes/dr-fernando-de-almeida-gomes/",
   },
   {
     id: 13,
     name: "Dr. Aquiles Gonçalves da Silva Francisco",
     description: "Juiz Conselheiro da 2.ª Câmara",
     src: "/juiz.jpeg",
-    biographyUrl: "https://tcontas.ao/juizes/dr-fernando-de-almeida-gomes/",
+    biographyUrl: "https://tcontas.ao/Juízes/dr-fernando-de-almeida-gomes/",
   },
 ];
 
@@ -451,7 +451,7 @@ export function Gallery() {
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="h-px w-12 bg-[#C9A347]" />
             <span className="text-[#C9A347] text-xs font-bold tracking-[0.3em] uppercase">
-              Juizes
+              Juízes
             </span>
             <div className="h-px w-12 bg-[#C9A347]" />
           </div>
@@ -459,7 +459,7 @@ export function Gallery() {
             className="text-[#0A2540]"
             style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 700, lineHeight: 1.2 }}
           >
-            Juizes em funções no Tribunal de Contas
+            Juízes em funções no Tribunal de Contas
           </h2>
         </div>
 
