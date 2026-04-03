@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
       - name: Instalar Dependências
@@ -35,7 +35,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
-          name: "Build Atualizado - Microsite 🏛️"
+          name: "Build Atualizado - Microsite"
           body: |
             ### Assets de Produção
             Este release contém o build mais recente gerado automaticamente.
