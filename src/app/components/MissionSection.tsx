@@ -97,7 +97,7 @@ export function MissionSection() {
             className="text-[#555] mt-4 max-w-2xl mx-auto"
             style={{ fontSize: "1rem", fontWeight: 300, lineHeight: 1.7 }}
           >
-            Fundado sobre os princípios da democracia e do Estado de Direito, o TCA orienta a sua acção por valores que garantem a confiança dos cidadãos angolanos.
+            Criado sobre os princípios da democracia e do Estado de Direito, o TCA orienta a sua acção por valores que garantem a confiança dos cidadãos angolanos.
           </p>
         </div>
 

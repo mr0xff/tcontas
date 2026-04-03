@@ -18,126 +18,6 @@ const IMAGES = {
   2026: "/timelines/2026.png",
 };
 
-// export const timelineData: Array<{
-//   year: number;
-//   title: string;
-//   text: string;
-//   side: "right" | "left";
-// }> = [
-//   {
-//     year: 1917,
-//     side: "left",
-//     title: "AS PRIMEIRAS SEMENTES DO CONTROLO FINANCEIRO",
-//     text: "A história do controlo das contas públicas em Angola tem raízes profundas. Em 1917 foi criado o Tribunal do Contencioso e de Contas, primeira estrutura destinada a apreciar matérias administrativas, fiscais e financeiras no território. Embora inserido no contexto da administração colonial, este organismo lançou uma ideia que atravessaria o tempo: os recursos públicos exigem responsabilidade e prestação de contas.",
-//   },
-//   {
-//     year: 1933,
-//     side: "right",
-//     title: "A ADMINISTRAÇÃO FINANCEIRA DO ULTRAMAR",
-//     text: `
-//       Com a reorganização administrativa do Império Português, o controlo das contas públicas das colónias passou a ser enquadrado nas estruturas centrais do Estado.
-//       Neste período, a fiscalização financeira permaneceu distante da realidade local. Ainda assim, consolidou-se o princípio jurídico de que a gestão do dinheiro público deve ser submetida a escrutínio institucional.
-//     `
-//   },
-//   {
-//     year: 1951,
-//     side: "left",
-//     title: "A PRESTAÇÃO DE CONTAS GANHA NOVO SIGNIFICADO",
-//     text: `
-//       A revisão constitucional de 1951 veio reafirmar a necessidade de examinar as contas das províncias ultramarinas, reforçando o papel do Tribunal de Contas no sistema administrativo português.
-//       Apesar das limitações da época, este momento representou mais um passo na construção de uma tradição jurídica baseada na responsabilidade financeira do poder público.
-//     `
-//   },
-//   {
-//     year: 1975,
-//     side: "right",
-//     title: "NASCE UMA NOVA NAÇÃO",
-//     text: `
-//       Com a Independência Nacional, Angola assumiu plenamente o desafio de construir as suas próprias instituições de soberania.
-//       Num contexto de profundas transformações políticas e sociais, o país iniciou o longo processo de edificação do seu Estado. A criação de um tribunal especializado na fiscalização das contas públicas tornar-se-ia, mais tarde, uma necessidade incontornável para o fortalecimento da governação democrática.
-//     `
-//   },
-//   {
-//     year: 1991,
-//     side: "left",
-//     title: "O DESPERTAR DO ESTADO DE DIREITO",
-//     text: `
-//       A abertura política dos anos 1990 trouxe consigo novas exigências institucionais.
-//       A Lei n.º 12/91, ao reconhecer a necessidade de criar um órgão independente de controlo financeiro, abriu caminho para a institucionalização de um tribunal dedicado à fiscalização das finanças públicas.
-//       O princípio da prestação de contas começava a afirmar-se como elemento essencial da nova ordem constitucional angolana.
-//     `
-//   },
-//   {
-//     year: 1992,
-//     side: "right",
-//     title: "A CONSTITUIÇÃO CONSAGRA O TRIBUNAL",
-//     text: `
-//       A segunda revisão constitucional, aprovada em 1992, estabeleceu formalmente a criação do Tribunal de Contas de Angola.
-//       Pela primeira vez, a Constituição reconhecia a importância de um órgão jurisdicional dedicado a assegurar a legalidade e a disciplina na gestão dos recursos públicos.
-//       A ideia transformava-se, finalmente, em compromisso institucional.
-//     `
-//   },
-//   {
-//     year: 1996,
-//     side: "left",
-//     title: "NASCE O TRIBUNAL DE CONTAS DE ANGOLA",
-//     text: `
-//       A 12 de Abril de 1996, através da Lei n.º 5/96, foi oficialmente criado o Tribunal de Contas de Angola.
-//       Com este acto legislativo, o país deu um passo decisivo na consolidação do Estado de Direito, instituindo um órgão especializado na fiscalização das finanças públicas e no julgamento das contas sujeitas à sua jurisdição.
-//       Era o nascimento jurídico de uma instituição destinada a proteger a legalidade financeira do Estado.
-//     `
-//   },
-//   {
-//     year: 2001,
-//     side: "right",
-//     title: "O TRIBUNAL GANHA VIDA",
-//     text: `
-//       Cinco anos após a sua criação legal, o Tribunal de Contas iniciou efectivamente as suas funções.
-//       Com a nomeação do primeiro Juiz Conselheiro Presidente, Dr. Julião António, e da primeira geração de Juízes Conselheiros, começou a construção concreta da instituição.
-//       Foram anos de fundação institucional, em que se lançaram as bases da fiscalização financeira moderna em Angola.
-//     `
-//   },
-//   {
-//     year: 2012,
-//     side: "left",
-//     title: "EXPANSÃO E FORTALECIMENTO",
-//     text: `
-//       Com o crescimento da administração pública e o aumento das responsabilidades de controlo, o Tribunal conheceu uma nova fase de expansão institucional.
-//       A nomeação de novos Juízes Conselheiros e o reforço das estruturas técnicas permitiram consolidar o Tribunal como referência nacional na fiscalização das finanças públicas.
-//     `
-//   },
-//   {
-//     year: 2020, // Atribuído ano aproximado para manter cronologia da Placa 10
-//     side: "right",
-//     title: "UMA CORTE AO SERVIÇO DO ESTADO",
-//     text: `
-//       Ao longo das décadas, o Tribunal de Contas afirmou-se como guardião da legalidade financeira.
-//       Mais do que julgar contas, a instituição passou a desempenhar um papel essencial na promoção da transparência, da boa governação e da responsabilidade na gestão da coisa pública.
-//       O Tribunal tornou-se, assim, um pilar da democracia financeira em Angola.
-//     `
-//   },
-//   {
-//     year: 2024, // Atribuído ano aproximado para a fase de modernização da Placa 11
-//     side: "left",
-//     title: "INSTITUIÇÃO EM TRANSFORMAÇÃO",
-//     text: `
-//       Num mundo em rápida mudança, o Tribunal de Contas acompanha os desafios da modernização administrativa.
-//       gitalização dos processos, o reforço da cooperação internacional e a incorporação de novas tecnologias transformam a forma como a fiscalização financeira é exercida, tornando-a mais eficiente, mais transparente e mais próxima das exigências contemporâneas da governação pública.
-//     `
-//   },
-//   {
-//     year: 2026,
-//     side: "right",
-//     title: "30 ANOS | UMA NOVA MARCA | UM NOVO CICLO",
-//     text: `
-//       Trinta anos depois da sua criação, o Tribunal de Contas de Angola celebra a maturidade de uma instituição que se tornou essencial para o funcionamento do Estado.
-//       Em 2026, a Corte apresenta também a sua nova identidade visual, símbolo de renovação, modernização e compromisso com o futuro.
-//       As 12 estrelas da nova marca representam os valores que orientam a instituição e recordam que a história do Tribunal continua a ser escrita todos os dias, ao serviço da legalidade, da transparência e da confiança pública.
-//     `
-//   },
-// ];
-
-
 export const timelineData: Array<{
   year: number;
   title: string;
@@ -173,14 +53,14 @@ export const timelineData: Array<{
     year: 1991,
     side: "left",
     title: "O DESPERTAR DO ESTADO DE DIREITO",
-    extraStyle: "lg:object-contain h-96",
+    extraStyle: "h-full md:h-96",
     text: "A abertura política dos anos 1990 trouxe consigo novas exigências institucionais. A Lei n.º 12/91, ao reconhecer a necessidade de criar um órgão independente de controlo financeiro, abriu caminho para a institucionalização de um tribunal dedicado à fiscalização das finanças públicas. O princípio da prestação de contas começava a afirmar-se como elemento essencial da nova ordem constitucional angolana.",
   },
   {
     year: 1992,
     side: "right",
     title: "A CONSTITUIÇÃO CONSAGRA O TRIBUNAL",
-    extraStyle: "lg:object-contain h-96",
+    extraStyle: "h-full md:h-96",
     text: "A segunda revisão constitucional, aprovada em 1992, estabeleceu formalmente a criação do Tribunal de Contas de Angola. Pela primeira vez, a Constituição reconhecia a importância de um órgão jurisdicional dedicado a assegurar a legalidade e a disciplina na gestão dos recursos públicos. A ideia transformava-se, finalmente, em compromisso institucional.",
   },
   {
@@ -250,7 +130,7 @@ function TimelineItem({
             <img
               src={IMAGES[item.year as keyof typeof IMAGES]}
               alt={`${item.year} — ${item.title}`}
-              className={clsx("w-full h-48 object-cover mb-4 shadow-lg", item.extraStyle)}
+              className={clsx("w-full test:object-cover mb-4 shadow-lg", item.extraStyle)}
               style={{ border: "2px solid #C9A347" }}
             />
             <h3
@@ -297,7 +177,7 @@ function TimelineItem({
             <img
               src={IMAGES[item.year as keyof typeof IMAGES]}
               alt={`${item.year} — ${item.title}`}
-              className={clsx("w-full h-48 object-cover mb-4 shadow-lg", item.extraStyle)}
+              className={clsx("w-full object-cover mb-4 shadow-lg", item.extraStyle)}
               style={{ border: "2px solid #C9A347" }}
             />
             <h3
@@ -321,7 +201,7 @@ function TimelineItem({
         <img
           src={IMAGES[item.year as keyof typeof IMAGES]}
           alt={`${item.year} — ${item.title}`}
-          className="w-full h-44 object-cover mb-4 shadow-lg"
+          className={clsx("w-full h-44 object-cover mb-4 shadow-lg", item.extraStyle)}
           style={{ border: "2px solid #C9A347" }}
         />
         <h3
