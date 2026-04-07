@@ -34,7 +34,7 @@ const pillars = [
   {
     icon: Shield,
     title: "LEGALIDADE",
-    text: "Assegurar o estrito cumprimento das normas jurídicas e a conformidade dos atos de gestão financeira e administrativa perante a Lei na República de Angola.",
+    text: "Assegurar o estrito cumprimento das normas jurídicas e a conformidade dos actos de gestão financeira e administrativa perante a Lei na República de Angola.",
   },
   {
     icon: Eye,

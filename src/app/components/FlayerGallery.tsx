@@ -9,7 +9,7 @@ const flayersData = [
   { id: 1, title: "Sebastião Cunza", image: "/flayers/p1.png" },
   { id: 2, title: "célio gourgel", image: "/flayers/p2.png" },
   { id: 3, title: "alexandre cose", image: "/flayers/p3.png" },
-  { id: 4, title: "Carlos antónio", image: "/flayers/p4.jpeg" },
+  { id: 4, title: "Carlos antónio", image: "/flayers/p4.png" },
   { id: 5, title: "Evarista Solano", image: "/flayers/p5.png" },
   { id: 6, title: "Zineb el adaqui", image: "/flayers/p6.png" },
   { id: 7, title: "Rui Cruz", image: "/flayers/p7.png" },
