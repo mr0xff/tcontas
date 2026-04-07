@@ -39,7 +39,7 @@ const SiteFeatures = () => {
           <div className="p-8 bg-white border border-gray-100 shadow-sm">
             <History className="text-[#C9A347] mb-6 w-10 h-10" />
             <p className="text-sm text-[#0A2540]/80 leading-relaxed">
-              Logo no primeiro contacto, destaca-se uma <strong>linha do tempo interactiva</strong>, concebida para oferecer, de forma clara e envolvente, uma visão sintética da evolução do Tribunal de Contas — desde a sua génese até à actualidade. Em poucos passos, o utilizador percorre os principais marcos que moldaram a instituição e consolidaram o seu papel como guardiã da legalidade financeira.
+              No primeiro contacto, destaca-se uma <strong>linha do tempo interactiva</strong>, concebida para oferecer, de forma clara e envolvente, uma visão sintética da evolução do Tribunal de Contas — desde a sua génese até à actualidade. Em poucos passos, o utilizador percorre os principais marcos que moldaram a instituição e consolidaram o seu papel como guardião da legalidade financeira.
             </p>
           </div>
 
